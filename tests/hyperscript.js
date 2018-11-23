@@ -9,7 +9,6 @@ const h = createHyperscript({
         table_cell: 'table_cell',
         image: {
             type: 'image',
-            isVoid: true
         }
     },
     inlines: {

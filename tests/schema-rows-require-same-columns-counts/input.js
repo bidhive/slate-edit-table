@@ -4,7 +4,7 @@ import hyperscript from '../hyperscript';
 export default (
     <value>
         <document>
-            <table>
+            <table key="table">
                 <table_row>
                     <table_cell>
                         <paragraph>Row 1, Col 1</paragraph>

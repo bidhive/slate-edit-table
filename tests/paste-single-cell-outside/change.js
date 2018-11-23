@@ -10,10 +10,8 @@ export default function(plugin, change) {
     // Paste it
     return change
         .select({
-            anchorKey: 'paste-here',
-            anchorOffset: 4,
-            focusKey: 'paste-here',
-            focusOffset: 4
+            anchor: { key: 'paste-here', offset: 4 },
+            focus: { key: 'paste-here', offset: 4 }
         })
         .insertFragment(copiedFragment);
 }

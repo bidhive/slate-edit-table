@@ -5,7 +5,6 @@ export default function(plugin, change) {
 
     // Copy the selection
     let copiedFragment = plugin.utils.getCopiedFragment(value);
-    // Default copy in this case
     expect(copiedFragment).toBeFalsy();
 
     copiedFragment = value.fragment;
@@ -13,10 +12,8 @@ export default function(plugin, change) {
     // Paste it
     return change
         .select({
-            anchorKey: 'cell',
-            anchorOffset: 0,
-            focusKey: 'cell',
-            focusOffset: 5
+            anchor: { key: 'cell', offset: 0 },
+            focus: { key: 'cell', offset: 5 }
         })
         .insertFragment(copiedFragment);
 }

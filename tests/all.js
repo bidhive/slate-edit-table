@@ -3,14 +3,25 @@
 import expect from 'expect';
 import fs from 'fs';
 import path from 'path';
-import { Value, Schema, resetKeyGenerator } from 'slate';
+import { Value, Schema, KeyUtils } from 'slate';
 import hyperprint from 'slate-hyperprint';
 import EditTable from '../lib';
 
 const PLUGIN = EditTable();
 const SCHEMA = Schema.create({
-    plugins: [PLUGIN]
-});
+    plugins: [
+        PLUGIN, 
+        {
+            // Plugin for test data schema requiring isVoid images
+            schema: {
+                blocks: {
+                    image: { isVoid: true }
+                }
+
+            }
+        }
+    ]
+})
 
 function deserializeValue(value) {
     return Value.fromJSON(
@@ -30,7 +41,7 @@ describe('slate-edit-table', () => {
         if (test[0] === '.' || path.extname(test).length > 0) return;
 
         it(test, () => {
-            resetKeyGenerator();
+            KeyUtils.resetGenerator();
             const dir = path.resolve(__dirname, test);
             const input = require(path.resolve(dir, 'input.js')).default;
             const expectedPath = path.resolve(dir, 'expected.js');
@@ -44,16 +55,16 @@ describe('slate-edit-table', () => {
             const newChange = runChange(PLUGIN, valueInput.change());
 
             if (expected) {
-                const newDoc = hyperprint(newChange.value.document, {
+                const newDoc = hyperprint(newChange.value.document, SCHEMA, {
                     strict: true
                 });
                 expect(newDoc).toEqual(
-                    hyperprint(expected.document, { strict: true })
+                    hyperprint(expected.document, SCHEMA, { strict: true })
                 );
 
                 // Check that the selection is still valid
                 if (!newChange.value.document.nodes.isEmpty()) {
-                    expect(newChange.value.startBlock).toExist(null);
+                    expect(newChange.value.selection.start.path).toExist(null);
                 }
             }
         });
