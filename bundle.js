@@ -67,7 +67,7 @@ var alignPlugin = {
 
 exports.default = alignPlugin;
 
-},{"../lib/":28,"slate":254,"slate-schema-violations":253}],2:[function(require,module,exports){
+},{"../lib/":28,"slate":239,"slate-schema-violations":238}],2:[function(require,module,exports){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -433,7 +433,7 @@ var Example = function (_React$Component5) {
 
 _reactDom2.default.render(React.createElement(Example, null), document.getElementById('example'));
 
-},{"../lib/":28,"./aligns":1,"./value":3,"prop-types":225,"react":234,"react-dom":229,"slate":254,"slate-react":249}],3:[function(require,module,exports){
+},{"../lib/":28,"./aligns":1,"./value":3,"prop-types":211,"react":219,"react-dom":215,"slate":239,"slate-react":234}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -546,7 +546,7 @@ exports.default = h(
     )
 );
 
-},{"slate-hyperscript":246}],4:[function(require,module,exports){
+},{"slate-hyperscript":231}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -577,7 +577,7 @@ function clearCell(opts, change, cell) {
 }
 exports.default = clearCell;
 
-},{"slate":254}],5:[function(require,module,exports){
+},{"slate":239}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -698,7 +698,7 @@ getCell) {
 }
 exports.default = insertColumn;
 
-},{"../utils":40,"./moveSelection":10,"slate":254}],7:[function(require,module,exports){
+},{"../utils":40,"./moveSelection":10,"slate":239}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -736,7 +736,7 @@ getRow // Generate the row yourself
 
 exports.default = insertRow;
 
-},{"../utils":40,"slate":254}],8:[function(require,module,exports){
+},{"../utils":40,"slate":239}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -767,7 +767,7 @@ function insertTable(opts, change) {
 
 exports.default = insertTable;
 
-},{"../utils":40,"slate":254}],9:[function(require,module,exports){
+},{"../utils":40,"slate":239}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -834,7 +834,7 @@ fragment) {
 }
 exports.default = insertTableFragmentAtRange;
 
-},{"../changes":5,"../utils":40,"slate":254}],10:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":239}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -868,7 +868,7 @@ function moveSelection(opts, change, x, y) {
 
 exports.default = moveSelection;
 
-},{"../utils":40,"slate":254}],11:[function(require,module,exports){
+},{"../utils":40,"slate":239}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -954,7 +954,7 @@ function normPos(x, y, width, height) {
 
 exports.default = moveSelectionBy;
 
-},{"../utils":40,"slate":254}],12:[function(require,module,exports){
+},{"../utils":40,"slate":239}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -992,7 +992,7 @@ function removeColumn(opts, change, at) {
 }
 exports.default = removeColumn;
 
-},{"../utils":40,"./removeColumnByKey":13,"slate":254}],13:[function(require,module,exports){
+},{"../utils":40,"./removeColumnByKey":13,"slate":239}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1049,7 +1049,7 @@ function removeColumnByKey(opts, change, key) {
 }
 exports.default = removeColumnByKey;
 
-},{"../utils":40,"./clearCell":4,"slate":254}],14:[function(require,module,exports){
+},{"../utils":40,"./clearCell":4,"slate":239}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1087,7 +1087,7 @@ function removeRow(opts, change, at) {
 }
 exports.default = removeRow;
 
-},{"../utils":40,"./removeRowByKey":15,"slate":254}],15:[function(require,module,exports){
+},{"../utils":40,"./removeRowByKey":15,"slate":239}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1133,7 +1133,7 @@ function removeRowByKey(opts, change, key) {
 }
 exports.default = removeRowByKey;
 
-},{"../utils":40,"./clearCell":4,"slate":254}],16:[function(require,module,exports){
+},{"../utils":40,"./clearCell":4,"slate":239}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1161,7 +1161,7 @@ function removeTable(opts, change) {
 
 exports.default = removeTable;
 
-},{"./removeTableByKey":17,"slate":254}],17:[function(require,module,exports){
+},{"./removeTableByKey":17,"slate":239}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1219,7 +1219,7 @@ function removeTableByKey(opts, change, key) {
 
 exports.default = removeTableByKey;
 
-},{"../utils":40,"slate":254}],18:[function(require,module,exports){
+},{"../utils":40,"slate":239}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1254,8 +1254,7 @@ function core(optionsParam) {
 
     return {
         schema: (0, _validation.schema)(opts),
-        // TODO(johan): This is no longer called in Slate 0.39.3, have asked in Slack channel 
-        // validateNode: validateNode(opts),
+        normalizeNode: (0, _validation.normalizeNode)(opts),
 
         utils: {
             isSelectionInTable: _utils.isSelectionInTable.bind(null, opts),
@@ -1451,7 +1450,7 @@ function onBackspace(event, change, editor, opts) {
 
 exports.default = onBackspace;
 
-},{"../changes":5,"slate":254}],21:[function(require,module,exports){
+},{"../changes":5,"slate":239}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1483,7 +1482,7 @@ opts, event, change, editor) {
 }
 exports.default = onCopy;
 
-},{"../utils":40,"slate":254,"slate-react":249}],22:[function(require,module,exports){
+},{"../utils":40,"slate":239,"slate-react":234}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1519,7 +1518,7 @@ function onEnter(event, change, editor, opts) {
 }
 exports.default = onEnter;
 
-},{"../changes":5,"../utils":40,"slate":254}],23:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":239}],23:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1592,7 +1591,7 @@ function onKeyDown(opts, event, change, editor) {
 
 exports.default = onKeyDown;
 
-},{"../utils":40,"./onBackspace":20,"./onEnter":22,"./onModEnter":24,"./onTab":26,"./onUpDown":27,"slate":254}],24:[function(require,module,exports){
+},{"../utils":40,"./onBackspace":20,"./onEnter":22,"./onModEnter":24,"./onTab":26,"./onUpDown":27,"slate":239}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1629,7 +1628,7 @@ function onModEnter(event, change, editor, opts) {
 
 exports.default = onModEnter;
 
-},{"../utils":40,"slate":254}],25:[function(require,module,exports){
+},{"../utils":40,"slate":239}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1676,7 +1675,7 @@ opts, event, change, editor) {
 
 exports.default = onPaste;
 
-},{"../changes":5,"../utils":40,"slate":254,"slate-react":249}],26:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":239,"slate-react":234}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1733,7 +1732,7 @@ function onTab(event, change, editor, opts) {
 
 exports.default = onTab;
 
-},{"../changes":5,"../utils":40,"slate":254}],27:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":239}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1773,7 +1772,7 @@ function onUpDown(event, change, editor, opts) {
 }
 exports.default = onUpDown;
 
-},{"../changes":5,"../utils":40,"slate":254}],28:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":239}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2184,7 +2183,7 @@ var TablePosition = function (_Record) {
 
 exports.default = TablePosition;
 
-},{"immutable":52,"slate":254}],31:[function(require,module,exports){
+},{"immutable":52,"slate":239}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2216,7 +2215,7 @@ function createEmptyContent(opts) {
 
 exports.default = createCell;
 
-},{"slate":254}],32:[function(require,module,exports){
+},{"slate":239}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2248,7 +2247,7 @@ function createRow(opts, columns, getCellContent) {
 }
 exports.default = createRow;
 
-},{"./createCell":31,"immutable":52,"slate":254}],33:[function(require,module,exports){
+},{"./createCell":31,"immutable":52,"slate":239}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2280,7 +2279,7 @@ function createTable(opts, columns, rows, getCellContent) {
 }
 exports.default = createTable;
 
-},{"./createRow":32,"immutable":52,"slate":254}],34:[function(require,module,exports){
+},{"./createRow":32,"immutable":52,"slate":239}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2303,7 +2302,7 @@ table, fn) {
 }
 exports.default = forEachCells;
 
-},{"slate":254}],35:[function(require,module,exports){
+},{"slate":239}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2327,7 +2326,7 @@ table, columnIndex) {
 
 exports.default = getCellsAtColumn;
 
-},{"immutable":52,"slate":254}],36:[function(require,module,exports){
+},{"immutable":52,"slate":239}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2349,7 +2348,7 @@ table, rowIndex) {
 
 exports.default = getCellsAtRow;
 
-},{"immutable":52,"slate":254}],37:[function(require,module,exports){
+},{"immutable":52,"slate":239}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2425,7 +2424,7 @@ function getCopiedFragment(opts, value) {
 }
 exports.default = getCopiedFragment;
 
-},{"../utils":40,"immutable":52,"slate":254}],38:[function(require,module,exports){
+},{"../utils":40,"immutable":52,"slate":239}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2451,7 +2450,7 @@ value) {
 
 exports.default = getPosition;
 
-},{"./TablePosition":30,"slate":254}],39:[function(require,module,exports){
+},{"./TablePosition":30,"slate":239}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2479,7 +2478,7 @@ key) {
 
 exports.default = getPositionByKey;
 
-},{"./TablePosition":30,"slate":254}],40:[function(require,module,exports){
+},{"./TablePosition":30,"slate":239}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2651,22 +2650,80 @@ exports.default = isSelectionOutOfTable;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.validateNode = exports.schema = undefined;
+exports.normalizeNode = exports.schema = undefined;
 
 var _schema = require('./schema');
 
 var _schema2 = _interopRequireDefault(_schema);
 
-var _validateNode = require('./validateNode');
+var _normalizeNode = require('./normalizeNode');
 
-var _validateNode2 = _interopRequireDefault(_validateNode);
+var _normalizeNode2 = _interopRequireDefault(_normalizeNode);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.schema = _schema2.default;
-exports.validateNode = _validateNode2.default;
+exports.normalizeNode = _normalizeNode2.default;
 
-},{"./schema":45,"./validateNode":46}],45:[function(require,module,exports){
+},{"./normalizeNode":45,"./schema":46}],45:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _utils = require('../utils');
+
+/*
+ * Ensure each row has the same number of columns.
+ */
+function normalizeNode(opts) {
+    var isRow = function isRow(node) {
+        return node.type === opts.typeRow;
+    };
+    var isCell = function isCell(node) {
+        return node.type === opts.typeCell;
+    };
+    var countCells = function countCells(row) {
+        return row.nodes.count(isCell);
+    };
+
+    return function (node) {
+        if (node.type !== opts.typeTable) {
+            return undefined;
+        }
+
+        var rows = node.nodes.filter(isRow);
+        var maxColumns = Math.max(
+        // Minimum 1 column
+        1, rows.map(countCells).max());
+        var rowsMissingColumns = rows.filter(function (row) {
+            return countCells(row) < maxColumns;
+        });
+
+        if (rowsMissingColumns.isEmpty()) {
+            return undefined;
+        }
+
+        return function (change) {
+            rowsMissingColumns.forEach(function (row) {
+                var numberOfCellsToAdd = maxColumns - row.nodes.size;
+                var cells = Array.from({ length: numberOfCellsToAdd }).map(function () {
+                    return (0, _utils.createCell)(opts);
+                });
+                cells.forEach(function (cell) {
+                    return change.insertNodeByKey(row.key, row.nodes.size, cell, {
+                        normalize: false
+                    });
+                });
+            });
+        };
+    };
+}
+
+exports.default = normalizeNode;
+
+},{"../utils":40}],46:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2769,65 +2826,7 @@ function cellOnlyInRow(opts, change, error) {
 
 exports.default = schema;
 
-},{"../utils":40,"slate":254,"slate-schema-violations":253}],46:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _utils = require('../utils');
-
-/*
- * Ensure each row has the same number of columns.
- */
-function validateNode(opts) {
-    var isRow = function isRow(node) {
-        return node.type === opts.typeRow;
-    };
-    var isCell = function isCell(node) {
-        return node.type === opts.typeCell;
-    };
-    var countCells = function countCells(row) {
-        return row.nodes.count(isCell);
-    };
-
-    return function (node) {
-        if (node.type !== opts.typeTable) {
-            return undefined;
-        }
-
-        var rows = node.nodes.filter(isRow);
-        var maxColumns = Math.max(
-        // Minimum 1 column
-        1, rows.map(countCells).max());
-        var rowsMissingColumns = rows.filter(function (row) {
-            return countCells(row) < maxColumns;
-        });
-
-        if (rowsMissingColumns.isEmpty()) {
-            return undefined;
-        }
-
-        return function (change) {
-            rowsMissingColumns.forEach(function (row) {
-                var numberOfCellsToAdd = maxColumns - row.nodes.size;
-                var cells = Array.from({ length: numberOfCellsToAdd }).map(function () {
-                    return (0, _utils.createCell)(opts);
-                });
-                cells.forEach(function (cell) {
-                    return change.insertNodeByKey(row.key, row.nodes.size, cell, {
-                        normalize: false
-                    });
-                });
-            });
-        };
-    };
-}
-
-exports.default = validateNode;
-
-},{"../utils":40}],47:[function(require,module,exports){
+},{"../utils":40,"slate":239,"slate-schema-violations":238}],47:[function(require,module,exports){
 'use strict';
 
 var GROUP_LEFT_TO_RIGHT,
@@ -8081,87 +8080,6 @@ module.exports =  !!document.attachEvent && window !== document.parentWindow;
 
 }));
 },{}],53:[function(require,module,exports){
-
-/**
- * Has own property.
- *
- * @type {Function}
- */
-
-var has = Object.prototype.hasOwnProperty
-
-/**
- * To string.
- *
- * @type {Function}
- */
-
-var toString = Object.prototype.toString
-
-/**
- * Test whether a value is "empty".
- *
- * @param {Mixed} val
- * @return {Boolean}
- */
-
-function isEmpty(val) {
-  // Null and Undefined...
-  if (val == null) return true
-
-  // Booleans...
-  if ('boolean' == typeof val) return false
-
-  // Numbers...
-  if ('number' == typeof val) return val === 0
-
-  // Strings...
-  if ('string' == typeof val) return val.length === 0
-
-  // Functions...
-  if ('function' == typeof val) return val.length === 0
-
-  // Arrays...
-  if (Array.isArray(val)) return val.length === 0
-
-  // Errors...
-  if (val instanceof Error) return val.message === ''
-
-  // Objects...
-  if (val.toString == toString) {
-    switch (val.toString()) {
-
-      // Maps, Sets, Files and Errors...
-      case '[object File]':
-      case '[object Map]':
-      case '[object Set]': {
-        return val.size === 0
-      }
-
-      // Plain objects...
-      case '[object Object]': {
-        for (var key in val) {
-          if (has.call(val, key)) return false
-        }
-
-        return true
-      }
-    }
-  }
-
-  // Anything else...
-  return false
-}
-
-/**
- * Export `isEmpty`.
- *
- * @type {Function}
- */
-
-module.exports = isEmpty
-
-},{}],54:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8407,7 +8325,7 @@ exports.parseHotkey = parseHotkey;
 exports.compareHotkey = compareHotkey;
 exports.toKeyCode = toKeyCode;
 exports.toKeyName = toKeyName;
-},{}],55:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8419,7 +8337,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var isBrowser = exports.isBrowser = (typeof window === "undefined" ? "undefined" : _typeof(window)) === "object" && (typeof document === "undefined" ? "undefined" : _typeof(document)) === 'object' && document.nodeType === 9;
 
 exports.default = isBrowser;
-},{}],56:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 /*!
  * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
  *
@@ -8458,7 +8376,7 @@ module.exports = function isPlainObject(o) {
   return true;
 };
 
-},{"isobject":57}],57:[function(require,module,exports){
+},{"isobject":56}],56:[function(require,module,exports){
 /*!
  * isobject <https://github.com/jonschlinkert/isobject>
  *
@@ -8472,13 +8390,13 @@ module.exports = function isObject(val) {
   return val != null && typeof val === 'object' && Array.isArray(val) === false;
 };
 
-},{}],58:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 'use strict';
 
 exports.atob = self.atob.bind(self);
 exports.btoa = self.btoa.bind(self);
 
-},{}],59:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -8487,7 +8405,7 @@ var DataView = getNative(root, 'DataView');
 
 module.exports = DataView;
 
-},{"./_getNative":131,"./_root":173}],60:[function(require,module,exports){
+},{"./_getNative":122,"./_root":163}],59:[function(require,module,exports){
 var hashClear = require('./_hashClear'),
     hashDelete = require('./_hashDelete'),
     hashGet = require('./_hashGet'),
@@ -8521,7 +8439,7 @@ Hash.prototype.set = hashSet;
 
 module.exports = Hash;
 
-},{"./_hashClear":139,"./_hashDelete":140,"./_hashGet":141,"./_hashHas":142,"./_hashSet":143}],61:[function(require,module,exports){
+},{"./_hashClear":130,"./_hashDelete":131,"./_hashGet":132,"./_hashHas":133,"./_hashSet":134}],60:[function(require,module,exports){
 var listCacheClear = require('./_listCacheClear'),
     listCacheDelete = require('./_listCacheDelete'),
     listCacheGet = require('./_listCacheGet'),
@@ -8555,7 +8473,7 @@ ListCache.prototype.set = listCacheSet;
 
 module.exports = ListCache;
 
-},{"./_listCacheClear":153,"./_listCacheDelete":154,"./_listCacheGet":155,"./_listCacheHas":156,"./_listCacheSet":157}],62:[function(require,module,exports){
+},{"./_listCacheClear":144,"./_listCacheDelete":145,"./_listCacheGet":146,"./_listCacheHas":147,"./_listCacheSet":148}],61:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -8564,7 +8482,7 @@ var Map = getNative(root, 'Map');
 
 module.exports = Map;
 
-},{"./_getNative":131,"./_root":173}],63:[function(require,module,exports){
+},{"./_getNative":122,"./_root":163}],62:[function(require,module,exports){
 var mapCacheClear = require('./_mapCacheClear'),
     mapCacheDelete = require('./_mapCacheDelete'),
     mapCacheGet = require('./_mapCacheGet'),
@@ -8598,7 +8516,7 @@ MapCache.prototype.set = mapCacheSet;
 
 module.exports = MapCache;
 
-},{"./_mapCacheClear":158,"./_mapCacheDelete":159,"./_mapCacheGet":160,"./_mapCacheHas":161,"./_mapCacheSet":162}],64:[function(require,module,exports){
+},{"./_mapCacheClear":149,"./_mapCacheDelete":150,"./_mapCacheGet":151,"./_mapCacheHas":152,"./_mapCacheSet":153}],63:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -8607,7 +8525,7 @@ var Promise = getNative(root, 'Promise');
 
 module.exports = Promise;
 
-},{"./_getNative":131,"./_root":173}],65:[function(require,module,exports){
+},{"./_getNative":122,"./_root":163}],64:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -8616,36 +8534,7 @@ var Set = getNative(root, 'Set');
 
 module.exports = Set;
 
-},{"./_getNative":131,"./_root":173}],66:[function(require,module,exports){
-var MapCache = require('./_MapCache'),
-    setCacheAdd = require('./_setCacheAdd'),
-    setCacheHas = require('./_setCacheHas');
-
-/**
- *
- * Creates an array cache object to store unique values.
- *
- * @private
- * @constructor
- * @param {Array} [values] The values to cache.
- */
-function SetCache(values) {
-  var index = -1,
-      length = values == null ? 0 : values.length;
-
-  this.__data__ = new MapCache;
-  while (++index < length) {
-    this.add(values[index]);
-  }
-}
-
-// Add methods to `SetCache`.
-SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
-SetCache.prototype.has = setCacheHas;
-
-module.exports = SetCache;
-
-},{"./_MapCache":63,"./_setCacheAdd":174,"./_setCacheHas":175}],67:[function(require,module,exports){
+},{"./_getNative":122,"./_root":163}],65:[function(require,module,exports){
 var ListCache = require('./_ListCache'),
     stackClear = require('./_stackClear'),
     stackDelete = require('./_stackDelete'),
@@ -8674,7 +8563,7 @@ Stack.prototype.set = stackSet;
 
 module.exports = Stack;
 
-},{"./_ListCache":61,"./_stackClear":179,"./_stackDelete":180,"./_stackGet":181,"./_stackHas":182,"./_stackSet":183}],68:[function(require,module,exports){
+},{"./_ListCache":60,"./_stackClear":166,"./_stackDelete":167,"./_stackGet":168,"./_stackHas":169,"./_stackSet":170}],66:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -8682,7 +8571,7 @@ var Symbol = root.Symbol;
 
 module.exports = Symbol;
 
-},{"./_root":173}],69:[function(require,module,exports){
+},{"./_root":163}],67:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -8690,7 +8579,7 @@ var Uint8Array = root.Uint8Array;
 
 module.exports = Uint8Array;
 
-},{"./_root":173}],70:[function(require,module,exports){
+},{"./_root":163}],68:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -8699,7 +8588,7 @@ var WeakMap = getNative(root, 'WeakMap');
 
 module.exports = WeakMap;
 
-},{"./_getNative":131,"./_root":173}],71:[function(require,module,exports){
+},{"./_getNative":122,"./_root":163}],69:[function(require,module,exports){
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
  * with the `this` binding of `thisArg` and the arguments of `args`.
@@ -8722,7 +8611,7 @@ function apply(func, thisArg, args) {
 
 module.exports = apply;
 
-},{}],72:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 /**
  * A specialized version of `_.forEach` for arrays without support for
  * iteratee shorthands.
@@ -8746,7 +8635,7 @@ function arrayEach(array, iteratee) {
 
 module.exports = arrayEach;
 
-},{}],73:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 /**
  * A specialized version of `_.filter` for arrays without support for
  * iteratee shorthands.
@@ -8773,7 +8662,7 @@ function arrayFilter(array, predicate) {
 
 module.exports = arrayFilter;
 
-},{}],74:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 var baseTimes = require('./_baseTimes'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray'),
@@ -8824,7 +8713,7 @@ function arrayLikeKeys(value, inherited) {
 
 module.exports = arrayLikeKeys;
 
-},{"./_baseTimes":104,"./_isIndex":148,"./isArguments":193,"./isArray":194,"./isBuffer":196,"./isTypedArray":206}],75:[function(require,module,exports){
+},{"./_baseTimes":99,"./_isIndex":139,"./isArguments":180,"./isArray":181,"./isBuffer":183,"./isTypedArray":192}],73:[function(require,module,exports){
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
  * shorthands.
@@ -8847,7 +8736,7 @@ function arrayMap(array, iteratee) {
 
 module.exports = arrayMap;
 
-},{}],76:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -8869,32 +8758,7 @@ function arrayPush(array, values) {
 
 module.exports = arrayPush;
 
-},{}],77:[function(require,module,exports){
-/**
- * A specialized version of `_.some` for arrays without support for iteratee
- * shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} predicate The function invoked per iteration.
- * @returns {boolean} Returns `true` if any element passes the predicate check,
- *  else `false`.
- */
-function arraySome(array, predicate) {
-  var index = -1,
-      length = array == null ? 0 : array.length;
-
-  while (++index < length) {
-    if (predicate(array[index], index, array)) {
-      return true;
-    }
-  }
-  return false;
-}
-
-module.exports = arraySome;
-
-},{}],78:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 var baseAssignValue = require('./_baseAssignValue'),
     eq = require('./eq');
 
@@ -8924,7 +8788,7 @@ function assignValue(object, key, value) {
 
 module.exports = assignValue;
 
-},{"./_baseAssignValue":82,"./eq":189}],79:[function(require,module,exports){
+},{"./_baseAssignValue":79,"./eq":176}],76:[function(require,module,exports){
 var eq = require('./eq');
 
 /**
@@ -8947,7 +8811,7 @@ function assocIndexOf(array, key) {
 
 module.exports = assocIndexOf;
 
-},{"./eq":189}],80:[function(require,module,exports){
+},{"./eq":176}],77:[function(require,module,exports){
 var copyObject = require('./_copyObject'),
     keys = require('./keys');
 
@@ -8966,7 +8830,7 @@ function baseAssign(object, source) {
 
 module.exports = baseAssign;
 
-},{"./_copyObject":117,"./keys":207}],81:[function(require,module,exports){
+},{"./_copyObject":111,"./keys":193}],78:[function(require,module,exports){
 var copyObject = require('./_copyObject'),
     keysIn = require('./keysIn');
 
@@ -8985,7 +8849,7 @@ function baseAssignIn(object, source) {
 
 module.exports = baseAssignIn;
 
-},{"./_copyObject":117,"./keysIn":208}],82:[function(require,module,exports){
+},{"./_copyObject":111,"./keysIn":194}],79:[function(require,module,exports){
 var defineProperty = require('./_defineProperty');
 
 /**
@@ -9012,7 +8876,7 @@ function baseAssignValue(object, key, value) {
 
 module.exports = baseAssignValue;
 
-},{"./_defineProperty":122}],83:[function(require,module,exports){
+},{"./_defineProperty":116}],80:[function(require,module,exports){
 var Stack = require('./_Stack'),
     arrayEach = require('./_arrayEach'),
     assignValue = require('./_assignValue'),
@@ -9185,7 +9049,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 
 module.exports = baseClone;
 
-},{"./_Stack":67,"./_arrayEach":72,"./_assignValue":78,"./_baseAssign":80,"./_baseAssignIn":81,"./_cloneBuffer":111,"./_copyArray":116,"./_copySymbols":118,"./_copySymbolsIn":119,"./_getAllKeys":128,"./_getAllKeysIn":129,"./_getTag":136,"./_initCloneArray":144,"./_initCloneByTag":145,"./_initCloneObject":146,"./isArray":194,"./isBuffer":196,"./isMap":200,"./isObject":201,"./isSet":204,"./keys":207}],84:[function(require,module,exports){
+},{"./_Stack":65,"./_arrayEach":70,"./_assignValue":75,"./_baseAssign":77,"./_baseAssignIn":78,"./_cloneBuffer":105,"./_copyArray":110,"./_copySymbols":112,"./_copySymbolsIn":113,"./_getAllKeys":119,"./_getAllKeysIn":120,"./_getTag":127,"./_initCloneArray":135,"./_initCloneByTag":136,"./_initCloneObject":137,"./isArray":181,"./isBuffer":183,"./isMap":186,"./isObject":187,"./isSet":190,"./keys":193}],81:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /** Built-in value references. */
@@ -9217,7 +9081,7 @@ var baseCreate = (function() {
 
 module.exports = baseCreate;
 
-},{"./isObject":201}],85:[function(require,module,exports){
+},{"./isObject":187}],82:[function(require,module,exports){
 var arrayPush = require('./_arrayPush'),
     isFlattenable = require('./_isFlattenable');
 
@@ -9257,7 +9121,7 @@ function baseFlatten(array, depth, predicate, isStrict, result) {
 
 module.exports = baseFlatten;
 
-},{"./_arrayPush":76,"./_isFlattenable":147}],86:[function(require,module,exports){
+},{"./_arrayPush":74,"./_isFlattenable":138}],83:[function(require,module,exports){
 var castPath = require('./_castPath'),
     toKey = require('./_toKey');
 
@@ -9283,7 +9147,7 @@ function baseGet(object, path) {
 
 module.exports = baseGet;
 
-},{"./_castPath":109,"./_toKey":185}],87:[function(require,module,exports){
+},{"./_castPath":103,"./_toKey":172}],84:[function(require,module,exports){
 var arrayPush = require('./_arrayPush'),
     isArray = require('./isArray');
 
@@ -9305,7 +9169,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 module.exports = baseGetAllKeys;
 
-},{"./_arrayPush":76,"./isArray":194}],88:[function(require,module,exports){
+},{"./_arrayPush":74,"./isArray":181}],85:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     getRawTag = require('./_getRawTag'),
     objectToString = require('./_objectToString');
@@ -9335,7 +9199,7 @@ function baseGetTag(value) {
 
 module.exports = baseGetTag;
 
-},{"./_Symbol":68,"./_getRawTag":133,"./_objectToString":169}],89:[function(require,module,exports){
+},{"./_Symbol":66,"./_getRawTag":124,"./_objectToString":159}],86:[function(require,module,exports){
 /**
  * The base implementation of `_.hasIn` without support for deep paths.
  *
@@ -9350,7 +9214,7 @@ function baseHasIn(object, key) {
 
 module.exports = baseHasIn;
 
-},{}],90:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -9370,122 +9234,7 @@ function baseIsArguments(value) {
 
 module.exports = baseIsArguments;
 
-},{"./_baseGetTag":88,"./isObjectLike":202}],91:[function(require,module,exports){
-var baseIsEqualDeep = require('./_baseIsEqualDeep'),
-    isObjectLike = require('./isObjectLike');
-
-/**
- * The base implementation of `_.isEqual` which supports partial comparisons
- * and tracks traversed objects.
- *
- * @private
- * @param {*} value The value to compare.
- * @param {*} other The other value to compare.
- * @param {boolean} bitmask The bitmask flags.
- *  1 - Unordered comparison
- *  2 - Partial comparison
- * @param {Function} [customizer] The function to customize comparisons.
- * @param {Object} [stack] Tracks traversed `value` and `other` objects.
- * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
- */
-function baseIsEqual(value, other, bitmask, customizer, stack) {
-  if (value === other) {
-    return true;
-  }
-  if (value == null || other == null || (!isObjectLike(value) && !isObjectLike(other))) {
-    return value !== value && other !== other;
-  }
-  return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
-}
-
-module.exports = baseIsEqual;
-
-},{"./_baseIsEqualDeep":92,"./isObjectLike":202}],92:[function(require,module,exports){
-var Stack = require('./_Stack'),
-    equalArrays = require('./_equalArrays'),
-    equalByTag = require('./_equalByTag'),
-    equalObjects = require('./_equalObjects'),
-    getTag = require('./_getTag'),
-    isArray = require('./isArray'),
-    isBuffer = require('./isBuffer'),
-    isTypedArray = require('./isTypedArray');
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1;
-
-/** `Object#toString` result references. */
-var argsTag = '[object Arguments]',
-    arrayTag = '[object Array]',
-    objectTag = '[object Object]';
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * A specialized version of `baseIsEqual` for arrays and objects which performs
- * deep comparisons and tracks traversed objects enabling objects with circular
- * references to be compared.
- *
- * @private
- * @param {Object} object The object to compare.
- * @param {Object} other The other object to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} [stack] Tracks traversed `object` and `other` objects.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
-  var objIsArr = isArray(object),
-      othIsArr = isArray(other),
-      objTag = objIsArr ? arrayTag : getTag(object),
-      othTag = othIsArr ? arrayTag : getTag(other);
-
-  objTag = objTag == argsTag ? objectTag : objTag;
-  othTag = othTag == argsTag ? objectTag : othTag;
-
-  var objIsObj = objTag == objectTag,
-      othIsObj = othTag == objectTag,
-      isSameTag = objTag == othTag;
-
-  if (isSameTag && isBuffer(object)) {
-    if (!isBuffer(other)) {
-      return false;
-    }
-    objIsArr = true;
-    objIsObj = false;
-  }
-  if (isSameTag && !objIsObj) {
-    stack || (stack = new Stack);
-    return (objIsArr || isTypedArray(object))
-      ? equalArrays(object, other, bitmask, customizer, equalFunc, stack)
-      : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
-  }
-  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
-    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
-        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
-
-    if (objIsWrapped || othIsWrapped) {
-      var objUnwrapped = objIsWrapped ? object.value() : object,
-          othUnwrapped = othIsWrapped ? other.value() : other;
-
-      stack || (stack = new Stack);
-      return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
-    }
-  }
-  if (!isSameTag) {
-    return false;
-  }
-  stack || (stack = new Stack);
-  return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
-}
-
-module.exports = baseIsEqualDeep;
-
-},{"./_Stack":67,"./_equalArrays":123,"./_equalByTag":124,"./_equalObjects":125,"./_getTag":136,"./isArray":194,"./isBuffer":196,"./isTypedArray":206}],93:[function(require,module,exports){
+},{"./_baseGetTag":85,"./isObjectLike":188}],88:[function(require,module,exports){
 var getTag = require('./_getTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -9505,7 +9254,7 @@ function baseIsMap(value) {
 
 module.exports = baseIsMap;
 
-},{"./_getTag":136,"./isObjectLike":202}],94:[function(require,module,exports){
+},{"./_getTag":127,"./isObjectLike":188}],89:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isMasked = require('./_isMasked'),
     isObject = require('./isObject'),
@@ -9554,7 +9303,7 @@ function baseIsNative(value) {
 
 module.exports = baseIsNative;
 
-},{"./_isMasked":151,"./_toSource":186,"./isFunction":198,"./isObject":201}],95:[function(require,module,exports){
+},{"./_isMasked":142,"./_toSource":173,"./isFunction":184,"./isObject":187}],90:[function(require,module,exports){
 var getTag = require('./_getTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -9574,7 +9323,7 @@ function baseIsSet(value) {
 
 module.exports = baseIsSet;
 
-},{"./_getTag":136,"./isObjectLike":202}],96:[function(require,module,exports){
+},{"./_getTag":127,"./isObjectLike":188}],91:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isLength = require('./isLength'),
     isObjectLike = require('./isObjectLike');
@@ -9636,7 +9385,7 @@ function baseIsTypedArray(value) {
 
 module.exports = baseIsTypedArray;
 
-},{"./_baseGetTag":88,"./isLength":199,"./isObjectLike":202}],97:[function(require,module,exports){
+},{"./_baseGetTag":85,"./isLength":185,"./isObjectLike":188}],92:[function(require,module,exports){
 var isPrototype = require('./_isPrototype'),
     nativeKeys = require('./_nativeKeys');
 
@@ -9668,7 +9417,7 @@ function baseKeys(object) {
 
 module.exports = baseKeys;
 
-},{"./_isPrototype":152,"./_nativeKeys":166}],98:[function(require,module,exports){
+},{"./_isPrototype":143,"./_nativeKeys":156}],93:[function(require,module,exports){
 var isObject = require('./isObject'),
     isPrototype = require('./_isPrototype'),
     nativeKeysIn = require('./_nativeKeysIn');
@@ -9703,7 +9452,7 @@ function baseKeysIn(object) {
 
 module.exports = baseKeysIn;
 
-},{"./_isPrototype":152,"./_nativeKeysIn":167,"./isObject":201}],99:[function(require,module,exports){
+},{"./_isPrototype":143,"./_nativeKeysIn":157,"./isObject":187}],94:[function(require,module,exports){
 var basePickBy = require('./_basePickBy'),
     hasIn = require('./hasIn');
 
@@ -9724,7 +9473,7 @@ function basePick(object, paths) {
 
 module.exports = basePick;
 
-},{"./_basePickBy":100,"./hasIn":191}],100:[function(require,module,exports){
+},{"./_basePickBy":95,"./hasIn":178}],95:[function(require,module,exports){
 var baseGet = require('./_baseGet'),
     baseSet = require('./_baseSet'),
     castPath = require('./_castPath');
@@ -9756,7 +9505,7 @@ function basePickBy(object, paths, predicate) {
 
 module.exports = basePickBy;
 
-},{"./_baseGet":86,"./_baseSet":101,"./_castPath":109}],101:[function(require,module,exports){
+},{"./_baseGet":83,"./_baseSet":96,"./_castPath":103}],96:[function(require,module,exports){
 var assignValue = require('./_assignValue'),
     castPath = require('./_castPath'),
     isIndex = require('./_isIndex'),
@@ -9805,7 +9554,7 @@ function baseSet(object, path, value, customizer) {
 
 module.exports = baseSet;
 
-},{"./_assignValue":78,"./_castPath":109,"./_isIndex":148,"./_toKey":185,"./isObject":201}],102:[function(require,module,exports){
+},{"./_assignValue":75,"./_castPath":103,"./_isIndex":139,"./_toKey":172,"./isObject":187}],97:[function(require,module,exports){
 var constant = require('./constant'),
     defineProperty = require('./_defineProperty'),
     identity = require('./identity');
@@ -9829,7 +9578,7 @@ var baseSetToString = !defineProperty ? identity : function(func, string) {
 
 module.exports = baseSetToString;
 
-},{"./_defineProperty":122,"./constant":187,"./identity":192}],103:[function(require,module,exports){
+},{"./_defineProperty":116,"./constant":174,"./identity":179}],98:[function(require,module,exports){
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
  *
@@ -9862,7 +9611,7 @@ function baseSlice(array, start, end) {
 
 module.exports = baseSlice;
 
-},{}],104:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -9884,7 +9633,7 @@ function baseTimes(n, iteratee) {
 
 module.exports = baseTimes;
 
-},{}],105:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     arrayMap = require('./_arrayMap'),
     isArray = require('./isArray'),
@@ -9923,7 +9672,7 @@ function baseToString(value) {
 
 module.exports = baseToString;
 
-},{"./_Symbol":68,"./_arrayMap":75,"./isArray":194,"./isSymbol":205}],106:[function(require,module,exports){
+},{"./_Symbol":66,"./_arrayMap":73,"./isArray":181,"./isSymbol":191}],101:[function(require,module,exports){
 /**
  * The base implementation of `_.unary` without support for storing metadata.
  *
@@ -9939,7 +9688,7 @@ function baseUnary(func) {
 
 module.exports = baseUnary;
 
-},{}],107:[function(require,module,exports){
+},{}],102:[function(require,module,exports){
 var castPath = require('./_castPath'),
     last = require('./last'),
     parent = require('./_parent'),
@@ -9961,22 +9710,7 @@ function baseUnset(object, path) {
 
 module.exports = baseUnset;
 
-},{"./_castPath":109,"./_parent":172,"./_toKey":185,"./last":209}],108:[function(require,module,exports){
-/**
- * Checks if a `cache` value for `key` exists.
- *
- * @private
- * @param {Object} cache The cache to query.
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */
-function cacheHas(cache, key) {
-  return cache.has(key);
-}
-
-module.exports = cacheHas;
-
-},{}],109:[function(require,module,exports){
+},{"./_castPath":103,"./_parent":162,"./_toKey":172,"./last":195}],103:[function(require,module,exports){
 var isArray = require('./isArray'),
     isKey = require('./_isKey'),
     stringToPath = require('./_stringToPath'),
@@ -9999,7 +9733,7 @@ function castPath(value, object) {
 
 module.exports = castPath;
 
-},{"./_isKey":149,"./_stringToPath":184,"./isArray":194,"./toString":218}],110:[function(require,module,exports){
+},{"./_isKey":140,"./_stringToPath":171,"./isArray":181,"./toString":204}],104:[function(require,module,exports){
 var Uint8Array = require('./_Uint8Array');
 
 /**
@@ -10017,7 +9751,7 @@ function cloneArrayBuffer(arrayBuffer) {
 
 module.exports = cloneArrayBuffer;
 
-},{"./_Uint8Array":69}],111:[function(require,module,exports){
+},{"./_Uint8Array":67}],105:[function(require,module,exports){
 var root = require('./_root');
 
 /** Detect free variable `exports`. */
@@ -10054,7 +9788,7 @@ function cloneBuffer(buffer, isDeep) {
 
 module.exports = cloneBuffer;
 
-},{"./_root":173}],112:[function(require,module,exports){
+},{"./_root":163}],106:[function(require,module,exports){
 var cloneArrayBuffer = require('./_cloneArrayBuffer');
 
 /**
@@ -10072,7 +9806,7 @@ function cloneDataView(dataView, isDeep) {
 
 module.exports = cloneDataView;
 
-},{"./_cloneArrayBuffer":110}],113:[function(require,module,exports){
+},{"./_cloneArrayBuffer":104}],107:[function(require,module,exports){
 /** Used to match `RegExp` flags from their coerced string values. */
 var reFlags = /\w*$/;
 
@@ -10091,7 +9825,7 @@ function cloneRegExp(regexp) {
 
 module.exports = cloneRegExp;
 
-},{}],114:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 var Symbol = require('./_Symbol');
 
 /** Used to convert symbols to primitives and strings. */
@@ -10111,7 +9845,7 @@ function cloneSymbol(symbol) {
 
 module.exports = cloneSymbol;
 
-},{"./_Symbol":68}],115:[function(require,module,exports){
+},{"./_Symbol":66}],109:[function(require,module,exports){
 var cloneArrayBuffer = require('./_cloneArrayBuffer');
 
 /**
@@ -10129,7 +9863,7 @@ function cloneTypedArray(typedArray, isDeep) {
 
 module.exports = cloneTypedArray;
 
-},{"./_cloneArrayBuffer":110}],116:[function(require,module,exports){
+},{"./_cloneArrayBuffer":104}],110:[function(require,module,exports){
 /**
  * Copies the values of `source` to `array`.
  *
@@ -10151,7 +9885,7 @@ function copyArray(source, array) {
 
 module.exports = copyArray;
 
-},{}],117:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 var assignValue = require('./_assignValue'),
     baseAssignValue = require('./_baseAssignValue');
 
@@ -10193,7 +9927,7 @@ function copyObject(source, props, object, customizer) {
 
 module.exports = copyObject;
 
-},{"./_assignValue":78,"./_baseAssignValue":82}],118:[function(require,module,exports){
+},{"./_assignValue":75,"./_baseAssignValue":79}],112:[function(require,module,exports){
 var copyObject = require('./_copyObject'),
     getSymbols = require('./_getSymbols');
 
@@ -10211,7 +9945,7 @@ function copySymbols(source, object) {
 
 module.exports = copySymbols;
 
-},{"./_copyObject":117,"./_getSymbols":134}],119:[function(require,module,exports){
+},{"./_copyObject":111,"./_getSymbols":125}],113:[function(require,module,exports){
 var copyObject = require('./_copyObject'),
     getSymbolsIn = require('./_getSymbolsIn');
 
@@ -10229,7 +9963,7 @@ function copySymbolsIn(source, object) {
 
 module.exports = copySymbolsIn;
 
-},{"./_copyObject":117,"./_getSymbolsIn":135}],120:[function(require,module,exports){
+},{"./_copyObject":111,"./_getSymbolsIn":126}],114:[function(require,module,exports){
 var root = require('./_root');
 
 /** Used to detect overreaching core-js shims. */
@@ -10237,7 +9971,7 @@ var coreJsData = root['__core-js_shared__'];
 
 module.exports = coreJsData;
 
-},{"./_root":173}],121:[function(require,module,exports){
+},{"./_root":163}],115:[function(require,module,exports){
 var isPlainObject = require('./isPlainObject');
 
 /**
@@ -10255,7 +9989,7 @@ function customOmitClone(value) {
 
 module.exports = customOmitClone;
 
-},{"./isPlainObject":203}],122:[function(require,module,exports){
+},{"./isPlainObject":189}],116:[function(require,module,exports){
 var getNative = require('./_getNative');
 
 var defineProperty = (function() {
@@ -10268,297 +10002,7 @@ var defineProperty = (function() {
 
 module.exports = defineProperty;
 
-},{"./_getNative":131}],123:[function(require,module,exports){
-var SetCache = require('./_SetCache'),
-    arraySome = require('./_arraySome'),
-    cacheHas = require('./_cacheHas');
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
-
-/**
- * A specialized version of `baseIsEqualDeep` for arrays with support for
- * partial deep comparisons.
- *
- * @private
- * @param {Array} array The array to compare.
- * @param {Array} other The other array to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} stack Tracks traversed `array` and `other` objects.
- * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
- */
-function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
-      arrLength = array.length,
-      othLength = other.length;
-
-  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
-    return false;
-  }
-  // Assume cyclic values are equal.
-  var stacked = stack.get(array);
-  if (stacked && stack.get(other)) {
-    return stacked == other;
-  }
-  var index = -1,
-      result = true,
-      seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
-
-  stack.set(array, other);
-  stack.set(other, array);
-
-  // Ignore non-index properties.
-  while (++index < arrLength) {
-    var arrValue = array[index],
-        othValue = other[index];
-
-    if (customizer) {
-      var compared = isPartial
-        ? customizer(othValue, arrValue, index, other, array, stack)
-        : customizer(arrValue, othValue, index, array, other, stack);
-    }
-    if (compared !== undefined) {
-      if (compared) {
-        continue;
-      }
-      result = false;
-      break;
-    }
-    // Recursively compare arrays (susceptible to call stack limits).
-    if (seen) {
-      if (!arraySome(other, function(othValue, othIndex) {
-            if (!cacheHas(seen, othIndex) &&
-                (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
-              return seen.push(othIndex);
-            }
-          })) {
-        result = false;
-        break;
-      }
-    } else if (!(
-          arrValue === othValue ||
-            equalFunc(arrValue, othValue, bitmask, customizer, stack)
-        )) {
-      result = false;
-      break;
-    }
-  }
-  stack['delete'](array);
-  stack['delete'](other);
-  return result;
-}
-
-module.exports = equalArrays;
-
-},{"./_SetCache":66,"./_arraySome":77,"./_cacheHas":108}],124:[function(require,module,exports){
-var Symbol = require('./_Symbol'),
-    Uint8Array = require('./_Uint8Array'),
-    eq = require('./eq'),
-    equalArrays = require('./_equalArrays'),
-    mapToArray = require('./_mapToArray'),
-    setToArray = require('./_setToArray');
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
-
-/** `Object#toString` result references. */
-var boolTag = '[object Boolean]',
-    dateTag = '[object Date]',
-    errorTag = '[object Error]',
-    mapTag = '[object Map]',
-    numberTag = '[object Number]',
-    regexpTag = '[object RegExp]',
-    setTag = '[object Set]',
-    stringTag = '[object String]',
-    symbolTag = '[object Symbol]';
-
-var arrayBufferTag = '[object ArrayBuffer]',
-    dataViewTag = '[object DataView]';
-
-/** Used to convert symbols to primitives and strings. */
-var symbolProto = Symbol ? Symbol.prototype : undefined,
-    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
-
-/**
- * A specialized version of `baseIsEqualDeep` for comparing objects of
- * the same `toStringTag`.
- *
- * **Note:** This function only supports comparing values with tags of
- * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
- *
- * @private
- * @param {Object} object The object to compare.
- * @param {Object} other The other object to compare.
- * @param {string} tag The `toStringTag` of the objects to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} stack Tracks traversed `object` and `other` objects.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
-  switch (tag) {
-    case dataViewTag:
-      if ((object.byteLength != other.byteLength) ||
-          (object.byteOffset != other.byteOffset)) {
-        return false;
-      }
-      object = object.buffer;
-      other = other.buffer;
-
-    case arrayBufferTag:
-      if ((object.byteLength != other.byteLength) ||
-          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
-        return false;
-      }
-      return true;
-
-    case boolTag:
-    case dateTag:
-    case numberTag:
-      // Coerce booleans to `1` or `0` and dates to milliseconds.
-      // Invalid dates are coerced to `NaN`.
-      return eq(+object, +other);
-
-    case errorTag:
-      return object.name == other.name && object.message == other.message;
-
-    case regexpTag:
-    case stringTag:
-      // Coerce regexes to strings and treat strings, primitives and objects,
-      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
-      // for more details.
-      return object == (other + '');
-
-    case mapTag:
-      var convert = mapToArray;
-
-    case setTag:
-      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
-      convert || (convert = setToArray);
-
-      if (object.size != other.size && !isPartial) {
-        return false;
-      }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(object);
-      if (stacked) {
-        return stacked == other;
-      }
-      bitmask |= COMPARE_UNORDERED_FLAG;
-
-      // Recursively compare objects (susceptible to call stack limits).
-      stack.set(object, other);
-      var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
-      stack['delete'](object);
-      return result;
-
-    case symbolTag:
-      if (symbolValueOf) {
-        return symbolValueOf.call(object) == symbolValueOf.call(other);
-      }
-  }
-  return false;
-}
-
-module.exports = equalByTag;
-
-},{"./_Symbol":68,"./_Uint8Array":69,"./_equalArrays":123,"./_mapToArray":163,"./_setToArray":176,"./eq":189}],125:[function(require,module,exports){
-var getAllKeys = require('./_getAllKeys');
-
-/** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1;
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * A specialized version of `baseIsEqualDeep` for objects with support for
- * partial deep comparisons.
- *
- * @private
- * @param {Object} object The object to compare.
- * @param {Object} other The other object to compare.
- * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
- * @param {Function} customizer The function to customize comparisons.
- * @param {Function} equalFunc The function to determine equivalents of values.
- * @param {Object} stack Tracks traversed `object` and `other` objects.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
-      objProps = getAllKeys(object),
-      objLength = objProps.length,
-      othProps = getAllKeys(other),
-      othLength = othProps.length;
-
-  if (objLength != othLength && !isPartial) {
-    return false;
-  }
-  var index = objLength;
-  while (index--) {
-    var key = objProps[index];
-    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
-      return false;
-    }
-  }
-  // Assume cyclic values are equal.
-  var stacked = stack.get(object);
-  if (stacked && stack.get(other)) {
-    return stacked == other;
-  }
-  var result = true;
-  stack.set(object, other);
-  stack.set(other, object);
-
-  var skipCtor = isPartial;
-  while (++index < objLength) {
-    key = objProps[index];
-    var objValue = object[key],
-        othValue = other[key];
-
-    if (customizer) {
-      var compared = isPartial
-        ? customizer(othValue, objValue, key, other, object, stack)
-        : customizer(objValue, othValue, key, object, other, stack);
-    }
-    // Recursively compare objects (susceptible to call stack limits).
-    if (!(compared === undefined
-          ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))
-          : compared
-        )) {
-      result = false;
-      break;
-    }
-    skipCtor || (skipCtor = key == 'constructor');
-  }
-  if (result && !skipCtor) {
-    var objCtor = object.constructor,
-        othCtor = other.constructor;
-
-    // Non `Object` object instances with different constructors are not equal.
-    if (objCtor != othCtor &&
-        ('constructor' in object && 'constructor' in other) &&
-        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
-          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
-      result = false;
-    }
-  }
-  stack['delete'](object);
-  stack['delete'](other);
-  return result;
-}
-
-module.exports = equalObjects;
-
-},{"./_getAllKeys":128}],126:[function(require,module,exports){
+},{"./_getNative":122}],117:[function(require,module,exports){
 var flatten = require('./flatten'),
     overRest = require('./_overRest'),
     setToString = require('./_setToString');
@@ -10576,7 +10020,7 @@ function flatRest(func) {
 
 module.exports = flatRest;
 
-},{"./_overRest":171,"./_setToString":177,"./flatten":190}],127:[function(require,module,exports){
+},{"./_overRest":161,"./_setToString":164,"./flatten":177}],118:[function(require,module,exports){
 (function (global){
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
@@ -10584,7 +10028,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 module.exports = freeGlobal;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],128:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 var baseGetAllKeys = require('./_baseGetAllKeys'),
     getSymbols = require('./_getSymbols'),
     keys = require('./keys');
@@ -10602,7 +10046,7 @@ function getAllKeys(object) {
 
 module.exports = getAllKeys;
 
-},{"./_baseGetAllKeys":87,"./_getSymbols":134,"./keys":207}],129:[function(require,module,exports){
+},{"./_baseGetAllKeys":84,"./_getSymbols":125,"./keys":193}],120:[function(require,module,exports){
 var baseGetAllKeys = require('./_baseGetAllKeys'),
     getSymbolsIn = require('./_getSymbolsIn'),
     keysIn = require('./keysIn');
@@ -10621,7 +10065,7 @@ function getAllKeysIn(object) {
 
 module.exports = getAllKeysIn;
 
-},{"./_baseGetAllKeys":87,"./_getSymbolsIn":135,"./keysIn":208}],130:[function(require,module,exports){
+},{"./_baseGetAllKeys":84,"./_getSymbolsIn":126,"./keysIn":194}],121:[function(require,module,exports){
 var isKeyable = require('./_isKeyable');
 
 /**
@@ -10641,7 +10085,7 @@ function getMapData(map, key) {
 
 module.exports = getMapData;
 
-},{"./_isKeyable":150}],131:[function(require,module,exports){
+},{"./_isKeyable":141}],122:[function(require,module,exports){
 var baseIsNative = require('./_baseIsNative'),
     getValue = require('./_getValue');
 
@@ -10660,7 +10104,7 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-},{"./_baseIsNative":94,"./_getValue":137}],132:[function(require,module,exports){
+},{"./_baseIsNative":89,"./_getValue":128}],123:[function(require,module,exports){
 var overArg = require('./_overArg');
 
 /** Built-in value references. */
@@ -10668,7 +10112,7 @@ var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 module.exports = getPrototype;
 
-},{"./_overArg":170}],133:[function(require,module,exports){
+},{"./_overArg":160}],124:[function(require,module,exports){
 var Symbol = require('./_Symbol');
 
 /** Used for built-in method references. */
@@ -10716,7 +10160,7 @@ function getRawTag(value) {
 
 module.exports = getRawTag;
 
-},{"./_Symbol":68}],134:[function(require,module,exports){
+},{"./_Symbol":66}],125:[function(require,module,exports){
 var arrayFilter = require('./_arrayFilter'),
     stubArray = require('./stubArray');
 
@@ -10748,7 +10192,7 @@ var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
 
 module.exports = getSymbols;
 
-},{"./_arrayFilter":73,"./stubArray":214}],135:[function(require,module,exports){
+},{"./_arrayFilter":71,"./stubArray":200}],126:[function(require,module,exports){
 var arrayPush = require('./_arrayPush'),
     getPrototype = require('./_getPrototype'),
     getSymbols = require('./_getSymbols'),
@@ -10775,7 +10219,7 @@ var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
 
 module.exports = getSymbolsIn;
 
-},{"./_arrayPush":76,"./_getPrototype":132,"./_getSymbols":134,"./stubArray":214}],136:[function(require,module,exports){
+},{"./_arrayPush":74,"./_getPrototype":123,"./_getSymbols":125,"./stubArray":200}],127:[function(require,module,exports){
 var DataView = require('./_DataView'),
     Map = require('./_Map'),
     Promise = require('./_Promise'),
@@ -10835,7 +10279,7 @@ if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
 
 module.exports = getTag;
 
-},{"./_DataView":59,"./_Map":62,"./_Promise":64,"./_Set":65,"./_WeakMap":70,"./_baseGetTag":88,"./_toSource":186}],137:[function(require,module,exports){
+},{"./_DataView":58,"./_Map":61,"./_Promise":63,"./_Set":64,"./_WeakMap":68,"./_baseGetTag":85,"./_toSource":173}],128:[function(require,module,exports){
 /**
  * Gets the value at `key` of `object`.
  *
@@ -10850,7 +10294,7 @@ function getValue(object, key) {
 
 module.exports = getValue;
 
-},{}],138:[function(require,module,exports){
+},{}],129:[function(require,module,exports){
 var castPath = require('./_castPath'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray'),
@@ -10891,7 +10335,7 @@ function hasPath(object, path, hasFunc) {
 
 module.exports = hasPath;
 
-},{"./_castPath":109,"./_isIndex":148,"./_toKey":185,"./isArguments":193,"./isArray":194,"./isLength":199}],139:[function(require,module,exports){
+},{"./_castPath":103,"./_isIndex":139,"./_toKey":172,"./isArguments":180,"./isArray":181,"./isLength":185}],130:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /**
@@ -10908,7 +10352,7 @@ function hashClear() {
 
 module.exports = hashClear;
 
-},{"./_nativeCreate":165}],140:[function(require,module,exports){
+},{"./_nativeCreate":155}],131:[function(require,module,exports){
 /**
  * Removes `key` and its value from the hash.
  *
@@ -10927,7 +10371,7 @@ function hashDelete(key) {
 
 module.exports = hashDelete;
 
-},{}],141:[function(require,module,exports){
+},{}],132:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -10959,7 +10403,7 @@ function hashGet(key) {
 
 module.exports = hashGet;
 
-},{"./_nativeCreate":165}],142:[function(require,module,exports){
+},{"./_nativeCreate":155}],133:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used for built-in method references. */
@@ -10984,7 +10428,7 @@ function hashHas(key) {
 
 module.exports = hashHas;
 
-},{"./_nativeCreate":165}],143:[function(require,module,exports){
+},{"./_nativeCreate":155}],134:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -11009,7 +10453,7 @@ function hashSet(key, value) {
 
 module.exports = hashSet;
 
-},{"./_nativeCreate":165}],144:[function(require,module,exports){
+},{"./_nativeCreate":155}],135:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -11037,7 +10481,7 @@ function initCloneArray(array) {
 
 module.exports = initCloneArray;
 
-},{}],145:[function(require,module,exports){
+},{}],136:[function(require,module,exports){
 var cloneArrayBuffer = require('./_cloneArrayBuffer'),
     cloneDataView = require('./_cloneDataView'),
     cloneRegExp = require('./_cloneRegExp'),
@@ -11116,7 +10560,7 @@ function initCloneByTag(object, tag, isDeep) {
 
 module.exports = initCloneByTag;
 
-},{"./_cloneArrayBuffer":110,"./_cloneDataView":112,"./_cloneRegExp":113,"./_cloneSymbol":114,"./_cloneTypedArray":115}],146:[function(require,module,exports){
+},{"./_cloneArrayBuffer":104,"./_cloneDataView":106,"./_cloneRegExp":107,"./_cloneSymbol":108,"./_cloneTypedArray":109}],137:[function(require,module,exports){
 var baseCreate = require('./_baseCreate'),
     getPrototype = require('./_getPrototype'),
     isPrototype = require('./_isPrototype');
@@ -11136,7 +10580,7 @@ function initCloneObject(object) {
 
 module.exports = initCloneObject;
 
-},{"./_baseCreate":84,"./_getPrototype":132,"./_isPrototype":152}],147:[function(require,module,exports){
+},{"./_baseCreate":81,"./_getPrototype":123,"./_isPrototype":143}],138:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray');
@@ -11158,7 +10602,7 @@ function isFlattenable(value) {
 
 module.exports = isFlattenable;
 
-},{"./_Symbol":68,"./isArguments":193,"./isArray":194}],148:[function(require,module,exports){
+},{"./_Symbol":66,"./isArguments":180,"./isArray":181}],139:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -11185,7 +10629,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],149:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 var isArray = require('./isArray'),
     isSymbol = require('./isSymbol');
 
@@ -11216,7 +10660,7 @@ function isKey(value, object) {
 
 module.exports = isKey;
 
-},{"./isArray":194,"./isSymbol":205}],150:[function(require,module,exports){
+},{"./isArray":181,"./isSymbol":191}],141:[function(require,module,exports){
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -11233,7 +10677,7 @@ function isKeyable(value) {
 
 module.exports = isKeyable;
 
-},{}],151:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 var coreJsData = require('./_coreJsData');
 
 /** Used to detect methods masquerading as native. */
@@ -11255,7 +10699,7 @@ function isMasked(func) {
 
 module.exports = isMasked;
 
-},{"./_coreJsData":120}],152:[function(require,module,exports){
+},{"./_coreJsData":114}],143:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -11275,7 +10719,7 @@ function isPrototype(value) {
 
 module.exports = isPrototype;
 
-},{}],153:[function(require,module,exports){
+},{}],144:[function(require,module,exports){
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -11290,7 +10734,7 @@ function listCacheClear() {
 
 module.exports = listCacheClear;
 
-},{}],154:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /** Used for built-in method references. */
@@ -11327,7 +10771,7 @@ function listCacheDelete(key) {
 
 module.exports = listCacheDelete;
 
-},{"./_assocIndexOf":79}],155:[function(require,module,exports){
+},{"./_assocIndexOf":76}],146:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -11348,7 +10792,7 @@ function listCacheGet(key) {
 
 module.exports = listCacheGet;
 
-},{"./_assocIndexOf":79}],156:[function(require,module,exports){
+},{"./_assocIndexOf":76}],147:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -11366,7 +10810,7 @@ function listCacheHas(key) {
 
 module.exports = listCacheHas;
 
-},{"./_assocIndexOf":79}],157:[function(require,module,exports){
+},{"./_assocIndexOf":76}],148:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -11394,7 +10838,7 @@ function listCacheSet(key, value) {
 
 module.exports = listCacheSet;
 
-},{"./_assocIndexOf":79}],158:[function(require,module,exports){
+},{"./_assocIndexOf":76}],149:[function(require,module,exports){
 var Hash = require('./_Hash'),
     ListCache = require('./_ListCache'),
     Map = require('./_Map');
@@ -11417,7 +10861,7 @@ function mapCacheClear() {
 
 module.exports = mapCacheClear;
 
-},{"./_Hash":60,"./_ListCache":61,"./_Map":62}],159:[function(require,module,exports){
+},{"./_Hash":59,"./_ListCache":60,"./_Map":61}],150:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -11437,7 +10881,7 @@ function mapCacheDelete(key) {
 
 module.exports = mapCacheDelete;
 
-},{"./_getMapData":130}],160:[function(require,module,exports){
+},{"./_getMapData":121}],151:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -11455,7 +10899,7 @@ function mapCacheGet(key) {
 
 module.exports = mapCacheGet;
 
-},{"./_getMapData":130}],161:[function(require,module,exports){
+},{"./_getMapData":121}],152:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -11473,7 +10917,7 @@ function mapCacheHas(key) {
 
 module.exports = mapCacheHas;
 
-},{"./_getMapData":130}],162:[function(require,module,exports){
+},{"./_getMapData":121}],153:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -11497,27 +10941,7 @@ function mapCacheSet(key, value) {
 
 module.exports = mapCacheSet;
 
-},{"./_getMapData":130}],163:[function(require,module,exports){
-/**
- * Converts `map` to its key-value pairs.
- *
- * @private
- * @param {Object} map The map to convert.
- * @returns {Array} Returns the key-value pairs.
- */
-function mapToArray(map) {
-  var index = -1,
-      result = Array(map.size);
-
-  map.forEach(function(value, key) {
-    result[++index] = [key, value];
-  });
-  return result;
-}
-
-module.exports = mapToArray;
-
-},{}],164:[function(require,module,exports){
+},{"./_getMapData":121}],154:[function(require,module,exports){
 var memoize = require('./memoize');
 
 /** Used as the maximum memoize cache size. */
@@ -11545,7 +10969,7 @@ function memoizeCapped(func) {
 
 module.exports = memoizeCapped;
 
-},{"./memoize":210}],165:[function(require,module,exports){
+},{"./memoize":196}],155:[function(require,module,exports){
 var getNative = require('./_getNative');
 
 /* Built-in method references that are verified to be native. */
@@ -11553,7 +10977,7 @@ var nativeCreate = getNative(Object, 'create');
 
 module.exports = nativeCreate;
 
-},{"./_getNative":131}],166:[function(require,module,exports){
+},{"./_getNative":122}],156:[function(require,module,exports){
 var overArg = require('./_overArg');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -11561,7 +10985,7 @@ var nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
 
-},{"./_overArg":170}],167:[function(require,module,exports){
+},{"./_overArg":160}],157:[function(require,module,exports){
 /**
  * This function is like
  * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
@@ -11583,7 +11007,7 @@ function nativeKeysIn(object) {
 
 module.exports = nativeKeysIn;
 
-},{}],168:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `exports`. */
@@ -11615,7 +11039,7 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-},{"./_freeGlobal":127}],169:[function(require,module,exports){
+},{"./_freeGlobal":118}],159:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -11639,7 +11063,7 @@ function objectToString(value) {
 
 module.exports = objectToString;
 
-},{}],170:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -11656,7 +11080,7 @@ function overArg(func, transform) {
 
 module.exports = overArg;
 
-},{}],171:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 var apply = require('./_apply');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -11694,7 +11118,7 @@ function overRest(func, start, transform) {
 
 module.exports = overRest;
 
-},{"./_apply":71}],172:[function(require,module,exports){
+},{"./_apply":69}],162:[function(require,module,exports){
 var baseGet = require('./_baseGet'),
     baseSlice = require('./_baseSlice');
 
@@ -11712,7 +11136,7 @@ function parent(object, path) {
 
 module.exports = parent;
 
-},{"./_baseGet":86,"./_baseSlice":103}],173:[function(require,module,exports){
+},{"./_baseGet":83,"./_baseSlice":98}],163:[function(require,module,exports){
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `self`. */
@@ -11723,64 +11147,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
 
-},{"./_freeGlobal":127}],174:[function(require,module,exports){
-/** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
-
-/**
- * Adds `value` to the array cache.
- *
- * @private
- * @name add
- * @memberOf SetCache
- * @alias push
- * @param {*} value The value to cache.
- * @returns {Object} Returns the cache instance.
- */
-function setCacheAdd(value) {
-  this.__data__.set(value, HASH_UNDEFINED);
-  return this;
-}
-
-module.exports = setCacheAdd;
-
-},{}],175:[function(require,module,exports){
-/**
- * Checks if `value` is in the array cache.
- *
- * @private
- * @name has
- * @memberOf SetCache
- * @param {*} value The value to search for.
- * @returns {number} Returns `true` if `value` is found, else `false`.
- */
-function setCacheHas(value) {
-  return this.__data__.has(value);
-}
-
-module.exports = setCacheHas;
-
-},{}],176:[function(require,module,exports){
-/**
- * Converts `set` to an array of its values.
- *
- * @private
- * @param {Object} set The set to convert.
- * @returns {Array} Returns the values.
- */
-function setToArray(set) {
-  var index = -1,
-      result = Array(set.size);
-
-  set.forEach(function(value) {
-    result[++index] = value;
-  });
-  return result;
-}
-
-module.exports = setToArray;
-
-},{}],177:[function(require,module,exports){
+},{"./_freeGlobal":118}],164:[function(require,module,exports){
 var baseSetToString = require('./_baseSetToString'),
     shortOut = require('./_shortOut');
 
@@ -11796,7 +11163,7 @@ var setToString = shortOut(baseSetToString);
 
 module.exports = setToString;
 
-},{"./_baseSetToString":102,"./_shortOut":178}],178:[function(require,module,exports){
+},{"./_baseSetToString":97,"./_shortOut":165}],165:[function(require,module,exports){
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
 var HOT_COUNT = 800,
     HOT_SPAN = 16;
@@ -11835,7 +11202,7 @@ function shortOut(func) {
 
 module.exports = shortOut;
 
-},{}],179:[function(require,module,exports){
+},{}],166:[function(require,module,exports){
 var ListCache = require('./_ListCache');
 
 /**
@@ -11852,7 +11219,7 @@ function stackClear() {
 
 module.exports = stackClear;
 
-},{"./_ListCache":61}],180:[function(require,module,exports){
+},{"./_ListCache":60}],167:[function(require,module,exports){
 /**
  * Removes `key` and its value from the stack.
  *
@@ -11872,7 +11239,7 @@ function stackDelete(key) {
 
 module.exports = stackDelete;
 
-},{}],181:[function(require,module,exports){
+},{}],168:[function(require,module,exports){
 /**
  * Gets the stack value for `key`.
  *
@@ -11888,7 +11255,7 @@ function stackGet(key) {
 
 module.exports = stackGet;
 
-},{}],182:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -11904,7 +11271,7 @@ function stackHas(key) {
 
 module.exports = stackHas;
 
-},{}],183:[function(require,module,exports){
+},{}],170:[function(require,module,exports){
 var ListCache = require('./_ListCache'),
     Map = require('./_Map'),
     MapCache = require('./_MapCache');
@@ -11940,7 +11307,7 @@ function stackSet(key, value) {
 
 module.exports = stackSet;
 
-},{"./_ListCache":61,"./_Map":62,"./_MapCache":63}],184:[function(require,module,exports){
+},{"./_ListCache":60,"./_Map":61,"./_MapCache":62}],171:[function(require,module,exports){
 var memoizeCapped = require('./_memoizeCapped');
 
 /** Used to match property names within property paths. */
@@ -11969,7 +11336,7 @@ var stringToPath = memoizeCapped(function(string) {
 
 module.exports = stringToPath;
 
-},{"./_memoizeCapped":164}],185:[function(require,module,exports){
+},{"./_memoizeCapped":154}],172:[function(require,module,exports){
 var isSymbol = require('./isSymbol');
 
 /** Used as references for various `Number` constants. */
@@ -11992,7 +11359,7 @@ function toKey(value) {
 
 module.exports = toKey;
 
-},{"./isSymbol":205}],186:[function(require,module,exports){
+},{"./isSymbol":191}],173:[function(require,module,exports){
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -12020,7 +11387,7 @@ function toSource(func) {
 
 module.exports = toSource;
 
-},{}],187:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 /**
  * Creates a function that returns `value`.
  *
@@ -12048,7 +11415,7 @@ function constant(value) {
 
 module.exports = constant;
 
-},{}],188:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 var isObject = require('./isObject'),
     now = require('./now'),
     toNumber = require('./toNumber');
@@ -12240,7 +11607,7 @@ function debounce(func, wait, options) {
 
 module.exports = debounce;
 
-},{"./isObject":201,"./now":211,"./toNumber":217}],189:[function(require,module,exports){
+},{"./isObject":187,"./now":197,"./toNumber":203}],176:[function(require,module,exports){
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -12279,7 +11646,7 @@ function eq(value, other) {
 
 module.exports = eq;
 
-},{}],190:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 var baseFlatten = require('./_baseFlatten');
 
 /**
@@ -12303,7 +11670,7 @@ function flatten(array) {
 
 module.exports = flatten;
 
-},{"./_baseFlatten":85}],191:[function(require,module,exports){
+},{"./_baseFlatten":82}],178:[function(require,module,exports){
 var baseHasIn = require('./_baseHasIn'),
     hasPath = require('./_hasPath');
 
@@ -12339,7 +11706,7 @@ function hasIn(object, path) {
 
 module.exports = hasIn;
 
-},{"./_baseHasIn":89,"./_hasPath":138}],192:[function(require,module,exports){
+},{"./_baseHasIn":86,"./_hasPath":129}],179:[function(require,module,exports){
 /**
  * This method returns the first argument it receives.
  *
@@ -12362,7 +11729,7 @@ function identity(value) {
 
 module.exports = identity;
 
-},{}],193:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 var baseIsArguments = require('./_baseIsArguments'),
     isObjectLike = require('./isObjectLike');
 
@@ -12400,7 +11767,7 @@ var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsAr
 
 module.exports = isArguments;
 
-},{"./_baseIsArguments":90,"./isObjectLike":202}],194:[function(require,module,exports){
+},{"./_baseIsArguments":87,"./isObjectLike":188}],181:[function(require,module,exports){
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -12428,7 +11795,7 @@ var isArray = Array.isArray;
 
 module.exports = isArray;
 
-},{}],195:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isLength = require('./isLength');
 
@@ -12463,7 +11830,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./isFunction":198,"./isLength":199}],196:[function(require,module,exports){
+},{"./isFunction":184,"./isLength":185}],183:[function(require,module,exports){
 var root = require('./_root'),
     stubFalse = require('./stubFalse');
 
@@ -12503,44 +11870,7 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-},{"./_root":173,"./stubFalse":215}],197:[function(require,module,exports){
-var baseIsEqual = require('./_baseIsEqual');
-
-/**
- * Performs a deep comparison between two values to determine if they are
- * equivalent.
- *
- * **Note:** This method supports comparing arrays, array buffers, booleans,
- * date objects, error objects, maps, numbers, `Object` objects, regexes,
- * sets, strings, symbols, and typed arrays. `Object` objects are compared
- * by their own, not inherited, enumerable properties. Functions and DOM
- * nodes are compared by strict equality, i.e. `===`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to compare.
- * @param {*} other The other value to compare.
- * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
- * @example
- *
- * var object = { 'a': 1 };
- * var other = { 'a': 1 };
- *
- * _.isEqual(object, other);
- * // => true
- *
- * object === other;
- * // => false
- */
-function isEqual(value, other) {
-  return baseIsEqual(value, other);
-}
-
-module.exports = isEqual;
-
-},{"./_baseIsEqual":91}],198:[function(require,module,exports){
+},{"./_root":163,"./stubFalse":201}],184:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObject = require('./isObject');
 
@@ -12579,7 +11909,7 @@ function isFunction(value) {
 
 module.exports = isFunction;
 
-},{"./_baseGetTag":88,"./isObject":201}],199:[function(require,module,exports){
+},{"./_baseGetTag":85,"./isObject":187}],185:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -12616,7 +11946,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],200:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 var baseIsMap = require('./_baseIsMap'),
     baseUnary = require('./_baseUnary'),
     nodeUtil = require('./_nodeUtil');
@@ -12645,7 +11975,7 @@ var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
 
 module.exports = isMap;
 
-},{"./_baseIsMap":93,"./_baseUnary":106,"./_nodeUtil":168}],201:[function(require,module,exports){
+},{"./_baseIsMap":88,"./_baseUnary":101,"./_nodeUtil":158}],187:[function(require,module,exports){
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -12678,7 +12008,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],202:[function(require,module,exports){
+},{}],188:[function(require,module,exports){
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -12709,7 +12039,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],203:[function(require,module,exports){
+},{}],189:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     getPrototype = require('./_getPrototype'),
     isObjectLike = require('./isObjectLike');
@@ -12773,7 +12103,7 @@ function isPlainObject(value) {
 
 module.exports = isPlainObject;
 
-},{"./_baseGetTag":88,"./_getPrototype":132,"./isObjectLike":202}],204:[function(require,module,exports){
+},{"./_baseGetTag":85,"./_getPrototype":123,"./isObjectLike":188}],190:[function(require,module,exports){
 var baseIsSet = require('./_baseIsSet'),
     baseUnary = require('./_baseUnary'),
     nodeUtil = require('./_nodeUtil');
@@ -12802,7 +12132,7 @@ var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
 
 module.exports = isSet;
 
-},{"./_baseIsSet":95,"./_baseUnary":106,"./_nodeUtil":168}],205:[function(require,module,exports){
+},{"./_baseIsSet":90,"./_baseUnary":101,"./_nodeUtil":158}],191:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -12833,7 +12163,7 @@ function isSymbol(value) {
 
 module.exports = isSymbol;
 
-},{"./_baseGetTag":88,"./isObjectLike":202}],206:[function(require,module,exports){
+},{"./_baseGetTag":85,"./isObjectLike":188}],192:[function(require,module,exports){
 var baseIsTypedArray = require('./_baseIsTypedArray'),
     baseUnary = require('./_baseUnary'),
     nodeUtil = require('./_nodeUtil');
@@ -12862,7 +12192,7 @@ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedA
 
 module.exports = isTypedArray;
 
-},{"./_baseIsTypedArray":96,"./_baseUnary":106,"./_nodeUtil":168}],207:[function(require,module,exports){
+},{"./_baseIsTypedArray":91,"./_baseUnary":101,"./_nodeUtil":158}],193:[function(require,module,exports){
 var arrayLikeKeys = require('./_arrayLikeKeys'),
     baseKeys = require('./_baseKeys'),
     isArrayLike = require('./isArrayLike');
@@ -12901,7 +12231,7 @@ function keys(object) {
 
 module.exports = keys;
 
-},{"./_arrayLikeKeys":74,"./_baseKeys":97,"./isArrayLike":195}],208:[function(require,module,exports){
+},{"./_arrayLikeKeys":72,"./_baseKeys":92,"./isArrayLike":182}],194:[function(require,module,exports){
 var arrayLikeKeys = require('./_arrayLikeKeys'),
     baseKeysIn = require('./_baseKeysIn'),
     isArrayLike = require('./isArrayLike');
@@ -12935,7 +12265,7 @@ function keysIn(object) {
 
 module.exports = keysIn;
 
-},{"./_arrayLikeKeys":74,"./_baseKeysIn":98,"./isArrayLike":195}],209:[function(require,module,exports){
+},{"./_arrayLikeKeys":72,"./_baseKeysIn":93,"./isArrayLike":182}],195:[function(require,module,exports){
 /**
  * Gets the last element of `array`.
  *
@@ -12957,7 +12287,7 @@ function last(array) {
 
 module.exports = last;
 
-},{}],210:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 var MapCache = require('./_MapCache');
 
 /** Error message constants. */
@@ -13032,7 +12362,7 @@ memoize.Cache = MapCache;
 
 module.exports = memoize;
 
-},{"./_MapCache":63}],211:[function(require,module,exports){
+},{"./_MapCache":62}],197:[function(require,module,exports){
 var root = require('./_root');
 
 /**
@@ -13057,7 +12387,7 @@ var now = function() {
 
 module.exports = now;
 
-},{"./_root":173}],212:[function(require,module,exports){
+},{"./_root":163}],198:[function(require,module,exports){
 var arrayMap = require('./_arrayMap'),
     baseClone = require('./_baseClone'),
     baseUnset = require('./_baseUnset'),
@@ -13116,7 +12446,7 @@ var omit = flatRest(function(object, paths) {
 
 module.exports = omit;
 
-},{"./_arrayMap":75,"./_baseClone":83,"./_baseUnset":107,"./_castPath":109,"./_copyObject":117,"./_customOmitClone":121,"./_flatRest":126,"./_getAllKeysIn":129}],213:[function(require,module,exports){
+},{"./_arrayMap":73,"./_baseClone":80,"./_baseUnset":102,"./_castPath":103,"./_copyObject":111,"./_customOmitClone":115,"./_flatRest":117,"./_getAllKeysIn":120}],199:[function(require,module,exports){
 var basePick = require('./_basePick'),
     flatRest = require('./_flatRest');
 
@@ -13143,7 +12473,7 @@ var pick = flatRest(function(object, paths) {
 
 module.exports = pick;
 
-},{"./_basePick":99,"./_flatRest":126}],214:[function(require,module,exports){
+},{"./_basePick":94,"./_flatRest":117}],200:[function(require,module,exports){
 /**
  * This method returns a new empty array.
  *
@@ -13168,7 +12498,7 @@ function stubArray() {
 
 module.exports = stubArray;
 
-},{}],215:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 /**
  * This method returns `false`.
  *
@@ -13188,7 +12518,7 @@ function stubFalse() {
 
 module.exports = stubFalse;
 
-},{}],216:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 var debounce = require('./debounce'),
     isObject = require('./isObject');
 
@@ -13259,7 +12589,7 @@ function throttle(func, wait, options) {
 
 module.exports = throttle;
 
-},{"./debounce":188,"./isObject":201}],217:[function(require,module,exports){
+},{"./debounce":175,"./isObject":187}],203:[function(require,module,exports){
 var isObject = require('./isObject'),
     isSymbol = require('./isSymbol');
 
@@ -13327,7 +12657,7 @@ function toNumber(value) {
 
 module.exports = toNumber;
 
-},{"./isObject":201,"./isSymbol":205}],218:[function(require,module,exports){
+},{"./isObject":187,"./isSymbol":191}],204:[function(require,module,exports){
 var baseToString = require('./_baseToString');
 
 /**
@@ -13357,7 +12687,7 @@ function toString(value) {
 
 module.exports = toString;
 
-},{"./_baseToString":105}],219:[function(require,module,exports){
+},{"./_baseToString":100}],205:[function(require,module,exports){
 'use strict';
 
 var simpleIsEqual = function simpleIsEqual(a, b) {
@@ -13399,7 +12729,7 @@ function index (resultFn, isEqual) {
 
 module.exports = index;
 
-},{}],220:[function(require,module,exports){
+},{}],206:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -13491,7 +12821,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],221:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -13677,7 +13007,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],222:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13772,7 +13102,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":226,"_process":221}],223:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":212,"_process":207}],209:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13833,7 +13163,7 @@ module.exports = function() {
   return ReactPropTypes;
 };
 
-},{"./lib/ReactPropTypesSecret":226}],224:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":212}],210:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -14392,7 +13722,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 };
 
 }).call(this,require('_process'))
-},{"./checkPropTypes":222,"./lib/ReactPropTypesSecret":226,"_process":221,"object-assign":220}],225:[function(require,module,exports){
+},{"./checkPropTypes":208,"./lib/ReactPropTypesSecret":212,"_process":207,"object-assign":206}],211:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -14424,7 +13754,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./factoryWithThrowingShims":223,"./factoryWithTypeCheckers":224,"_process":221}],226:[function(require,module,exports){
+},{"./factoryWithThrowingShims":209,"./factoryWithTypeCheckers":210,"_process":207}],212:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -14438,7 +13768,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],227:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 (function (process){
 /** @license React v16.6.1
  * react-dom.development.js
@@ -34169,7 +33499,7 @@ module.exports = reactDom;
 }
 
 }).call(this,require('_process'))
-},{"_process":221,"object-assign":220,"prop-types/checkPropTypes":222,"react":234,"scheduler":239,"scheduler/tracing":240}],228:[function(require,module,exports){
+},{"_process":207,"object-assign":206,"prop-types/checkPropTypes":208,"react":219,"scheduler":224,"scheduler/tracing":225}],214:[function(require,module,exports){
 /** @license React v16.6.1
  * react-dom.production.min.js
  *
@@ -34420,7 +33750,7 @@ void 0:t("40");return a._reactRootContainer?(Oh(function(){$h(null,null,a,!1,fun
 Ka,La,Ca.injectEventPluginsByName,qa,Ra,function(a){za(a,Qa)},Ib,Jb,Jd,Ea]},unstable_createRoot:function(a,b){Yh(a)?void 0:t("299","unstable_createRoot");return new Xh(a,!0,null!=b&&!0===b.hydrate)}};(function(a){var b=a.findFiberByHostInstance;return Ve(n({},a,{findHostInstanceByFiber:function(a){a=nd(a);return null===a?null:a.stateNode},findFiberByHostInstance:function(a){return b?b(a):null}}))})({findFiberByHostInstance:Ia,bundleType:0,version:"16.6.3",rendererPackageName:"react-dom"});
 var ei={default:bi},fi=ei&&bi||ei;module.exports=fi.default||fi;
 
-},{"object-assign":220,"react":234,"scheduler":239}],229:[function(require,module,exports){
+},{"object-assign":206,"react":219,"scheduler":224}],215:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -34462,7 +33792,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react-dom.development.js":227,"./cjs/react-dom.production.min.js":228,"_process":221}],230:[function(require,module,exports){
+},{"./cjs/react-dom.development.js":213,"./cjs/react-dom.production.min.js":214,"_process":207}],216:[function(require,module,exports){
 /**
  * This is a straight rip-off of the React.js ReactPropTypes.js proptype validators,
  * modified to make it possible to validate Immutable.js data.
@@ -34713,234 +34043,7 @@ function createMapContainsChecker(shapeTypes) {
 }
 
 module.exports = ImmutablePropTypes;
-},{"immutable":52}],231:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require('react-dom');
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var KEYCODES = {
-  ESCAPE: 27
-};
-
-var Portal = function (_React$Component) {
-  _inherits(Portal, _React$Component);
-
-  function Portal() {
-    _classCallCheck(this, Portal);
-
-    var _this = _possibleConstructorReturn(this, (Portal.__proto__ || Object.getPrototypeOf(Portal)).call(this));
-
-    _this.state = { active: false };
-    _this.handleWrapperClick = _this.handleWrapperClick.bind(_this);
-    _this.closePortal = _this.closePortal.bind(_this);
-    _this.handleOutsideMouseClick = _this.handleOutsideMouseClick.bind(_this);
-    _this.handleKeydown = _this.handleKeydown.bind(_this);
-    _this.portal = null;
-    _this.node = null;
-    return _this;
-  }
-
-  _createClass(Portal, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (this.props.closeOnEsc) {
-        document.addEventListener('keydown', this.handleKeydown);
-      }
-
-      if (this.props.closeOnOutsideClick) {
-        document.addEventListener('mouseup', this.handleOutsideMouseClick);
-        document.addEventListener('touchstart', this.handleOutsideMouseClick);
-      }
-
-      if (this.props.isOpened) {
-        this.openPortal();
-      }
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(newProps) {
-      // portal's 'is open' state is handled through the prop isOpened
-      if (typeof newProps.isOpened !== 'undefined') {
-        if (newProps.isOpened) {
-          if (this.state.active) {
-            this.renderPortal(newProps);
-          } else {
-            this.openPortal(newProps);
-          }
-        }
-        if (!newProps.isOpened && this.state.active) {
-          this.closePortal();
-        }
-      }
-
-      // portal handles its own 'is open' state
-      if (typeof newProps.isOpened === 'undefined' && this.state.active) {
-        this.renderPortal(newProps);
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      if (this.props.closeOnEsc) {
-        document.removeEventListener('keydown', this.handleKeydown);
-      }
-
-      if (this.props.closeOnOutsideClick) {
-        document.removeEventListener('mouseup', this.handleOutsideMouseClick);
-        document.removeEventListener('touchstart', this.handleOutsideMouseClick);
-      }
-
-      this.closePortal(true);
-    }
-  }, {
-    key: 'handleWrapperClick',
-    value: function handleWrapperClick(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if (this.state.active) {
-        return;
-      }
-      this.openPortal();
-    }
-  }, {
-    key: 'openPortal',
-    value: function openPortal() {
-      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.props;
-
-      this.setState({ active: true });
-      this.renderPortal(props);
-      this.props.onOpen(this.node);
-    }
-  }, {
-    key: 'closePortal',
-    value: function closePortal() {
-      var _this2 = this;
-
-      var isUnmounted = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-
-      var resetPortalState = function resetPortalState(overrideIsUnmounted) {
-        if (_this2.node) {
-          _reactDom2.default.unmountComponentAtNode(_this2.node);
-          document.body.removeChild(_this2.node);
-        }
-        _this2.portal = null;
-        _this2.node = null;
-
-        var finalIsUnmounted = overrideIsUnmounted === undefined ? isUnmounted : overrideIsUnmounted;
-
-        if (finalIsUnmounted !== true) {
-          _this2.setState({ active: false });
-        }
-      };
-
-      if (this.state.active) {
-        if (this.props.beforeClose) {
-          this.props.beforeClose(this.node, resetPortalState);
-        } else {
-          resetPortalState();
-        }
-
-        this.props.onClose();
-      }
-    }
-  }, {
-    key: 'handleOutsideMouseClick',
-    value: function handleOutsideMouseClick(e) {
-      if (!this.state.active) {
-        return;
-      }
-
-      var root = (0, _reactDom.findDOMNode)(this.portal);
-      if (root.contains(e.target) || e.button && e.button !== 0) {
-        return;
-      }
-
-      e.stopPropagation();
-      this.closePortal();
-    }
-  }, {
-    key: 'handleKeydown',
-    value: function handleKeydown(e) {
-      if (e.keyCode === KEYCODES.ESCAPE && this.state.active) {
-        this.closePortal();
-      }
-    }
-  }, {
-    key: 'renderPortal',
-    value: function renderPortal(props) {
-      if (!this.node) {
-        this.node = document.createElement('div');
-        document.body.appendChild(this.node);
-      }
-
-      var children = props.children;
-      // https://gist.github.com/jimfb/d99e0678e9da715ccf6454961ef04d1b
-      if (typeof props.children.type === 'function') {
-        children = _react2.default.cloneElement(props.children, { closePortal: this.closePortal });
-      }
-
-      this.portal = _reactDom2.default.unstable_renderSubtreeIntoContainer(this, children, this.node, this.props.onUpdate);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      if (this.props.openByClickOn) {
-        return _react2.default.cloneElement(this.props.openByClickOn, { onClick: this.handleWrapperClick });
-      }
-      return null;
-    }
-  }]);
-
-  return Portal;
-}(_react2.default.Component);
-
-exports.default = Portal;
-
-
-Portal.propTypes = {
-  children: _propTypes2.default.element.isRequired,
-  openByClickOn: _propTypes2.default.element,
-  closeOnEsc: _propTypes2.default.bool,
-  closeOnOutsideClick: _propTypes2.default.bool,
-  isOpened: _propTypes2.default.bool,
-  onOpen: _propTypes2.default.func,
-  onClose: _propTypes2.default.func,
-  beforeClose: _propTypes2.default.func,
-  onUpdate: _propTypes2.default.func
-};
-
-Portal.defaultProps = {
-  onOpen: function onOpen() {},
-  onClose: function onClose() {},
-  onUpdate: function onUpdate() {}
-};
-module.exports = exports['default'];
-
-},{"prop-types":225,"react":234,"react-dom":229}],232:[function(require,module,exports){
+},{"immutable":52}],217:[function(require,module,exports){
 (function (process){
 /** @license React v16.6.1
  * react.development.js
@@ -36784,7 +35887,7 @@ module.exports = react;
 }
 
 }).call(this,require('_process'))
-},{"_process":221,"object-assign":220,"prop-types/checkPropTypes":222}],233:[function(require,module,exports){
+},{"_process":207,"object-assign":206,"prop-types/checkPropTypes":208}],218:[function(require,module,exports){
 /** @license React v16.6.1
  * react.production.min.js
  *
@@ -36810,7 +35913,7 @@ _currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.P
 if(null!=b){void 0!==b.ref&&(h=b.ref,f=K.current);void 0!==b.key&&(g=""+b.key);var l=void 0;a.type&&a.type.defaultProps&&(l=a.type.defaultProps);for(c in b)L.call(b,c)&&!M.hasOwnProperty(c)&&(d[c]=void 0===b[c]&&void 0!==l?l[c]:b[c])}c=arguments.length-2;if(1===c)d.children=e;else if(1<c){l=Array(c);for(var m=0;m<c;m++)l[m]=arguments[m+2];d.children=l}return{$$typeof:p,type:a.type,key:g,ref:h,props:d,_owner:f}},createFactory:function(a){var b=N.bind(null,a);b.type=a;return b},isValidElement:O,version:"16.6.3",
 __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:K,assign:k}};X.unstable_ConcurrentMode=x;X.unstable_Profiler=u;var Y={default:X},Z=Y&&X||Y;module.exports=Z.default||Z;
 
-},{"object-assign":220}],234:[function(require,module,exports){
+},{"object-assign":206}],219:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -36821,7 +35924,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/react.development.js":232,"./cjs/react.production.min.js":233,"_process":221}],235:[function(require,module,exports){
+},{"./cjs/react.development.js":217,"./cjs/react.production.min.js":218,"_process":207}],220:[function(require,module,exports){
 (function (process){
 /** @license React v16.6.1
  * scheduler-tracing.development.js
@@ -37245,7 +36348,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 }
 
 }).call(this,require('_process'))
-},{"_process":221}],236:[function(require,module,exports){
+},{"_process":207}],221:[function(require,module,exports){
 /** @license React v16.6.1
  * scheduler-tracing.production.min.js
  *
@@ -37257,7 +36360,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 
 'use strict';Object.defineProperty(exports,"__esModule",{value:!0});var b=0;exports.__interactionsRef=null;exports.__subscriberRef=null;exports.unstable_clear=function(a){return a()};exports.unstable_getCurrent=function(){return null};exports.unstable_getThreadID=function(){return++b};exports.unstable_trace=function(a,d,c){return c()};exports.unstable_wrap=function(a){return a};exports.unstable_subscribe=function(){};exports.unstable_unsubscribe=function(){};
 
-},{}],237:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 (function (process){
 /** @license React v16.6.1
  * scheduler.development.js
@@ -37900,7 +37003,7 @@ exports.unstable_shouldYield = unstable_shouldYield;
 }
 
 }).call(this,require('_process'))
-},{"_process":221}],238:[function(require,module,exports){
+},{"_process":207}],223:[function(require,module,exports){
 /** @license React v16.6.1
  * scheduler.production.min.js
  *
@@ -37923,7 +37026,7 @@ exports.unstable_scheduleCallback=function(a,b){var c=-1!==k?k:exports.unstable_
 b=c.previous;b.next=c.previous=a;a.next=c;a.previous=b}return a};exports.unstable_cancelCallback=function(a){var b=a.next;if(null!==b){if(b===a)d=null;else{a===d&&(d=b);var c=a.previous;c.next=b;b.previous=c}a.next=a.previous=null}};exports.unstable_wrapCallback=function(a){var b=h;return function(){var c=h,e=k;h=b;k=exports.unstable_now();try{return a.apply(this,arguments)}finally{h=c,k=e,v()}}};exports.unstable_getCurrentPriorityLevel=function(){return h};
 exports.unstable_shouldYield=function(){return!f&&(null!==d&&d.expirationTime<l||w())};
 
-},{}],239:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -37934,7 +37037,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/scheduler.development.js":237,"./cjs/scheduler.production.min.js":238,"_process":221}],240:[function(require,module,exports){
+},{"./cjs/scheduler.development.js":222,"./cjs/scheduler.production.min.js":223,"_process":207}],225:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -37945,7 +37048,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 }).call(this,require('_process'))
-},{"./cjs/scheduler-tracing.development.js":235,"./cjs/scheduler-tracing.production.min.js":236,"_process":221}],241:[function(require,module,exports){
+},{"./cjs/scheduler-tracing.development.js":220,"./cjs/scheduler-tracing.production.min.js":221,"_process":207}],226:[function(require,module,exports){
 function isBackward(selection) {
     var startNode = selection.anchorNode;
     var startOffset = selection.anchorOffset;
@@ -37959,7 +37062,7 @@ function isBackward(selection) {
 
 module.exports = isBackward;
 
-},{}],242:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38061,7 +37164,7 @@ var index = {
 exports.default = index;
 
 
-},{"isomorphic-base64":58,"slate":254}],243:[function(require,module,exports){
+},{"isomorphic-base64":57,"slate":239}],228:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38287,369 +37390,37 @@ exports.HAS_INPUT_EVENTS_LEVEL_1 = HAS_INPUT_EVENTS_LEVEL_1;
 exports.HAS_INPUT_EVENTS_LEVEL_2 = HAS_INPUT_EVENTS_LEVEL_2;
 
 
-},{"is-in-browser":55}],244:[function(require,module,exports){
-(function (global){
+},{"is-in-browser":54}],229:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var global$1 = typeof global !== "undefined" ? global :
-            typeof self !== "undefined" ? self :
-            typeof window !== "undefined" ? window : {}
-
-// shim for using process in browser
-// based off https://github.com/defunctzombie/node-process/blob/master/browser.js
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-var cachedSetTimeout = defaultSetTimout;
-var cachedClearTimeout = defaultClearTimeout;
-if (typeof global$1.setTimeout === 'function') {
-    cachedSetTimeout = setTimeout;
-}
-if (typeof global$1.clearTimeout === 'function') {
-    cachedClearTimeout = clearTimeout;
-}
-
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-function nextTick(fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-}
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-var title = 'browser';
-var platform = 'browser';
-var browser = true;
-var env = {};
-var argv = [];
-var version = ''; // empty string to avoid regexp issues
-var versions = {};
-var release = {};
-var config = {};
-
-function noop() {}
-
-var on = noop;
-var addListener = noop;
-var once = noop;
-var off = noop;
-var removeListener = noop;
-var removeAllListeners = noop;
-var emit = noop;
-
-function binding(name) {
-    throw new Error('process.binding is not supported');
-}
-
-function cwd () { return '/' }
-function chdir (dir) {
-    throw new Error('process.chdir is not supported');
-}
-function umask() { return 0; }
-
-// from https://github.com/kumavis/browser-process-hrtime/blob/master/index.js
-var performance = global$1.performance || {};
-var performanceNow =
-  performance.now        ||
-  performance.mozNow     ||
-  performance.msNow      ||
-  performance.oNow       ||
-  performance.webkitNow  ||
-  function(){ return (new Date()).getTime() };
-
-// generate timestamp or delta
-// see http://nodejs.org/api/process.html#process_process_hrtime
-function hrtime(previousTimestamp){
-  var clocktime = performanceNow.call(performance)*1e-3;
-  var seconds = Math.floor(clocktime);
-  var nanoseconds = Math.floor((clocktime%1)*1e9);
-  if (previousTimestamp) {
-    seconds = seconds - previousTimestamp[0];
-    nanoseconds = nanoseconds - previousTimestamp[1];
-    if (nanoseconds<0) {
-      seconds--;
-      nanoseconds += 1e9;
-    }
-  }
-  return [seconds,nanoseconds]
-}
-
-var startTime = new Date();
-function uptime() {
-  var currentTime = new Date();
-  var dif = currentTime - startTime;
-  return dif / 1000;
-}
-
-var process = {
-  nextTick: nextTick,
-  title: title,
-  browser: browser,
-  env: env,
-  argv: argv,
-  version: version,
-  versions: versions,
-  on: on,
-  addListener: addListener,
-  once: once,
-  off: off,
-  removeListener: removeListener,
-  removeAllListeners: removeAllListeners,
-  emit: emit,
-  binding: binding,
-  cwd: cwd,
-  chdir: chdir,
-  umask: umask,
-  hrtime: hrtime,
-  platform: platform,
-  release: release,
-  config: config,
-  uptime: uptime
-};
-
-/* eslint-disable no-console */
-
 /**
- * Is deprecate interface forbidden?
- */
-
-var FORBID_DEPRECATE = process && process.env && process.env.FORBID_DEPRECATIONS;
-
-/**
- * Is warning scenarios forbidden?
- */
-
-var FORBID_WARNING = process && process.env && process.env.FORBID_WARNINGS;
-
-/**
- * Is in development?
+ * A `warning` helper, modeled after Facebook's and the `tiny-invariant` library.
  *
- * @type {Boolean}
- */
-
-var IS_DEV = typeof process !== 'undefined' && process.env && "development" !== 'production';
-
-/**
- * Has console?
- *
- * @type {Boolean}
- */
-
-var HAS_CONSOLE = typeof console != 'undefined' && typeof console.log == 'function' && typeof console.warn == 'function' && typeof console.error == 'function';
-
-/**
- * Log a `message` at `level`.
- *
- * @param {String} level
+ * @param {Mixed} condition
  * @param {String} message
- * @param {Any} ...args
  */
 
-function log(level, message) {
-  if (!IS_DEV) {
-    return;
-  }
+function warning(condition) {
+  var message = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
-  if (HAS_CONSOLE) {
-    var _console;
+  if (condition) return;
 
-    for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-      args[_key - 2] = arguments[_key];
-    }
+  var isProduction = "development" === 'production';
+  var log = console.warn || console.log; // eslint-disable-line no-console
 
-    (_console = console)[level].apply(_console, [message].concat(args));
+  if (isProduction) {
+    log('Warning');
+  } else {
+    log('Warning: ' + message);
   }
 }
 
-/**
- * Log an error `message`.
- *
- * @param {String} message
- * @param {Any} ...args
- */
-
-function error(message) {
-  if (HAS_CONSOLE) {
-    var _console2;
-
-    for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-      args[_key2 - 1] = arguments[_key2];
-    }
-
-    (_console2 = console).error.apply(_console2, [message].concat(args));
-  }
-}
-
-/**
- * Log a warning `message` in development only.
- *
- * @param {String} message
- * @param {Any} ...args
- */
-
-function warn(message) {
-  var logger = FORBID_WARNING ? forbidden : log;
-
-  for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
-    args[_key3 - 1] = arguments[_key3];
-  }
-
-  logger.apply(undefined, ['warn', 'Warning: ' + message].concat(args));
-}
-
-/**
- * Log a deprecation warning `message`, with helpful `version` number in
- * development only.
- *
- * @param {String} version
- * @param {String} message
- * @param {Any} ...args
- */
-
-function deprecate(version$$1, message) {
-  var logger = FORBID_DEPRECATE ? forbidden : log;
-
-  for (var _len4 = arguments.length, args = Array(_len4 > 2 ? _len4 - 2 : 0), _key4 = 2; _key4 < _len4; _key4++) {
-    args[_key4 - 2] = arguments[_key4];
-  }
-
-  logger.apply(undefined, ['warn', 'Deprecation (' + version$$1 + '): ' + message].concat(args));
-}
-
-function forbidden(level, message) {
-  throw new Error(message);
-}
-
-/**
- * Export.
- *
- * @type {Function}
- */
-
-var index = {
-  deprecate: deprecate,
-  error: error,
-  warn: warn
-};
-
-exports.default = index;
+exports.default = warning;
 
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],245:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38736,7 +37507,7 @@ KEYS.forEach(function (key) {
 exports.default = Hotkeys;
 
 
-},{"is-hotkey":54,"slate-dev-environment":243}],246:[function(require,module,exports){
+},{"is-hotkey":53,"slate-dev-environment":228}],231:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38980,7 +37751,6 @@ var CREATORS = {
         _attributes$normalize = attributes.normalize,
         normalize = _attributes$normalize === undefined ? true : _attributes$normalize;
 
-    var schema = slate.Schema.create(attributes.schema || {});
     var document = children.find(slate.Document.isDocument);
     var selection = children.find(slate.Selection.isSelection) || slate.Selection.create();
     var anchor = void 0;
@@ -39064,7 +37834,7 @@ var CREATORS = {
       throw new Error('Slate hyperscript ranges must have both `<anchor />` and `<focus />` defined if one is defined, but you only defined `<focus />`. For collapsed selections, use `<cursor />` instead.');
     }
 
-    var value = slate.Value.fromJSON({ data: data, document: document, selection: selection, schema: schema }, { normalize: normalize });
+    var value = slate.Value.fromJSON(_extends({ data: data, document: document, selection: selection }, attributes), { normalize: normalize });
 
     if (anchor || focus) {
       selection = selection.setPoints([anchor, focus]);
@@ -39285,19 +38055,19 @@ function resolveCreators(options) {
   var creators = _extends({}, CREATORS, options.creators || {});
 
   Object.keys(blocks).map(function (key) {
-    creators[key] = normalizeNode(key, blocks[key], 'block');
+    creators[key] = normalizeNode(blocks[key], 'block');
   });
 
   Object.keys(inlines).map(function (key) {
-    creators[key] = normalizeNode(key, inlines[key], 'inline');
+    creators[key] = normalizeNode(inlines[key], 'inline');
   });
 
   Object.keys(marks).map(function (key) {
-    creators[key] = normalizeMark(key, marks[key]);
+    creators[key] = normalizeMark(marks[key]);
   });
 
   Object.keys(decorations).map(function (key) {
-    creators[key] = normalizeNode(key, decorations[key], 'decoration');
+    creators[key] = normalizeNode(decorations[key], 'decoration');
   });
 
   creators.value = function (tagName) {
@@ -39312,15 +38082,14 @@ function resolveCreators(options) {
 }
 
 /**
- * Normalize a node creator with `key` and `value`, of `object`.
+ * Normalize a node creator of `value` and `object`.
  *
- * @param {String} key
  * @param {Function|Object|String} value
  * @param {String} object
  * @return {Function}
  */
 
-function normalizeNode(key, value, object) {
+function normalizeNode(value, object) {
   if (typeof value == 'function') {
     return value;
   }
@@ -39331,12 +38100,12 @@ function normalizeNode(key, value, object) {
 
   if (isPlainObject(value)) {
     return function (tagName, attributes, children) {
-      var attrKey = attributes.key,
+      var key = attributes.key,
           rest = objectWithoutProperties(attributes, ['key']);
 
       var attrs = _extends({}, value, {
         object: object,
-        key: attrKey,
+        key: key,
         data: _extends({}, value.data || {}, rest)
       });
 
@@ -39348,14 +38117,13 @@ function normalizeNode(key, value, object) {
 }
 
 /**
- * Normalize a mark creator with `key` and `value`.
+ * Normalize a mark creator of `value`.
  *
- * @param {String} key
  * @param {Function|Object|String} value
  * @return {Function}
  */
 
-function normalizeMark(key, value) {
+function normalizeMark(value) {
   if (typeof value == 'function') {
     return value;
   }
@@ -39389,7 +38157,7 @@ exports.default = index;
 exports.createHyperscript = createHyperscript;
 
 
-},{"is-plain-object":56,"slate":254}],247:[function(require,module,exports){
+},{"is-plain-object":55,"slate":239}],232:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -39428,6 +38196,8 @@ function deserialize(string) {
       defaultBlock = _options$defaultBlock === undefined ? 'line' : _options$defaultBlock,
       _options$defaultMarks = options.defaultMarks,
       defaultMarks = _options$defaultMarks === undefined ? [] : _options$defaultMarks,
+      _options$delimiter = options.delimiter,
+      delimiter = _options$delimiter === undefined ? '\n' : _options$delimiter,
       _options$toJSON = options.toJSON,
       toJSON = _options$toJSON === undefined ? false : _options$toJSON;
 
@@ -39444,10 +38214,9 @@ function deserialize(string) {
     document: {
       object: 'document',
       data: {},
-      nodes: string.split('\n').map(function (line) {
+      nodes: string.split(delimiter).map(function (line) {
         return _extends({}, defaultBlock, {
           object: 'block',
-          isVoid: false,
           data: {},
           nodes: [{
             object: 'text',
@@ -39474,7 +38243,9 @@ function deserialize(string) {
  */
 
 function serialize(value) {
-  return serializeNode(value.document);
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  return serializeNode(value.document, options);
 }
 
 /**
@@ -39485,8 +38256,13 @@ function serialize(value) {
  */
 
 function serializeNode(node) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var _options$delimiter2 = options.delimiter,
+      delimiter = _options$delimiter2 === undefined ? '\n' : _options$delimiter2;
+
+
   if (node.object == 'document' || node.object == 'block' && slate.Block.isBlockList(node.nodes)) {
-    return node.nodes.map(serializeNode).join('\n');
+    return node.nodes.map(serializeNode).join(delimiter);
   } else {
     return node.text;
   }
@@ -39506,7 +38282,7 @@ var index = {
 exports.default = index;
 
 
-},{"immutable":52,"slate":254}],248:[function(require,module,exports){
+},{"immutable":52,"slate":239}],233:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -39631,7 +38407,7 @@ var Types = {
 exports.default = Types;
 
 
-},{"slate":254}],249:[function(require,module,exports){
+},{"slate":239}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -39645,7 +38421,7 @@ var SlateTypes = _interopDefault(require('slate-prop-types'));
 var ImmutableTypes = _interopDefault(require('react-immutable-proptypes'));
 var slate = require('slate');
 var immutable = require('immutable');
-var logger = _interopDefault(require('slate-dev-logger'));
+var warning = _interopDefault(require('slate-dev-warning'));
 var getWindow = _interopDefault(require('get-window'));
 var slateDevEnvironment = require('slate-dev-environment');
 var isBackward = _interopDefault(require('selection-is-backward'));
@@ -39654,7 +38430,6 @@ var Base64 = _interopDefault(require('slate-base64-serializer'));
 var Plain = _interopDefault(require('slate-plain-serializer'));
 var Hotkeys = _interopDefault(require('slate-hotkeys'));
 var reactDom = require('react-dom');
-var Portal = _interopDefault(require('react-portal'));
 var memoizeOne = _interopDefault(require('memoize-one'));
 
 /**
@@ -40044,29 +38819,29 @@ var Leaf = function (_React$Component) {
         return React.createElement(
           'span',
           { 'data-slate-zero-width': 'z' },
-          '\u200B'
+          '\uFEFF'
         );
       }
 
       // COMPAT: If this is the last text node in an empty block, render a zero-
       // width space that will convert into a line break when copying and pasting
       // to support expected plain text.
-      if (text === '' && parent.object === 'block' && parent.text === '' && parent.nodes.size === 1) {
+      if (text === '' && parent.object === 'block' && parent.text === '' && parent.nodes.last() === node) {
         return React.createElement(
           'span',
           { 'data-slate-zero-width': 'n' },
-          '\u200B'
+          '\uFEFF'
         );
       }
 
       // COMPAT: If the text is empty, it's because it's on the edge of an inline
-      // void node, so we render a zero-width space so that the selection can be
+      // node, so we render a zero-width space so that the selection can be
       // inserted next to it still.
       if (text === '') {
         return React.createElement(
           'span',
           { 'data-slate-zero-width': 'z' },
-          '\u200B'
+          '\uFEFF'
         );
       }
 
@@ -40208,7 +38983,7 @@ var Text = function (_React$Component) {
         if (start.key === end.key) return false;
 
         // If the node's path is before the start path, ignore it.
-        var path = document.assertPathByKey(key);
+        var path = document.assertPath(key);
         if (slate.PathUtils.compare(path, start.path) === -1) return false;
 
         // If the node's path is after the end path, ignore it.
@@ -40687,9 +39462,7 @@ var Node = function (_React$Component) {
           return true;
         }
 
-        if (shouldUpdate === false) {
-          logger.warn("Returning false in `shouldNodeComponentUpdate` does not disable Slate's internal `shouldComponentUpdate` logic. If you want to prevent updates, use React's `shouldComponentUpdate` instead.");
-        }
+        warning(shouldUpdate !== false, "Returning false in `shouldNodeComponentUpdate` does not disable Slate's internal `shouldComponentUpdate` logic. If you want to prevent updates, use React's `shouldComponentUpdate` instead.");
       }
 
       // If the `readOnly` status has changed, re-render in case there is any
@@ -41374,6 +40147,8 @@ function removeAllRanges(selection) {
   }
 }
 
+var FIREFOX_NODE_TYPE_ACCESS_ERROR = /Permission denied to access property "nodeType"/;
+
 /**
  * Debug.
  *
@@ -41424,6 +40199,11 @@ var Content = function (_React$Component) {
 
       var window = getWindow(_this.element);
       var native = window.getSelection();
+
+      // .getSelection() can return null in some cases
+      // https://bugzilla.mozilla.org/show_bug.cgi?id=827585
+      if (!native) return;
+
       var rangeCount = native.rangeCount,
           anchorNode = native.anchorNode;
 
@@ -41449,7 +40229,8 @@ var Content = function (_React$Component) {
       var range = findDOMRange(selection, window);
 
       if (!range) {
-        logger.error('Unable to find a native DOM range from the current selection.', { selection: selection });
+        warning(false, 'Unable to find a native DOM range from the current selection.');
+
         return;
       }
 
@@ -41504,11 +40285,34 @@ var Content = function (_React$Component) {
     }, _this.isInEditor = function (target) {
       var _this2 = _this,
           element = _this2.element;
-      // COMPAT: Text nodes don't have `isContentEditable` property. So, when
-      // `target` is a text node use its parent node for check.
 
-      var el = target.nodeType === 3 ? target.parentNode : target;
-      return el.isContentEditable && (el === element || el.closest('[data-slate-editor]') === element);
+
+      var el = void 0;
+
+      try {
+        // COMPAT: In Firefox, sometimes the node can be comment which doesn't
+        // have .closest and it crashes.
+        if (target.nodeType === 8) {
+          return false;
+        }
+
+        // COMPAT: Text nodes don't have `isContentEditable` property. So, when
+        // `target` is a text node use its parent node for check.
+        el = target.nodeType === 3 ? target.parentNode : target;
+      } catch (err) {
+        // COMPAT: In Firefox, `target.nodeType` will throw an error if target is
+        // originating from an internal "restricted" element (e.g. a stepper
+        // arrow on a number input)
+        // see github.com/ianstormtaylor/slate/issues/1819
+        if (slateDevEnvironment.IS_FIREFOX && FIREFOX_NODE_TYPE_ACCESS_ERROR.test(err.message)) {
+          return false;
+        }
+
+        throw err;
+      }
+
+      var allowEdit = el.isContentEditable || el.closest('[data-slate-void]');
+      return allowEdit && (el === element || el.closest('[data-slate-editor]') === element);
     }, _this.onNativeSelectionChange = throttle(function (event) {
       if (_this.props.readOnly) return;
 
@@ -41578,7 +40382,7 @@ var Content = function (_React$Component) {
       // COMPAT: Restrict scope of `beforeinput` to clients that support the
       // Input Events Level 2 spec, since they are preventable events.
       if (slateDevEnvironment.HAS_INPUT_EVENTS_LEVEL_2) {
-        this.element.addEventListener('beforeinput', this.onBeforeInput);
+        this.element.addEventListener('beforeinput', this.handlers.onBeforeInput);
       }
 
       this.updateSelection();
@@ -41598,7 +40402,7 @@ var Content = function (_React$Component) {
       }
 
       if (slateDevEnvironment.HAS_INPUT_EVENTS_LEVEL_2) {
-        this.element.removeEventListener('beforeinput', this.onBeforeInput);
+        this.element.removeEventListener('beforeinput', this.handlers.onBeforeInput);
       }
     }
 
@@ -41767,8 +40571,7 @@ var Content = function (_React$Component) {
           // so we have to disable it like this. (2017/04/24)
           , 'data-gramm': false
         }),
-        children,
-        this.props.children
+        children
       );
     }
 
@@ -41790,7 +40593,6 @@ var Content = function (_React$Component) {
 
 Content.propTypes = {
   autoCorrect: Types.bool.isRequired,
-  children: Types.any.isRequired,
   className: Types.string,
   editor: Types.object.isRequired,
   readOnly: Types.bool.isRequired,
@@ -42017,12 +40819,12 @@ function getEventRange(event, value) {
       var previousText = document.getPreviousText(text.key);
 
       if (previousText) {
-        return _range.moveToEndOf(previousText);
+        return _range.moveToEndOfNode(previousText);
       }
     }
 
     var nextText = document.getNextText(text.key);
-    return nextText ? _range.moveToStartOf(nextText) : null;
+    return nextText ? _range.moveToStartOfNode(nextText) : null;
   }
 
   // Else resolve a range from the caret position where the drop occured.
@@ -42334,7 +41136,9 @@ function AfterPlugin() {
     event.preventDefault();
 
     var value = change.value;
-    var selection = value.selection;
+    var document = value.document,
+        selection = value.selection,
+        schema = value.schema;
 
     var range = findRange(targetRange, value);
 
@@ -42378,7 +41182,9 @@ function AfterPlugin() {
       case 'insertLineBreak':
       case 'insertParagraph':
         {
-          if (change.value.isInVoid) {
+          var hasVoidParent = document.hasVoidParent(selection.start.path, schema);
+
+          if (hasVoidParent) {
             change.moveToStartOfNextText();
           } else {
             change.splitBlockAtRange(range);
@@ -42435,13 +41241,20 @@ function AfterPlugin() {
    */
 
   function onClick(event, change, editor) {
-    if (editor.props.readOnly) return true;
+    if (editor.props.readOnly) {
+      return true;
+    }
 
     var value = change.value;
     var document = value.document,
         schema = value.schema;
 
     var node = findNode(event.target, value);
+
+    if (!node) {
+      return;
+    }
+
     var ancestors = document.getAncestors(node.key);
     var isVoid = node && (schema.isVoid(node) || ancestors.some(function (a) {
       return schema.isVoid(a);
@@ -42607,7 +41420,7 @@ function AfterPlugin() {
     // If the drag is internal and the target is after the selection, it
     // needs to account for the selection's content being deleted.
     if (isDraggingInternally && selection.end.key == target.end.key && selection.end.offset < target.end.offset) {
-      target = target.move(selection.start.key == selection.end.key ? 0 - selection.end.offset + selection.start.offset : 0 - selection.end.offset);
+      target = target.moveForward(selection.start.key == selection.end.key ? 0 - selection.end.offset + selection.start.offset : 0 - selection.end.offset);
     }
 
     if (isDraggingInternally) {
@@ -42741,14 +41554,17 @@ function AfterPlugin() {
     debug$5('onKeyDown', { event: event });
 
     var value = change.value;
-    var schema = value.schema;
+    var document = value.document,
+        selection = value.selection,
+        schema = value.schema;
+
+    var hasVoidParent = document.hasVoidParent(selection.start.path, schema);
 
     // COMPAT: In iOS, some of these hotkeys are handled in the
     // `onNativeBeforeInput` handler of the `<Content>` component in order to
     // preserve native autocorrect behavior, so they shouldn't be handled here.
-
     if (Hotkeys.isSplitBlock(event) && !slateDevEnvironment.IS_IOS) {
-      return value.isInVoid ? change.moveToStartOfNextText() : change.splitBlock();
+      return hasVoidParent ? change.moveToStartOfNextText() : change.splitBlock();
     }
 
     if (Hotkeys.isDeleteBackward(event) && !slateDevEnvironment.IS_IOS) {
@@ -42810,56 +41626,48 @@ function AfterPlugin() {
     // an inline is selected, we need to handle these hotkeys manually because
     // browsers won't know what to do.
     if (Hotkeys.isMoveBackward(event)) {
-      var document = value.document,
-          isInVoid = value.isInVoid,
-          previousText = value.previousText,
+      var previousText = value.previousText,
           startText = value.startText;
 
       var isPreviousInVoid = previousText && document.hasVoidParent(previousText.key, schema);
 
-      if (isInVoid || isPreviousInVoid || startText.text == '') {
+      if (hasVoidParent || isPreviousInVoid || startText.text == '') {
         event.preventDefault();
         return change.moveBackward();
       }
     }
 
     if (Hotkeys.isMoveForward(event)) {
-      var _document = value.document,
-          _isInVoid = value.isInVoid,
-          nextText = value.nextText,
+      var nextText = value.nextText,
           _startText = value.startText;
 
-      var isNextInVoid = nextText && _document.hasVoidParent(nextText.key, schema);
+      var isNextInVoid = nextText && document.hasVoidParent(nextText.key, schema);
 
-      if (_isInVoid || isNextInVoid || _startText.text == '') {
+      if (hasVoidParent || isNextInVoid || _startText.text == '') {
         event.preventDefault();
         return change.moveForward();
       }
     }
 
     if (Hotkeys.isExtendBackward(event)) {
-      var _document2 = value.document,
-          _isInVoid2 = value.isInVoid,
-          _previousText = value.previousText,
+      var _previousText = value.previousText,
           _startText2 = value.startText;
 
-      var _isPreviousInVoid = _previousText && _document2.hasVoidParent(_previousText.key, schema);
+      var _isPreviousInVoid = _previousText && document.hasVoidParent(_previousText.key, schema);
 
-      if (_isInVoid2 || _isPreviousInVoid || _startText2.text == '') {
+      if (hasVoidParent || _isPreviousInVoid || _startText2.text == '') {
         event.preventDefault();
         return change.moveFocusBackward();
       }
     }
 
     if (Hotkeys.isExtendForward(event)) {
-      var _document3 = value.document,
-          _isInVoid3 = value.isInVoid,
-          _nextText = value.nextText,
+      var _nextText = value.nextText,
           _startText3 = value.startText;
 
-      var _isNextInVoid = _nextText && _document3.hasVoidParent(_nextText.key, schema);
+      var _isNextInVoid = _nextText && document.hasVoidParent(_nextText.key, schema);
 
-      if (_isInVoid3 || _isNextInVoid || _startText3.text == '') {
+      if (hasVoidParent || _isNextInVoid || _startText3.text == '') {
         event.preventDefault();
         return change.moveFocusForward();
       }
@@ -42971,6 +41779,11 @@ function AfterPlugin() {
 
     var selection = document.createSelection(range);
     selection = selection.setIsFocused(true);
+
+    // Preserve active marks from the current selection.
+    // They will be cleared by `change.select` if the selection actually moved.
+    selection = selection.set('marks', value.selection.marks);
+
     change.select(selection);
   }
 
@@ -42985,11 +41798,9 @@ function AfterPlugin() {
   function renderEditor(props, editor) {
     var handlers = editor.handlers;
 
-
     return React.createElement(Content, _extends({}, handlers, {
       autoCorrect: props.autoCorrect,
       className: props.className,
-      children: props.children,
       editor: editor,
       readOnly: props.readOnly,
       role: props.role,
@@ -43188,7 +41999,9 @@ function BeforePlugin() {
     // This change isn't save into history since only schema is updated.
 
     if (value.schema != editor.schema) {
-      change.setValue({ schema: editor.schema }, { save: false }).normalize();
+      change.withoutSaving(function () {
+        change.setValue({ schema: editor.schema }).normalize();
+      });
     }
 
     debug$6('onChange');
@@ -43659,9 +42472,7 @@ var Editor = function (_React$Component) {
       // If we've resolved a few times already, and it's exactly in line with
       // the updates, then warn the user that they may be doing something wrong.
 
-      if (resolves > 5 && resolves === updates) {
-        logger.warn('A Slate <Editor> component is re-resolving `props.plugins` or `props.schema` on each update, which leads to poor performance. This is often due to passing in a new `schema` or `plugins` prop with each render by declaring them inline in your render function. Do not do this!');
-      }
+      warning(resolves < 5 || resolves !== updates, 'A Slate <Editor> component is re-resolving `props.plugins` or `props.schema` on each update, which leads to poor performance. This is often due to passing in a new `schema` or `plugins` prop with each render by declaring them inline in your render function. Do not do this!');
 
       if (change) {
         this.onChange(change);
@@ -43678,16 +42489,7 @@ var Editor = function (_React$Component) {
     key: 'render',
     value: function render() {
       debug$7('render', this);
-
-      var children = this.stack.map('renderPortal', this.value, this).map(function (child, i) {
-        return React.createElement(
-          Portal,
-          { key: i, isOpened: true },
-          child
-        );
-      });
-
-      var props = _extends({}, this.props, { children: children });
+      var props = _extends({}, this.props);
       var tree = this.stack.render('renderEditor', props, this);
       return tree;
     }
@@ -43875,7 +42677,7 @@ var _initialiseProps$4 = function _initialiseProps() {
 
   this.change = function () {
     if (_this2.tmp.isChanging) {
-      logger.warn("The `editor.change` method was called from within an existing `editor.change` callback. This is not allowed, and often due to calling `editor.change` directly from a plugin's event handler which is unnecessary.");
+      warning(false, "The `editor.change` method was called from within an existing `editor.change` callback. This is not allowed, and often due to calling `editor.change` directly from a plugin's event handler which is unnecessary.");
 
       return;
     }
@@ -44078,7 +42880,7 @@ exports.BeforePlugin = BeforePlugin;
 exports.default = index;
 
 
-},{"debug":250,"get-window":50,"immutable":52,"lodash/throttle":216,"memoize-one":219,"prop-types":225,"react":234,"react-dom":229,"react-immutable-proptypes":230,"react-portal":231,"selection-is-backward":241,"slate":254,"slate-base64-serializer":242,"slate-dev-environment":243,"slate-dev-logger":244,"slate-hotkeys":245,"slate-plain-serializer":247,"slate-prop-types":248}],250:[function(require,module,exports){
+},{"debug":235,"get-window":50,"immutable":52,"lodash/throttle":202,"memoize-one":205,"prop-types":211,"react":219,"react-dom":215,"react-immutable-proptypes":216,"selection-is-backward":226,"slate":239,"slate-base64-serializer":227,"slate-dev-environment":228,"slate-dev-warning":229,"slate-hotkeys":230,"slate-plain-serializer":232,"slate-prop-types":233}],235:[function(require,module,exports){
 (function (process){
 "use strict";
 
@@ -44262,7 +43064,7 @@ formatters.j = function (v) {
 
 
 }).call(this,require('_process'))
-},{"./common":251,"_process":221}],251:[function(require,module,exports){
+},{"./common":236,"_process":207}],236:[function(require,module,exports){
 "use strict";
 
 /**
@@ -44513,7 +43315,7 @@ function setup(env) {
 module.exports = setup;
 
 
-},{"ms":252}],252:[function(require,module,exports){
+},{"ms":237}],237:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -44677,7 +43479,7 @@ function plural(ms, msAbs, n, name) {
   return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
 }
 
-},{}],253:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -44731,7 +43533,7 @@ exports.PREVIOUS_SIBLING_OBJECT_INVALID = PREVIOUS_SIBLING_OBJECT_INVALID;
 exports.PREVIOUS_SIBLING_TYPE_INVALID = PREVIOUS_SIBLING_TYPE_INVALID;
 
 
-},{}],254:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -44740,14 +43542,11 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var isPlainObject = _interopDefault(require('is-plain-object'));
 var immutable = require('immutable');
-var logger = _interopDefault(require('slate-dev-logger'));
+var warning = _interopDefault(require('slate-dev-warning'));
 var esrever = require('esrever');
 var Debug = _interopDefault(require('debug'));
-var isEqual = _interopDefault(require('lodash/isEqual'));
-var slateSchemaViolations = require('slate-schema-violations');
 var pick = _interopDefault(require('lodash/pick'));
 var omit = _interopDefault(require('lodash/omit'));
-var isEmpty = _interopDefault(require('is-empty'));
 var direction = _interopDefault(require('direction'));
 
 /**
@@ -45347,7 +44146,6 @@ Document.prototype[MODEL_TYPES.DOCUMENT] = true;
 
 var DEFAULTS$1 = {
   data: new immutable.Map(),
-  isVoid: false,
   key: undefined,
   nodes: new immutable.List(),
   type: undefined
@@ -45384,7 +44182,6 @@ var Inline = function (_Record) {
       var object = {
         object: this.object,
         type: this.type,
-        isVoid: this.get('isVoid'),
         data: this.data.toJSON(),
         nodes: this.nodes.toArray().map(function (n) {
           return n.toJSON(options);
@@ -45474,8 +44271,6 @@ var Inline = function (_Record) {
 
       var _object$data = object.data,
           data = _object$data === undefined ? {} : _object$data,
-          _object$isVoid = object.isVoid,
-          isVoid = _object$isVoid === undefined ? false : _object$isVoid,
           _object$key = object.key,
           key = _object$key === undefined ? KeyUtils.create() : _object$key,
           _object$nodes = object.nodes,
@@ -45490,7 +44285,6 @@ var Inline = function (_Record) {
       var inline = new Inline({
         key: key,
         type: type,
-        isVoid: !!isVoid,
         data: new immutable.Map(data),
         nodes: Node.createList(nodes)
       });
@@ -46356,47 +45150,8 @@ var Text = function (_Record) {
   }
 
   createClass(Text, [{
-    key: 'getKeysToPathsTable',
+    key: 'searchLeafAtOffset',
 
-
-    /**
-     * Get an object mapping all the keys in the node to their paths.
-     *
-     * @return {Object}
-     */
-
-    value: function getKeysToPathsTable() {
-      return defineProperty({}, this.key, []);
-    }
-
-    /**
-     * Object.
-     *
-     * @return {String}
-     */
-
-  }, {
-    key: 'getText',
-
-
-    /**
-     * Get the concatenated text of the node, cached for text getter
-     *
-     * @returns {String}
-     */
-
-    value: function getText() {
-      return this.leaves.reduce(function (string, leaf) {
-        return string + leaf.text;
-      }, '');
-    }
-  }, {
-    key: 'getString',
-    value: function getString() {
-      logger.deprecate('0.39.0', 'The `Text.getString` property is deprecated, please use `Text.getText` instead.');
-
-      return this.getText();
-    }
 
     /**
      * Find the 'first' leaf at offset; By 'first' the alorighthm prefers `endOffset === offset` than `startOffset === offset`
@@ -46412,8 +45167,6 @@ var Text = function (_Record) {
      *   @property {Leaf} leaf
      */
 
-  }, {
-    key: 'searchLeafAtOffset',
     value: function searchLeafAtOffset(offset) {
       var endOffset = 0;
       var startOffset = 0;
@@ -46627,16 +45380,6 @@ var Text = function (_Record) {
         });
       });
     }
-  }, {
-    key: 'getFirstText',
-    value: function getFirstText() {
-      return this;
-    }
-  }, {
-    key: 'getLastText',
-    value: function getLastText() {
-      return this;
-    }
 
     /**
      * Get all of the marks on between two offsets
@@ -46737,32 +45480,6 @@ var Text = function (_Record) {
     }
 
     /**
-     * Get a node by `key`, to parallel other nodes.
-     *
-     * @param {String} key
-     * @return {Node|Null}
-     */
-
-  }, {
-    key: 'getNode',
-    value: function getNode(key) {
-      return this.key == key ? this : null;
-    }
-
-    /**
-     * Check if the node has a node by `key`, to parallel other nodes.
-     *
-     * @param {String} key
-     * @return {Boolean}
-     */
-
-  }, {
-    key: 'hasNode',
-    value: function hasNode(key) {
-      return !!this.getNode(key);
-    }
-
-    /**
      * Insert `text` at `index`.
      *
      * @param {Numbder} offset
@@ -46799,19 +45516,6 @@ var Text = function (_Record) {
       var nextLeaves = leaves.splice(index, 1, leaf.set('text', beforeText), Leaf.create({ text: text, marks: marks }), leaf.set('text', afterText));
 
       return this.setLeaves(nextLeaves);
-    }
-
-    /**
-     * Regenerate the node's key.
-     *
-     * @return {Text}
-     */
-
-  }, {
-    key: 'regenerateKey',
-    value: function regenerateKey() {
-      var key = KeyUtils.create();
-      return this.set('key', key);
     }
 
     /**
@@ -47011,53 +45715,6 @@ var Text = function (_Record) {
     }
 
     /**
-     * Normalize the text node with a `schema`.
-     *
-     * @param {Schema} schema
-     * @return {Function|Void}
-     */
-
-  }, {
-    key: 'normalize',
-    value: function normalize(schema) {
-      return schema.normalizeNode(this);
-    }
-
-    /**
-     * Validate the text node against a `schema`.
-     *
-     * @param {Schema} schema
-     * @return {Error|Void}
-     */
-
-  }, {
-    key: 'validate',
-    value: function validate(schema) {
-      return schema.validateNode(this);
-    }
-
-    /**
-     * Get the first invalid descendant
-     * PERF: Do not cache this method; because it can cause cycle reference
-     *
-     * @param {Schema} schema
-     * @returns {Text|Null}
-     */
-
-  }, {
-    key: 'getFirstInvalidNode',
-    value: function getFirstInvalidNode(schema) {
-      return this.validate(schema) ? this : null;
-    }
-  }, {
-    key: 'getFirstInvalidDescendant',
-    value: function getFirstInvalidDescendant(schema) {
-      logger.deprecate('0.39.0', 'The `Node.getFirstInvalidDescendant` method is deprecated, please use `Node.getFirstInvalidNode` instead.');
-
-      return this.getFirstInvalidNode(schema);
-    }
-
-    /**
      * Set leaves with normalized `leaves`
      *
      * @param {Schema} schema
@@ -47083,33 +45740,16 @@ var Text = function (_Record) {
     }
   }, {
     key: 'object',
-    get: function get$$1() {
-      return 'text';
-    }
+
 
     /**
-     * Is the node empty?
-     *
-     * @return {Boolean}
-     */
-
-  }, {
-    key: 'isEmpty',
-    get: function get$$1() {
-      logger.deprecate('0.39.0', 'The `Text.isEmpty` property is deprecated.');
-      return this.text == '';
-    }
-
-    /**
-     * Get the concatenated text of the node.
+     * Object.
      *
      * @return {String}
      */
 
-  }, {
-    key: 'text',
     get: function get$$1() {
-      return this.getText();
+      return 'text';
     }
   }], [{
     key: 'create',
@@ -47189,7 +45829,7 @@ var Text = function (_Record) {
 
       if (!leaves) {
         if (object.ranges) {
-          logger.deprecate('slate@0.27.0', 'The `ranges` property of Slate objects has been renamed to `leaves`.');
+          warning(false, 'As of slate@0.27.0, the `ranges` property of Slate objects has been renamed to `leaves`.');
 
           leaves = object.ranges;
         } else {
@@ -47255,7 +45895,7 @@ Text.prototype[MODEL_TYPES.TEXT] = true;
  * Memoize read methods.
  */
 
-memoize(Text.prototype, ['getActiveMarks', 'getMarks', 'getMarksAsArray', 'normalize', 'validate', 'getText', 'getKeysToPathsTable']);
+memoize(Text.prototype, ['getActiveMarks', 'getMarks', 'getMarksAsArray']);
 
 /**
  * A pseudo-model that is used for its static methods only.
@@ -47290,7 +45930,7 @@ var Node = function () {
 
 
         if (!object && attrs.kind) {
-          logger.deprecate('slate@0.32.0', 'The `kind` property of Slate objects has been renamed to `object`.');
+          warning(false, 'As of slate@0.32.0, the `kind` property of Slate objects has been renamed to `object`.');
 
           object = attrs.kind;
         }
@@ -47350,7 +45990,6 @@ var Node = function () {
       if (Block.isBlock(attrs) || Inline.isInline(attrs)) {
         return {
           data: attrs.data,
-          isVoid: attrs.isVoid,
           type: attrs.type
         };
       }
@@ -47363,7 +46002,6 @@ var Node = function () {
         var props = {};
         if ('type' in attrs) props.type = attrs.type;
         if ('data' in attrs) props.data = Data.create(attrs.data);
-        if ('isVoid' in attrs) props.isVoid = attrs.isVoid;
         return props;
       }
 
@@ -47384,7 +46022,7 @@ var Node = function () {
 
 
       if (!object && value.kind) {
-        logger.deprecate('slate@0.32.0', 'The `kind` property of Slate objects has been renamed to `object`.');
+        warning(false, 'As of slate@0.32.0, the `kind` property of Slate objects has been renamed to `object`.');
 
         object = value.kind;
       }
@@ -47447,7 +46085,6 @@ var Node = function () {
 
 var DEFAULTS$5 = {
   data: new immutable.Map(),
-  isVoid: false,
   key: undefined,
   nodes: new immutable.List(),
   type: undefined
@@ -47484,7 +46121,6 @@ var Block = function (_Record) {
       var object = {
         object: this.object,
         type: this.type,
-        isVoid: this.get('isVoid'),
         data: this.data.toJSON(),
         nodes: this.nodes.toArray().map(function (n) {
           return n.toJSON(options);
@@ -47574,8 +46210,6 @@ var Block = function (_Record) {
 
       var _object$data = object.data,
           data = _object$data === undefined ? {} : _object$data,
-          _object$isVoid = object.isVoid,
-          isVoid = _object$isVoid === undefined ? false : _object$isVoid,
           _object$key = object.key,
           key = _object$key === undefined ? KeyUtils.create() : _object$key,
           _object$nodes = object.nodes,
@@ -47590,7 +46224,6 @@ var Block = function (_Record) {
       var block = new Block({
         key: key,
         type: type,
-        isVoid: !!isVoid,
         data: immutable.Map(data),
         nodes: Node.createList(nodes)
       });
@@ -47666,18 +46299,6 @@ PROXY_TRANSFORMS.forEach(function (method) {
     }
   };
 });
-
-Changes.setBlock = function () {
-  logger.deprecate('slate@0.33.0', 'The `setBlock` method of Slate changes has been renamed to `setBlocks`.');
-
-  Changes.setBlocks.apply(Changes, arguments);
-};
-
-Changes.setInline = function () {
-  logger.deprecate('slate@0.33.0', 'The `setInline` method of Slate changes has been renamed to `setInlines`.');
-
-  Changes.setInlines.apply(Changes, arguments);
-};
 
 /**
  * Add a `mark` to the characters in the current selection.
@@ -49155,12 +47776,6 @@ Changes$1.setBlocksAtRange = function (change, range, properties) {
   });
 };
 
-Changes$1.setBlockAtRange = function () {
-  logger.deprecate('slate@0.33.0', 'The `setBlockAtRange` method of Slate changes has been renamed to `setBlocksAtRange`.');
-
-  Changes$1.setBlocksAtRange.apply(Changes$1, arguments);
-};
-
 /**
  * Set the `properties` of inline nodes in a `range`.
  *
@@ -49185,12 +47800,6 @@ Changes$1.setInlinesAtRange = function (change, range, properties) {
   });
 };
 
-Changes$1.setInlineAtRange = function () {
-  logger.deprecate('slate@0.33.0', 'The `setInlineAtRange` method of Slate changes has been renamed to `setInlinesAtRange`.');
-
-  Changes$1.setInlinesAtRange.apply(Changes$1, arguments);
-};
-
 /**
  * Split the block nodes at a `range`, to optional `height`.
  *
@@ -49206,12 +47815,12 @@ Changes$1.splitBlockAtRange = function (change, range) {
   var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
 
   var normalize = change.getFlag('normalize', options);
-
   var _range6 = range,
       start = _range6.start,
       end = _range6.end;
   var value = change.value;
-  var document = value.document;
+  var _value = value,
+      document = _value.document;
 
   var node = document.assertDescendant(start.key);
   var parent = document.getClosestBlock(node.key);
@@ -49227,15 +47836,20 @@ Changes$1.splitBlockAtRange = function (change, range) {
     normalize: normalize && range.isCollapsed
   });
 
+  value = change.value;
+  document = value.document;
+
   if (range.isExpanded) {
     if (range.isBackward) range = range.flip();
-    var nextBlock = change.value.document.getNextBlock(node.key);
+    var nextBlock = document.getNextBlock(node.key);
     range = range.moveAnchorToStartOfNode(nextBlock);
+    range = range.setFocus(range.focus.setPath(null));
 
     if (start.key === end.key) {
       range = range.moveFocusTo(range.anchor.key, end.offset - start.offset);
     }
 
+    range = document.resolveRange(range);
     change.deleteAtRange(range, { normalize: normalize });
   }
 };
@@ -49330,15 +47944,13 @@ Changes$1.unwrapBlockAtRange = function (change, range, properties) {
 
   var normalize = change.getFlag('normalize', options);
   var value = change.value;
-  var document = value.document,
-      schema = value.schema;
+  var document = value.document;
 
   var blocks = document.getBlocksAtRange(range);
   var wrappers = blocks.map(function (block) {
     return document.getClosest(block.key, function (parent) {
       if (parent.object != 'block') return false;
       if (properties.type != null && parent.type != properties.type) return false;
-      if (properties.isVoid != null && schema.isVoid(parent) != properties.isVoid) return false;
       if (properties.data != null && !parent.data.isSuperset(properties.data)) return false;
       return true;
     });
@@ -49431,15 +48043,13 @@ Changes$1.unwrapInlineAtRange = function (change, range, properties) {
 
   var normalize = change.getFlag('normalize', options);
   var value = change.value;
-  var document = value.document,
-      schema = value.schema;
+  var document = value.document;
 
   var texts = document.getTextsAtRange(range);
   var inlines = texts.map(function (text) {
     return document.getClosest(text.key, function (parent) {
       if (parent.object != 'inline') return false;
       if (properties.type != null && parent.type != properties.type) return false;
-      if (properties.isVoid != null && schema.isVoid(parent) != properties.isVoid) return false;
       if (properties.data != null && !parent.data.isSuperset(properties.data)) return false;
       return true;
     });
@@ -49456,6 +48066,8 @@ Changes$1.unwrapInlineAtRange = function (change, range, properties) {
         normalize: false
       });
     });
+
+    change.removeNodeByKey(inline.key, { normalize: false });
   });
 
   // TODO: optmize to only normalize the right block
@@ -50948,7 +49560,7 @@ var Point = function (_Record) {
       var target = node.getNode(key || path);
 
       if (!target) {
-        logger.warn("A point's `path` or `key` invalid and was reset:", this);
+        warning(false, "A point's `path` or `key` invalid and was reset!");
 
         var text = node.getFirstText();
         if (!text) return Point.create();
@@ -50963,7 +49575,7 @@ var Point = function (_Record) {
       }
 
       if (target.object !== 'text') {
-        logger.warn('A point should not reference a non-text node:', target);
+        warning(false, 'A point should not reference a non-text node!');
 
         var _text = target.getTextAtOffset(offset);
         var before = target.getOffset(_text.key);
@@ -50977,7 +49589,7 @@ var Point = function (_Record) {
       }
 
       if (target && path && key && key !== target.key) {
-        logger.warn("A point's `key` did not match its `path`:", this, target);
+        warning(false, "A point's `key` did not match its `path`!");
       }
 
       var point = this.merge({
@@ -51414,15 +50026,8 @@ var Decoration = function (_Record) {
     key: 'fromJSON',
     value: function fromJSON(object) {
       var anchor = object.anchor,
-          focus = object.focus;
-      var mark = object.mark;
-
-
-      if (object.marks) {
-        logger.deprecate('0.39.0', 'The `marks` property of decorations has been changed to a single `mark` property instead.');
-
-        mark = object.marks[0];
-      }
+          focus = object.focus,
+          mark = object.mark;
 
       var decoration = new Decoration({
         anchor: Point.fromJSON(anchor || {}),
@@ -51537,18 +50142,6 @@ var Range = function (_Record) {
       }
 
       if (isPlainObject(attrs)) {
-        if ('isFocused' in attrs || 'marks' in attrs) {
-          logger.deprecate('0.39.0', 'Using `Range.create` for selections is deprecated, please use `Selection.create` instead.');
-
-          return Selection.create(attrs);
-        }
-
-        if ('isAtomic' in attrs) {
-          logger.deprecate('0.39.0', 'Using `Range.create` for decorations is deprecated, please use `Decoration.create` instead.');
-
-          return Decoration.create(attrs);
-        }
-
         return Range.fromJSON(attrs);
       }
 
@@ -51616,27 +50209,6 @@ var Range = function (_Record) {
     value: function fromJSON(object) {
       var anchor = object.anchor,
           focus = object.focus;
-
-
-      if (!anchor && (object.anchorKey || object.anchorOffset || object.anchorPath)) {
-        logger.deprecate('0.37.0', '`Range` objects now take a `Point` object as an `anchor` instead of taking `anchorKey/Offset/Path` properties. But you passed:', object);
-
-        anchor = {
-          key: object.anchorKey,
-          offset: object.anchorOffset,
-          path: object.anchorPath
-        };
-      }
-
-      if (!focus && (object.focusKey || object.focusOffset || object.focusPath)) {
-        logger.deprecate('0.37.0', '`Range` objects now take a `Point` object as a `focus` instead of taking `focusKey/Offset/Path` properties. But you passed:', object);
-
-        focus = {
-          key: object.focusKey,
-          offset: object.focusOffset,
-          path: object.focusPath
-        };
-      }
 
       var range = new Range({
         anchor: Point.fromJSON(anchor || {}),
@@ -51887,27 +50459,6 @@ var Selection = function (_Record) {
           isFocused = _object$isFocused === undefined ? false : _object$isFocused,
           _object$marks = object.marks,
           marks = _object$marks === undefined ? null : _object$marks;
-
-
-      if (!anchor && (object.anchorKey || object.anchorOffset || object.anchorPath)) {
-        logger.deprecate('0.37.0', '`Selection` objects now take a `Point` object as an `anchor` instead of taking `anchorKey/Offset/Path` properties. But you passed:', object);
-
-        anchor = {
-          key: object.anchorKey,
-          offset: object.anchorOffset,
-          path: object.anchorPath
-        };
-      }
-
-      if (!focus && (object.focusKey || object.focusOffset || object.focusPath)) {
-        logger.deprecate('0.37.0', '`Selection` objects now take a `Point` object as a `focus` instead of taking `focusKey/Offset/Path` properties. But you passed:', object);
-
-        focus = {
-          key: object.focusKey,
-          offset: object.focusOffset,
-          path: object.focusPath
-        };
-      }
 
       var selection = new Selection({
         anchor: Point.fromJSON(anchor || {}),
@@ -52161,7 +50712,7 @@ History.prototype[MODEL_TYPES.HISTORY] = true;
 function shouldMerge(o, p) {
   if (!p) return false;
 
-  var merge = o.type == 'set_selection' && p.type == 'set_selection' || o.type == 'insert_text' && p.type == 'insert_text' && o.offset == p.offset + p.text.length && isEqual(o.path, p.path) || o.type == 'remove_text' && p.type == 'remove_text' && o.offset + o.text.length == p.offset && isEqual(o.path, p.path);
+  var merge = o.type == 'set_selection' && p.type == 'set_selection' || o.type == 'insert_text' && p.type == 'insert_text' && o.offset == p.offset + p.text.length && o.path.equals(p.path) || o.type == 'remove_text' && p.type == 'remove_text' && o.offset + o.text.length == p.offset && o.path.equals(p.path);
 
   return merge;
 }
@@ -52358,11 +50909,6 @@ var Stack = function (_Record) {
       var plugins = this.getPluginsWith(property);
       return plugins.reduceRight(function (children, plugin) {
         if (!plugin[property]) return children;
-
-        if (property === 'renderPortal') {
-          logger.deprecate('0.39.0', 'The `renderPortal` property of plugins is deprecated, please use `renderEditor` with a `<React.Fragment>` in React 16 instead.');
-        }
-
         var ret = plugin[property].apply(plugin, [props].concat(args));
         if (ret == null) return children;
         props.children = ret;
@@ -52521,17 +51067,7 @@ var CORE_RULES = [
   }
 },
 
-// Ensure that inline non-void nodes are never empty.
-{
-  match: {
-    object: 'inline',
-    isVoid: false,
-    nodes: [{ match: { object: 'text' } }]
-  },
-  text: /[\w\W]+/
-},
-
-// Ensure that inline void nodes are surrounded by text nodes.
+// Ensure that inline nodes are surrounded by text nodes.
 {
   match: { object: 'block' },
   first: [{ object: 'block' }, { object: 'text' }],
@@ -52622,8 +51158,22 @@ var Schema = function (_Record) {
   }
 
   createClass(Schema, [{
-    key: 'validateNode',
+    key: 'getNodeRules',
 
+
+    /**
+     * Get the schema rules for a `node`.
+     *
+     * @param {Node} node
+     * @return {Array}
+     */
+
+    value: function getNodeRules(node) {
+      var rules = this.rules.filter(function (r) {
+        return testRules(node, r.match);
+      });
+      return rules;
+    }
 
     /**
      * Validate a `node` with the schema, returning an error if it's invalid.
@@ -52632,10 +51182,10 @@ var Schema = function (_Record) {
      * @return {Error|Void}
      */
 
+  }, {
+    key: 'validateNode',
     value: function validateNode(node) {
-      var rules = this.rules.filter(function (r) {
-        return testRules(node, r.match);
-      });
+      var rules = this.getNodeRules(node);
       var failure = validateRules(node, rules, this.rules, { every: true });
       if (!failure) return;
       var error = new SlateError(failure.code, failure);
@@ -52734,9 +51284,10 @@ var Schema = function (_Record) {
   }, {
     key: 'isVoid',
     value: function isVoid(node) {
-      // COMPAT: Right now this just provides a way to get around the
-      // deprecation warnings, but in the future it will check the rules.
-      return node.get('isVoid');
+      var rule = this.rules.find(function (r) {
+        return 'isVoid' in r && testRules(node, r.match);
+      });
+      return rule ? rule.isVoid : false;
     }
 
     /**
@@ -52901,43 +51452,52 @@ function defaultNormalize(change, error) {
   var code = error.code,
       node = error.node,
       child = error.child,
+      next = error.next,
+      previous = error.previous,
       key = error.key,
       mark = error.mark;
 
 
   switch (code) {
-    case slateSchemaViolations.CHILD_OBJECT_INVALID:
-    case slateSchemaViolations.CHILD_TYPE_INVALID:
-    case slateSchemaViolations.CHILD_UNKNOWN:
-    case slateSchemaViolations.FIRST_CHILD_OBJECT_INVALID:
-    case slateSchemaViolations.FIRST_CHILD_TYPE_INVALID:
-    case slateSchemaViolations.LAST_CHILD_OBJECT_INVALID:
-    case slateSchemaViolations.LAST_CHILD_TYPE_INVALID:
+    case 'child_object_invalid':
+    case 'child_type_invalid':
+    case 'child_unknown':
+    case 'first_child_object_invalid':
+    case 'first_child_type_invalid':
+    case 'last_child_object_invalid':
+    case 'last_child_type_invalid':
       {
         return child.object === 'text' && node.object === 'block' && node.nodes.size === 1 ? change.removeNodeByKey(node.key, { normalize: false }) : change.removeNodeByKey(child.key, { normalize: false });
       }
 
-    case slateSchemaViolations.CHILD_REQUIRED:
-    case slateSchemaViolations.NODE_TEXT_INVALID:
-    case slateSchemaViolations.PARENT_OBJECT_INVALID:
-    case slateSchemaViolations.PARENT_TYPE_INVALID:
+    case 'previous_sibling_object_invalid':
+    case 'previous_sibling_type_invalid':
+      {
+        return previous.object === 'text' && node.object === 'block' && node.nodes.size === 1 ? change.removeNodeByKey(node.key, { normalize: false }) : change.removeNodeByKey(previous.key, { normalize: false });
+      }
+
+    case 'next_sibling_object_invalid':
+    case 'next_sibling_type_invalid':
+      {
+        return next.object === 'text' && node.object === 'block' && node.nodes.size === 1 ? change.removeNodeByKey(node.key, { normalize: false }) : change.removeNodeByKey(next.key, { normalize: false });
+      }
+
+    case 'child_required':
+    case 'node_text_invalid':
+    case 'parent_object_invalid':
+    case 'parent_type_invalid':
       {
         return node.object === 'document' ? node.nodes.forEach(function (n) {
           return change.removeNodeByKey(n.key, { normalize: false });
         }) : change.removeNodeByKey(node.key, { normalize: false });
       }
 
-    case slateSchemaViolations.NODE_DATA_INVALID:
+    case 'node_data_invalid':
       {
         return node.data.get(key) === undefined && node.object !== 'document' ? change.removeNodeByKey(node.key, { normalize: false }) : change.setNodeByKey(node.key, { data: node.data.delete(key) }, { normalize: false });
       }
 
-    case slateSchemaViolations.NODE_IS_VOID_INVALID:
-      {
-        return change.setNodeByKey(node.key, { isVoid: !node.get('isVoid') }, { normalize: false });
-      }
-
-    case slateSchemaViolations.NODE_MARK_INVALID:
+    case 'node_mark_invalid':
       {
         return node.getTexts().forEach(function (t) {
           return change.removeMarkByKey(t.key, 0, t.text.length, mark, {
@@ -53016,47 +51576,40 @@ function validateRules(object, rule, rules) {
     return first;
   }
 
-  var error = validateObject(object, rule) || validateType(object, rule) || validateIsVoid(object, rule) || validateData(object, rule) || validateMarks(object, rule) || validateText(object, rule) || validateFirst(object, rule) || validateLast(object, rule) || validateNodes(object, rule, rules);
+  var error = validateObject(object, rule) || validateType(object, rule) || validateData(object, rule) || validateMarks(object, rule) || validateText(object, rule) || validateFirst(object, rule) || validateLast(object, rule) || validateNodes(object, rule, rules);
 
   return error;
 }
 
 function validateObject(node, rule) {
-  if (rule.objects) {
-    logger.warn('The `objects` schema validation rule was changed. Please use the new `match` syntax with `object`.');
-  }
-
   if (rule.object == null) return;
   if (rule.object === node.object) return;
-  return fail(slateSchemaViolations.NODE_OBJECT_INVALID, { rule: rule, node: node });
+  if (typeof rule.object === 'function' && rule.object(node.object)) return;
+  return fail('node_object_invalid', { rule: rule, node: node });
 }
 
 function validateType(node, rule) {
-  if (rule.types) {
-    logger.warn('The `types` schema validation rule was changed. Please use the new `match` syntax with `type`.');
-  }
-
   if (rule.type == null) return;
   if (rule.type === node.type) return;
-  return fail(slateSchemaViolations.NODE_TYPE_INVALID, { rule: rule, node: node });
-}
-
-function validateIsVoid(node, rule) {
-  if (rule.isVoid == null) return;
-  if (rule.isVoid === node.get('isVoid')) return;
-  return fail(slateSchemaViolations.NODE_IS_VOID_INVALID, { rule: rule, node: node });
+  if (typeof rule.type === 'function' && rule.type(node.type)) return;
+  return fail('node_type_invalid', { rule: rule, node: node });
 }
 
 function validateData(node, rule) {
   if (rule.data == null) return;
   if (node.data == null) return;
 
+  if (typeof rule.data === 'function') {
+    if (rule.data(node.data)) return;
+    return fail('node_data_invalid', { rule: rule, node: node });
+  }
+
   for (var key in rule.data) {
     var fn = rule.data[key];
     var value = node.data && node.data.get(key);
     var valid = typeof fn === 'function' ? fn(value) : fn === value;
     if (valid) continue;
-    return fail(slateSchemaViolations.NODE_DATA_INVALID, { rule: rule, node: node, key: key, value: value });
+    return fail('node_data_invalid', { rule: rule, node: node, key: key, value: value });
   }
 }
 
@@ -53066,11 +51619,11 @@ function validateMarks(node, rule) {
 
   var _loop = function _loop(mark) {
     var valid = rule.marks.some(function (def) {
-      return def.type === mark.type;
+      return typeof def.type === 'function' ? def.type(mark.type) : def.type === mark.type;
     });
     if (valid) return 'continue';
     return {
-      v: fail(slateSchemaViolations.NODE_MARK_INVALID, { rule: rule, node: node, mark: mark })
+      v: fail('node_mark_invalid', { rule: rule, node: node, mark: mark })
     };
   };
 
@@ -53114,7 +51667,7 @@ function validateText(node, rule) {
 
   var valid = typeof rule.text === 'function' ? rule.text(text) : rule.text.test(text);
   if (valid) return;
-  return fail(slateSchemaViolations.NODE_TEXT_INVALID, { rule: rule, node: node, text: text });
+  return fail('node_text_invalid', { rule: rule, node: node, text: text });
 }
 
 function validateFirst(node, rule) {
@@ -53193,17 +51746,7 @@ function validateNodes(node, rule) {
 
     if (rule.nodes != null) {
       if (!def) {
-        return fail(slateSchemaViolations.CHILD_UNKNOWN, { rule: rule, node: node, child: child, index: index });
-      }
-
-      if (def) {
-        if (def.objects) {
-          logger.warn('The `objects` schema validation rule was changed. Please use the new `match` syntax with `object`.');
-        }
-
-        if (def.types) {
-          logger.warn('The `types` schema validation rule was changed. Please use the new `match` syntax with `type`.');
-        }
+        return fail('child_unknown', { rule: rule, node: node, child: child, index: index });
       }
 
       if (def.match) {
@@ -53229,7 +51772,7 @@ function validateNodes(node, rule) {
   if (rule.nodes != null) {
     while (min != null) {
       if (offset < min) {
-        return fail(slateSchemaViolations.CHILD_REQUIRED, { rule: rule, node: node, index: index });
+        return fail('child_required', { rule: rule, node: node, index: index });
       }
 
       nextDef();
@@ -53982,11 +52525,6 @@ var Value = function (_Record) {
 
       return object;
     }
-
-    /**
-     * Deprecated.
-     */
-
   }, {
     key: 'object',
 
@@ -54288,161 +52826,6 @@ var Value = function (_Record) {
     get: function get$$1() {
       return this.selection.isUnset ? new immutable.List() : this.document.getTextsAtRange(this.selection);
     }
-  }, {
-    key: 'hasUndos',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Value.hasUndos` property is deprecated, please use `history.undos.size` instead.');
-
-      return this.history.undos.size > 0;
-    }
-  }, {
-    key: 'hasRedos',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Value.hasRedos` property is deprecated, please use `history.redos.size` instead.');
-
-      return this.history.redos.size > 0;
-    }
-  }, {
-    key: 'isBlurred',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Value.isBlurred` property is deprecated, please use `selection.isBlurred` instead.');
-
-      return this.selection.isBlurred;
-    }
-  }, {
-    key: 'isFocused',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Value.isFocused` property is deprecated, please use `selection.isFocused` instead.');
-
-      return this.selection.isFocused;
-    }
-  }, {
-    key: 'isEmpty',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Value.isEmpty` property is deprecated.');
-      if (this.selection.isCollapsed) return true;
-      if (this.selection.end.offset != 0 && this.selection.start.offset != 0) return false;
-      return this.fragment.isEmpty;
-    }
-  }, {
-    key: 'isInVoid',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Value.isInVoid` property is deprecated.');
-      if (this.selection.isExpanded) return false;
-      return this.document.hasVoidParent(this.selection.start.key, this.schema);
-    }
-  }, {
-    key: 'isCollapsed',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.isCollapsed` property is deprecated, please use `selection.isCollapsed` instead.');
-
-      return this.selection.isCollapsed;
-    }
-  }, {
-    key: 'isExpanded',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.isExpanded` property is deprecated, please use `selection.isExpanded` instead.');
-
-      return this.selection.isExpanded;
-    }
-  }, {
-    key: 'isBackward',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.isBackward` property is deprecated, please use `selection.isBackward` instead.');
-
-      return this.selection.isBackward;
-    }
-  }, {
-    key: 'isForward',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.isForward` property is deprecated, please use `selection.isForward` instead.');
-
-      return this.selection.isForward;
-    }
-  }, {
-    key: 'startKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.startKey` property is deprecated, please use `selection.start.key` instead.');
-
-      return this.selection.start.key;
-    }
-  }, {
-    key: 'endKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.endKey` property is deprecated, please use `selection.end.key` instead.');
-
-      return this.selection.end.key;
-    }
-  }, {
-    key: 'startPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.startPath` property is deprecated, please use `selection.start.path` instead.');
-
-      return this.selection.start.path;
-    }
-  }, {
-    key: 'endPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.endPath` property is deprecated, please use `selection.end.path` instead.');
-
-      return this.selection.end.path;
-    }
-  }, {
-    key: 'startOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.startOffset` property is deprecated, please use `selection.start.offset` instead.');
-
-      return this.selection.start.offset;
-    }
-  }, {
-    key: 'endOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.endOffset` property is deprecated, please use `selection.end.offset` instead.');
-
-      return this.selection.end.offset;
-    }
-  }, {
-    key: 'anchorKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.anchorKey` property is deprecated, please use `selection.anchor.key` instead.');
-
-      return this.selection.anchor.key;
-    }
-  }, {
-    key: 'focusKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.focusKey` property is deprecated, please use `selection.focus.key` instead.');
-
-      return this.selection.focus.key;
-    }
-  }, {
-    key: 'anchorPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.anchorPath` property is deprecated, please use `selection.anchor.path` instead.');
-
-      return this.selection.anchor.path;
-    }
-  }, {
-    key: 'focusPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.focusPath` property is deprecated, please use `selection.focus.path` instead.');
-
-      return this.selection.focus.path;
-    }
-  }, {
-    key: 'anchorOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.anchorOffset` property is deprecated, please use `selection.anchor.offset` instead.');
-
-      return this.selection.anchor.offset;
-    }
-  }, {
-    key: 'focusOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `value.focusOffset` property is deprecated, please use `selection.focus.offset` instead.');
-
-      return this.selection.focus.offset;
-    }
   }], [{
     key: 'create',
 
@@ -54514,7 +52897,9 @@ var Value = function (_Record) {
     key: 'fromJSON',
     value: function fromJSON(object) {
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      var _object$document = object.document,
+      var _object$data = object.data,
+          data = _object$data === undefined ? {} : _object$data,
+          _object$document = object.document,
           document = _object$document === undefined ? {} : _object$document,
           _object$selection = object.selection,
           selection = _object$selection === undefined ? {} : _object$selection,
@@ -54523,49 +52908,11 @@ var Value = function (_Record) {
           _object$history = object.history,
           history = _object$history === undefined ? {} : _object$history;
 
-      var data = new immutable.Map();
-      document = Document.fromJSON(document);
-      selection = Selection.fromJSON(selection);
+
+      data = Data.fromJSON(data);
       schema = Schema.fromJSON(schema);
       history = History.fromJSON(history);
-
-      // Allow plugins to set a default value for `data`.
-      if (options.plugins) {
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
-
-        try {
-          for (var _iterator = options.plugins[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var plugin = _step.value;
-
-            if (plugin.data) {
-              logger.deprecate('0.39.0', 'The plugin `data` property is deprecated.');
-
-              data = data.merge(plugin.data);
-            }
-          }
-        } catch (err) {
-          _didIteratorError = true;
-          _iteratorError = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion && _iterator.return) {
-              _iterator.return();
-            }
-          } finally {
-            if (_didIteratorError) {
-              throw _iteratorError;
-            }
-          }
-        }
-      }
-
-      // Then merge in the `data` provided.
-      if ('data' in object) {
-        data = data.merge(object.data);
-      }
-
+      document = Document.fromJSON(document);
       selection = document.createSelection(selection);
 
       if (selection.isUnset) {
@@ -54573,8 +52920,6 @@ var Value = function (_Record) {
         if (text) selection = selection.moveToStartOfNode(text);
         selection = document.createSelection(selection);
       }
-
-      selection = document.createSelection(selection);
 
       var value = new Value({
         data: data,
@@ -54727,7 +53072,6 @@ var Operation = function (_Record) {
           if (key == 'properties' && type == 'set_node') {
             var _v2 = {};
             if ('data' in value) _v2.data = value.data.toJS();
-            if ('isVoid' in value) _v2.isVoid = value.get('isVoid');
             if ('type' in value) _v2.type = value.type;
             value = _v2;
           }
@@ -55935,7 +54279,7 @@ Changes$4.select = function (change, properties) {
   }
 
   // If there are no new properties to set, abort to avoid extra operations.
-  if (isEmpty(props)) {
+  if (Object.keys(props).length === 0) {
     return;
   }
 
@@ -56047,10 +54391,10 @@ function pointBackward(change, point) {
       schema = value.schema;
 
   var p = selection[point];
-  var isInVoid = document.hasVoidParent(p.path, schema);
+  var hasVoidParent = document.hasVoidParent(p.path, schema);
 
   // what is this?
-  if (!isInVoid && p.offset - n >= 0) {
+  if (!hasVoidParent && p.offset - n >= 0) {
     var range = selection['move' + Point + 'Backward'](n);
     change.select(range);
     return;
@@ -56065,7 +54409,7 @@ function pointBackward(change, point) {
   change['move' + Point + 'ToEndOfNode'](previous);
 
   // when is this called?
-  if (!isInVoid && !isPreviousInVoid && isInBlock) {
+  if (!hasVoidParent && !isPreviousInVoid && isInBlock) {
     var _range = change.value.selection['move' + Point + 'Backward'](n);
     change.select(_range);
   }
@@ -56085,10 +54429,10 @@ function pointForward(change, point) {
 
   var p = selection[point];
   var text = document.getNode(p.path);
-  var isInVoid = document.hasVoidParent(p.path, schema);
+  var hasVoidParent = document.hasVoidParent(p.path, schema);
 
   // what is this?
-  if (!isInVoid && p.offset + n <= text.text.length) {
+  if (!hasVoidParent && p.offset + n <= text.text.length) {
     var range = selection['move' + Point + 'Forward'](n);
     change.select(range);
     return;
@@ -56103,41 +54447,11 @@ function pointForward(change, point) {
   change['move' + Point + 'ToStartOfNode'](next);
 
   // when is this called?
-  if (!isInVoid && !isNextInVoid && isInBlock) {
+  if (!hasVoidParent && !isNextInVoid && isInBlock) {
     var _range2 = change.value.selection['move' + Point + 'Forward'](n);
     change.select(_range2);
   }
 }
-
-/**
- * Deprecated.
- */
-
-Changes$4.moveOffsetsTo = function (change, start) {
-  var end = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : start;
-
-  logger.deprecate('0.37.0', 'The `Change.moveOffsetsTo` method is deprecated, please use `Change.moveAnchorTo` and `Change.moveFocusTo` instead.');
-
-  change.moveAnchorTo(start).moveFocusTo(end);
-};
-
-var DEPRECATEDS = [['collapseCharBackward', 'moveBackward'], ['collapseCharForward', 'moveForward'], ['collapseLineBackward', 'moveLineBackward'], ['collapseLineForward', 'moveLineForward'], ['collapseTo', 'moveTo'], ['collapseToAnchor', 'moveToAnchor'], ['collapseToEnd', 'moveToEnd'], ['collapseToEndOf', 'moveToEndOfNode'], ['collapseToEndOfBlock', 'moveToEndOfBlock'], ['collapseToEndOfNextBlock', 'moveToEndOfNextBlock'], ['collapseToEndOfNextInline', 'moveToEndOfNextInline'], ['collapseToEndOfNextText', 'moveToEndOfNextText'], ['collapseToEndOfPreviousBlock', 'moveToEndOfPreviousBlock'], ['collapseToEndOfPreviousInline', 'moveToEndOfPreviousInline'], ['collapseToEndOfPreviousText', 'moveToEndOfPreviousText'], ['collapseToFocus', 'moveToFocus'], ['collapseToStart', 'moveToStart'], ['collapseToStartOf', 'moveToStartOfNode'], ['collapseToStartOfBlock', 'moveToStartOfBlock'], ['collapseToStartOfNextBlock', 'moveToStartOfNextBlock'], ['collapseToStartOfNextInline', 'moveToStartOfNextInline'], ['collapseToStartOfNextText', 'moveToStartOfNextText'], ['collapseToStartOfPreviousBlock', 'moveToStartOfPreviousBlock'], ['collapseToStartOfPreviousInline', 'moveToStartOfPreviousInline'], ['collapseToStartOfPreviousText', 'moveToStartOfPreviousText'], ['extend', 'moveFocusForward'], ['extendCharBackward', 'moveFocusBackward'], ['extendCharForward', 'moveFocusForward'], ['extendLineBackward', 'moveFocusToStartOfBlock'], ['extendLineForward', 'moveFocusToEndOfBlock'], ['extendTo', 'moveFocusTo'], ['extendToEndOf', 'moveFocusToEndOfNode'], ['extendToEndOfBlock', 'moveFocusToEndOfBlock'], ['extendToEndOfBlock', 'moveFocusToEndOfBlock'], ['extendToEndOfNextBlock', 'moveFocusToEndOfNextBlock'], ['extendToEndOfNextInline', 'moveFocusToEndOfNextInline'], ['extendToEndOfNextText', 'moveFocusToEndOfNextText'], ['extendToEndOfPreviousBlock', 'moveFocusToEndOfPreviousBlock'], ['extendToEndOfPreviousInline', 'moveFocusToEndOfPreviousInline'], ['extendToEndOfPreviousText', 'moveFocusToEndOfPreviousText'], ['extendToStartOf', 'moveFocusToStartOfNode'], ['extendToStartOfBlock', 'moveFocusToStartOfBlock'], ['extendToStartOfNextBlock', 'moveFocusToStartOfNextBlock'], ['extendToStartOfNextInline', 'moveFocusToStartOfNextInline'], ['extendToStartOfNextText', 'moveFocusToStartOfNextText'], ['extendToStartOfPreviousBlock', 'moveFocusToStartOfPreviousBlock'], ['extendToStartOfPreviousInline', 'moveFocusToStartOfPreviousInline'], ['extendToStartOfPreviousText', 'moveFocusToStartOfPreviousText'], ['move', 'moveForward'], ['moveAnchor', 'moveAnchorForward'], ['moveAnchorCharBackward', 'moveAnchorBackward'], ['moveAnchorCharForward', 'moveAnchorForward'], ['moveAnchorOffsetTo', 'moveAnchorTo'], ['moveAnchorToEndOf', 'moveAnchorToEndOfNode'], ['moveAnchorToStartOf', 'moveAnchorToStartOfNode'], ['moveCharBackward', 'moveBackward'], ['moveCharForward', 'moveForward'], ['moveEnd', 'moveEndForward'], ['moveEndCharBackward', 'moveEndBackward'], ['moveEndCharForward', 'moveEndForward'], ['moveEndOffsetTo', 'moveEndTo'], ['moveFocus', 'moveFocusForward'], ['moveFocusCharBackward', 'moveFocusBackward'], ['moveFocusCharForward', 'moveFocusForward'], ['moveFocusOffsetTo', 'moveFocusTo'], ['moveFocusToEndOf', 'moveFocusToEndOfNode'], ['moveFocusToStartOf', 'moveFocusToStartOfNode'], ['moveStart', 'moveStartForward'], ['moveStartCharBackward', 'moveStartBackward'], ['moveStartCharForward', 'moveStartForward'], ['moveStartOffsetTo', 'moveStartTo'], ['moveToEndOf', 'moveToEndOfNode'], ['moveToRangeOf', 'moveToRangeOfNode'], ['moveToStartOf', 'moveToStartOfNode'], ['selectAll', 'moveToRangeOfDocument']];
-
-DEPRECATEDS.forEach(function (_ref) {
-  var _ref2 = slicedToArray(_ref, 2),
-      deprecated = _ref2[0],
-      method = _ref2[1];
-
-  Changes$4[deprecated] = function (change) {
-    logger.deprecate('0.37.0', 'The `Change.' + deprecated + '` method is deprecated, please use `Change.' + method + '` instead.');
-
-    for (var _len32 = arguments.length, args = Array(_len32 > 1 ? _len32 - 1 : 0), _key32 = 1; _key32 < _len32; _key32++) {
-      args[_key32 - 1] = arguments[_key32];
-    }
-
-    change[method].apply(change, args);
-  };
-});
 
 /**
  * Changes.
@@ -56336,7 +54650,8 @@ function normalizeNodeAndChildren(change, node, schema) {
  */
 
 function normalizeNode(change, node, schema) {
-  var max = schema.stack.plugins.length + schema.rules.length + 1;
+  var max = schema.stack.plugins.length + schema.rules.length + (node.object === 'text' ? 1 : node.nodes.size);
+
   var iterations = 0;
 
   function iterate(c, n) {
@@ -56809,18 +55124,6 @@ var CommonInterface = function () {
     value: function toJS() {
       return this.toJSON.apply(this, arguments);
     }
-
-    /**
-     * Deprecated.
-     */
-
-  }, {
-    key: 'kind',
-    get: function get$$1() {
-      logger.deprecate('slate@0.32.0', 'The `kind` property of Slate objects has been renamed to `object`.');
-
-      return this.object;
-    }
   }], [{
     key: 'fromJS',
 
@@ -56850,14 +55153,13 @@ mixin(CommonInterface, [Block, Change, Decoration, Document, History, Inline, Le
  * @type {Class}
  */
 
-var NodeInterface = function () {
-  function NodeInterface() {
-    classCallCheck(this, NodeInterface);
+var ElementInterface = function () {
+  function ElementInterface() {
+    classCallCheck(this, ElementInterface);
   }
 
-  createClass(NodeInterface, [{
+  createClass(ElementInterface, [{
     key: 'addMark',
-
 
     /**
      * Add mark to text at `offset` and `length` in node by `path`.
@@ -57299,15 +55601,6 @@ var NodeInterface = function () {
   }, {
     key: 'getClosestVoid',
     value: function getClosestVoid(path, schema) {
-      if (!schema) {
-        logger.deprecate('0.38.0', 'Calling the `Node.getClosestVoid` method without passing a second `schema` argument is deprecated.');
-
-        var closest = this.getClosest(path, function (p) {
-          return p.get('isVoid');
-        });
-        return closest;
-      }
-
       var ancestors = this.getAncestors(path);
       var ancestor = ancestors.findLast(function (a) {
         return schema.isVoid(a);
@@ -57389,53 +55682,6 @@ var NodeInterface = function () {
       });
       var ret = this.getIn(deep);
       return ret;
-    }
-
-    /**
-     * Get the first invalid descendant
-     *
-     * @param {Schema} schema
-     * @return {Node|Text|Null}
-     */
-
-  }, {
-    key: 'getFirstInvalidNode',
-    value: function getFirstInvalidNode(schema) {
-      var result = null;
-
-      this.nodes.find(function (n) {
-        result = n.validate(schema) ? n : n.getFirstInvalidNode(schema);
-        return result;
-      });
-
-      return result;
-    }
-  }, {
-    key: 'getFirstInvalidDescendant',
-    value: function getFirstInvalidDescendant(schema) {
-      logger.deprecate('0.39.0', 'The `Node.getFirstInvalidDescendant` method is deprecated, please use `Node.getFirstInvalidNode` instead.');
-
-      return this.getFirstInvalidNode(schema);
-    }
-
-    /**
-     * Get the first child text node.
-     *
-     * @return {Node|Null}
-     */
-
-  }, {
-    key: 'getFirstText',
-    value: function getFirstText() {
-      var descendant = null;
-
-      var found = this.nodes.find(function (node) {
-        if (node.object === 'text') return true;
-        descendant = node.getFirstText();
-        return !!descendant;
-      });
-
-      return descendant || found;
     }
 
     /**
@@ -57727,56 +55973,6 @@ var NodeInterface = function () {
     }
 
     /**
-     * Get an object mapping all the keys in the node to their paths.
-     *
-     * @return {Object}
-     */
-
-  }, {
-    key: 'getKeysToPathsTable',
-    value: function getKeysToPathsTable() {
-      var _this5 = this;
-
-      var ret = defineProperty({}, this.key, []);
-
-      this.nodes.forEach(function (node, i) {
-        var nested = node.getKeysToPathsTable();
-
-        for (var key in nested) {
-          var path = nested[key];
-
-          if (ret[key]) {
-            logger.warn('A node with a duplicate key of "' + key + '" was found! Duplicate keys are not allowed, you should use `node.regenerateKey` before inserting if you are reusing an existing node.', _this5);
-          }
-
-          ret[key] = [i].concat(toConsumableArray(path));
-        }
-      });
-
-      return ret;
-    }
-
-    /**
-     * Get the last child text node.
-     *
-     * @return {Node|Null}
-     */
-
-  }, {
-    key: 'getLastText',
-    value: function getLastText() {
-      var descendant = null;
-
-      var found = this.nodes.findLast(function (node) {
-        if (node.object == 'text') return true;
-        descendant = node.getLastText();
-        return descendant;
-      });
-
-      return descendant || found;
-    }
-
-    /**
      * Get all of the marks for all of the characters of every text node.
      *
      * @return {Set<Mark>}
@@ -57981,22 +56177,6 @@ var NodeInterface = function () {
     }
 
     /**
-     * Get a node in the tree.
-     *
-     * @param {List|String} path
-     * @return {Node|Null}
-     */
-
-  }, {
-    key: 'getNode',
-    value: function getNode(path) {
-      path = this.resolvePath(path);
-      if (!path) return null;
-      var node = path.size ? this.getDescendant(path) : this;
-      return node;
-    }
-
-    /**
      * Get the offset for a descendant text node by `key`.
      *
      * @param {String} key
@@ -58158,24 +56338,6 @@ var NodeInterface = function () {
     }
 
     /**
-     * Find the path to a node.
-     *
-     * @param {String|List} key
-     * @return {List}
-     */
-
-  }, {
-    key: 'getPath',
-    value: function getPath(key) {
-      // Handle the case of passing in a path directly, to match other methods.
-      if (immutable.List.isList(key)) return key;
-
-      var dict = this.getKeysToPathsTable();
-      var path = dict[key];
-      return path ? immutable.List(path) : null;
-    }
-
-    /**
      * Get the block node before a descendant text node by `key`.
      *
      * @param {String} key
@@ -58325,22 +56487,6 @@ var NodeInterface = function () {
       if (isSelected && startIndex == null) startIndex = 0;
       if (isSelected && endIndex == null) endIndex = this.nodes.size;
       return startIndex == null ? null : { start: startIndex, end: endIndex };
-    }
-
-    /**
-     * Get the concatenated text string of all child nodes.
-     *
-     * @return {String}
-     */
-
-  }, {
-    key: 'getText',
-    value: function getText() {
-      var text = this.nodes.reduce(function (string, node) {
-        return string + node.text;
-      }, '');
-
-      return text;
     }
 
     /**
@@ -58539,20 +56685,6 @@ var NodeInterface = function () {
     }
 
     /**
-     * Recursively check if a node exists.
-     *
-     * @param {List|String} path
-     * @return {Boolean}
-     */
-
-  }, {
-    key: 'hasNode',
-    value: function hasNode(path) {
-      var node = this.getNode(path);
-      return !!node;
-    }
-
-    /**
      * Check if a node has a void parent.
      *
      * @param {List|String} path
@@ -58563,13 +56695,6 @@ var NodeInterface = function () {
   }, {
     key: 'hasVoidParent',
     value: function hasVoidParent(path, schema) {
-      if (!schema) {
-        logger.deprecate('0.38.0', 'Calling the `Node.hasVoidParent` method without the second `schema` argument is deprecated.');
-
-        var _closest = this.getClosestVoid(path);
-        return !!_closest;
-      }
-
       var closest = this.getClosestVoid(path, schema);
       return !!closest;
     }
@@ -58624,9 +56749,11 @@ var NodeInterface = function () {
   }, {
     key: 'isLeafBlock',
     value: function isLeafBlock() {
-      return this.object === 'block' && this.nodes.every(function (n) {
-        return n.object !== 'block';
-      });
+      var object = this.object,
+          nodes = this.nodes;
+
+      var first = nodes.first();
+      return object === 'block' && first.object !== 'block';
     }
 
     /**
@@ -58638,9 +56765,11 @@ var NodeInterface = function () {
   }, {
     key: 'isLeafInline',
     value: function isLeafInline() {
-      return this.object === 'inline' && this.nodes.every(function (n) {
-        return n.object !== 'inline';
-      });
+      var object = this.object,
+          nodes = this.nodes;
+
+      var first = nodes.first();
+      return object === 'inline' && first.object !== 'inline';
     }
 
     /**
@@ -58654,13 +56783,13 @@ var NodeInterface = function () {
   }, {
     key: 'mapChildren',
     value: function mapChildren(iterator) {
-      var _this6 = this;
+      var _this5 = this;
 
       var nodes = this.nodes;
 
 
       nodes.forEach(function (node, i) {
-        var ret = iterator(node, i, _this6.nodes);
+        var ret = iterator(node, i, _this5.nodes);
         if (ret !== node) nodes = nodes.set(ret.key, ret);
       });
 
@@ -58679,7 +56808,7 @@ var NodeInterface = function () {
   }, {
     key: 'mapDescendants',
     value: function mapDescendants(iterator) {
-      var _this7 = this;
+      var _this6 = this;
 
       var nodes = this.nodes;
 
@@ -58687,7 +56816,7 @@ var NodeInterface = function () {
       nodes.forEach(function (node, index) {
         var ret = node;
         if (ret.object !== 'text') ret = ret.mapDescendants(iterator);
-        ret = iterator(ret, index, _this7.nodes);
+        ret = iterator(ret, index, _this6.nodes);
         if (ret === node) return;
 
         nodes = nodes.set(index, ret);
@@ -58774,20 +56903,6 @@ var NodeInterface = function () {
     }
 
     /**
-     * Normalize the node with a `schema`.
-     *
-     * @param {Schema} schema
-     * @return {Function|Void}
-     */
-
-  }, {
-    key: 'normalize',
-    value: function normalize(schema) {
-      var normalizer = schema.normalizeNode(this);
-      return normalizer;
-    }
-
-    /**
      * Attempt to "refind" a node by a previous `path`, falling back to looking
      * it up by `key` again.
      *
@@ -58819,20 +56934,6 @@ var NodeInterface = function () {
       var node = this.getDescendant(path);
       var found = node && node.key === key ? path : this.getPath(key);
       return found;
-    }
-
-    /**
-     * Regenerate the node's key.
-     *
-     * @return {Node}
-     */
-
-  }, {
-    key: 'regenerateKey',
-    value: function regenerateKey() {
-      var key = KeyUtils.create();
-      var node = this.set('key', key);
-      return node;
     }
 
     /**
@@ -58932,35 +57033,6 @@ var NodeInterface = function () {
       decoration = Decoration.create(decoration);
       decoration = decoration.normalize(this);
       return decoration;
-    }
-
-    /**
-     * Resolve a path from a path list or key string.
-     *
-     * An `index` can be provided, in which case paths created from a key string
-     * will have the index pushed onto them. This is helpful in cases where you
-     * want to accept either a `path` or a `key, index` combination for targeting
-     * a location in the tree that doesn't exist yet, like when inserting.
-     *
-     * @param {List|String} value
-     * @param {Number} index
-     * @return {List}
-     */
-
-  }, {
-    key: 'resolvePath',
-    value: function resolvePath(path, index) {
-      if (typeof path === 'string') {
-        path = this.getPath(path);
-
-        if (index != null) {
-          path = path.concat(index);
-        }
-      } else {
-        path = PathUtils.create(path);
-      }
-
-      return path;
     }
 
     /**
@@ -59091,156 +57163,8 @@ var NodeInterface = function () {
       ret = ret.insertNode(path, a);
       return ret;
     }
-
-    /**
-     * Validate the node against a `schema`.
-     *
-     * @param {Schema} schema
-     * @return {Error|Void}
-     */
-
-  }, {
-    key: 'validate',
-    value: function validate(schema) {
-      return schema.validateNode(this);
-    }
-
-    /**
-     * Deprecated.
-     */
-
-  }, {
-    key: 'getNodeAtPath',
-    value: function getNodeAtPath(path) {
-      logger.deprecate('0.35.0', 'The `Node.getNodeAtPath` method has been combined into `Node.getNode`.');
-
-      return this.getNode(path);
-    }
-  }, {
-    key: 'getDescendantAtPath',
-    value: function getDescendantAtPath(path) {
-      logger.deprecate('0.35.0', 'The `Node.getDescendantAtPath` has been combined into `Node.getDescendant`.');
-
-      return this.getDescendant(path);
-    }
-  }, {
-    key: 'getKeys',
-    value: function getKeys() {
-      logger.deprecate('0.35.0', 'The `Node.getKeys` method is deprecated.');
-
-      var keys = this.getKeysAsArray();
-      return immutable.Set(keys);
-    }
-  }, {
-    key: 'getKeysAsArray',
-    value: function getKeysAsArray() {
-      logger.deprecate('0.35.0', 'The `Node.getKeysAsArray` method is deprecated.');
-
-      var dict = this.getKeysToPathsTable();
-      var keys = [];
-
-      for (var key in dict) {
-        if (this.key !== key) {
-          keys.push(key);
-        }
-      }
-
-      return keys;
-    }
-  }, {
-    key: 'areDescendantsSorted',
-    value: function areDescendantsSorted(first, second) {
-      var _this8 = this;
-
-      logger.deprecate('0.35.0', 'The `Node.areDescendantsSorted` method is deprecated. Use the new `PathUtils.compare` helper instead.');
-
-      first = KeyUtils.create(first);
-      second = KeyUtils.create(second);
-
-      var keys = this.getKeysAsArray().filter(function (k) {
-        return k !== _this8.key;
-      });
-      var firstIndex = keys.indexOf(first);
-      var secondIndex = keys.indexOf(second);
-      if (firstIndex == -1 || secondIndex == -1) return null;
-
-      return firstIndex < secondIndex;
-    }
-  }, {
-    key: 'isInRange',
-    value: function isInRange(range) {
-      logger.deprecate('0.35.0', 'The `Node.isInRange` method is deprecated. Use the new `PathUtils.compare` helper instead.');
-
-      range = this.resolveRange(range);
-
-      var node = this;
-      var _range10 = range,
-          startKey = _range10.startKey,
-          endKey = _range10.endKey,
-          isCollapsed = _range10.isCollapsed;
-
-      // PERF: solve the most common cast where the start or end key are inside
-      // the node, for collapsed selections.
-
-      if (node.key == startKey || node.key == endKey || node.hasDescendant(startKey) || node.hasDescendant(endKey)) {
-        return true;
-      }
-
-      // PERF: if the selection is collapsed and the previous check didn't return
-      // true, then it must be false.
-      if (isCollapsed) {
-        return false;
-      }
-
-      // Otherwise, look through all of the leaf text nodes in the range, to see
-      // if any of them are inside the node.
-      var texts = node.getTextsAtRange(range);
-      var memo = false;
-
-      texts.forEach(function (text) {
-        if (node.hasDescendant(text.key)) memo = true;
-        return memo;
-      });
-
-      return memo;
-    }
-  }, {
-    key: 'text',
-
-    /**
-     * Get the concatenated text of all the block's children.
-     *
-     * @return {String}
-     */
-
-    get: function get$$1() {
-      return this.getText();
-    }
-  }, {
-    key: 'isVoid',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Node.isVoid` property is deprecated, please use the `Schema.isVoid()` checking method instead.');
-
-      return this.get('isVoid');
-    }
-  }, {
-    key: 'isEmpty',
-    get: function get$$1() {
-      logger.deprecate('0.38.0', 'The `Node.isEmpty` property is deprecated.');
-
-      return !this.get('isVoid') && !this.nodes.some(function (child) {
-        return !child.isEmpty;
-      });
-    }
-  }], [{
-    key: 'createChildren',
-    value: function createChildren() {
-      logger.deprecate('0.39.0', 'The `Node.createChildren` static method is deprecated, please use `Node.createList` instead.');
-
-      return this.createList.apply(this, arguments);
-    }
   }]);
-  return NodeInterface;
+  return ElementInterface;
 }();
 
 /**
@@ -59250,7 +57174,7 @@ var NodeInterface = function () {
 var ASSERTS = ['Child', 'Depth', 'Descendant', 'Node', 'Parent', 'Path'];
 
 var _loop$1 = function _loop(method) {
-  NodeInterface.prototype['assert' + method] = function (path) {
+  ElementInterface.prototype['assert' + method] = function (path) {
     for (var _len3 = arguments.length, args = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
       args[_key3 - 1] = arguments[_key3];
     }
@@ -59294,13 +57218,290 @@ try {
   }
 }
 
-memoize(NodeInterface.prototype, ['getBlocksAsArray', 'getBlocksAtRangeAsArray', 'getBlocksByTypeAsArray', 'getDecorations', 'getFirstInvalidNode', 'getFirstText', 'getFragmentAtRange', 'getInlinesAsArray', 'getInlinesAtRangeAsArray', 'getInlinesByTypeAsArray', 'getMarksAsArray', 'getMarksAtPosition', 'getOrderedMarksBetweenPositions', 'getInsertMarksAtRange', 'getKeysToPathsTable', 'getLastText', 'getMarksByTypeAsArray', 'getNextBlock', 'getOffset', 'getOffsetAtRange', 'getPreviousBlock', 'getText', 'getTextAtOffset', 'getTextDirection', 'getTextsAsArray', 'getTextsBetweenPositionsAsArray', 'isLeafBlock', 'isLeafInline', 'normalize', 'validate']);
+memoize(ElementInterface.prototype, ['getBlocksAsArray', 'getBlocksAtRangeAsArray', 'getBlocksByTypeAsArray', 'getDecorations', 'getFragmentAtRange', 'getInlinesAsArray', 'getInlinesAtRangeAsArray', 'getInlinesByTypeAsArray', 'getMarksAsArray', 'getMarksAtPosition', 'getOrderedMarksBetweenPositions', 'getInsertMarksAtRange', 'getMarksByTypeAsArray', 'getNextBlock', 'getOffset', 'getOffsetAtRange', 'getPreviousBlock', 'getTextAtOffset', 'getTextDirection', 'getTextsAsArray', 'getTextsBetweenPositionsAsArray']);
+
+/**
+ * Mix in the element interface.
+ */
+
+mixin(ElementInterface, [Block, Document, Inline]);
+
+/**
+ * The interface that `Document`, `Block` and `Inline` all implement, to make
+ * working with the recursive node tree easier.
+ *
+ * @type {Class}
+ */
+
+var NodeInterface = function () {
+  function NodeInterface() {
+    classCallCheck(this, NodeInterface);
+  }
+
+  createClass(NodeInterface, [{
+    key: 'getFirstInvalidNode',
+
+
+    /**
+     * Check whether the node is a leaf inline.
+     *
+     * @return {Boolean}
+     */
+
+    value: function getFirstInvalidNode(schema) {
+      if (this.object === 'text') {
+        var _invalid = this.validate(schema) ? this : null;
+        return _invalid;
+      }
+
+      var invalid = null;
+
+      this.nodes.find(function (n) {
+        invalid = n.validate(schema) ? n : n.getFirstInvalidNode(schema);
+        return invalid;
+      });
+
+      return invalid;
+    }
+
+    /**
+     * Get the first text node of a node, or the node itself.
+     *
+     * @return {Node|Null}
+     */
+
+  }, {
+    key: 'getFirstText',
+    value: function getFirstText() {
+      if (this.object === 'text') {
+        return this;
+      }
+
+      var descendant = null;
+
+      var found = this.nodes.find(function (node) {
+        if (node.object === 'text') return true;
+        descendant = node.getFirstText();
+        return !!descendant;
+      });
+
+      return descendant || found;
+    }
+
+    /**
+     * Get an object mapping all the keys in the node to their paths.
+     *
+     * @return {Object}
+     */
+
+  }, {
+    key: 'getKeysToPathsTable',
+    value: function getKeysToPathsTable() {
+      var ret = defineProperty({}, this.key, []);
+
+      if (this.nodes) {
+        this.nodes.forEach(function (node, i) {
+          var nested = node.getKeysToPathsTable();
+
+          for (var key in nested) {
+            var path = nested[key];
+
+            warning(!(key in ret), 'A node with a duplicate key of "' + key + '" was found! Duplicate keys are not allowed, you should use `node.regenerateKey` before inserting if you are reusing an existing node.');
+
+            ret[key] = [i].concat(toConsumableArray(path));
+          }
+        });
+      }
+
+      return ret;
+    }
+
+    /**
+     * Get the last text node of a node, or the node itself.
+     *
+     * @return {Node|Null}
+     */
+
+  }, {
+    key: 'getLastText',
+    value: function getLastText() {
+      if (this.object === 'text') {
+        return this;
+      }
+
+      var descendant = null;
+
+      var found = this.nodes.findLast(function (node) {
+        if (node.object == 'text') return true;
+        descendant = node.getLastText();
+        return descendant;
+      });
+
+      return descendant || found;
+    }
+
+    /**
+     * Get a node in the tree, or the node itself.
+     *
+     * @param {List|String} path
+     * @return {Node|Null}
+     */
+
+  }, {
+    key: 'getNode',
+    value: function getNode(path) {
+      path = this.resolvePath(path);
+      if (!path) return null;
+      if (this.object === 'text' && path.size) return null;
+      var node = path.size ? this.getDescendant(path) : this;
+      return node;
+    }
+
+    /**
+     * Find the path to a node.
+     *
+     * @param {String|List} key
+     * @return {List}
+     */
+
+  }, {
+    key: 'getPath',
+    value: function getPath(key) {
+      // Handle the case of passing in a path directly, to match other methods.
+      if (immutable.List.isList(key)) return key;
+
+      var dict = this.getKeysToPathsTable();
+      var path = dict[key];
+      return path ? immutable.List(path) : null;
+    }
+
+    /**
+     * Get the concatenated text string of a node.
+     *
+     * @return {String}
+     */
+
+  }, {
+    key: 'getText',
+    value: function getText() {
+      var children = this.object === 'text' ? this.leaves : this.nodes;
+      var text = children.reduce(function (memo, c) {
+        return memo + c.text;
+      }, '');
+      return text;
+    }
+
+    /**
+     * Check if a node exists.
+     *
+     * @param {List|String} path
+     * @return {Boolean}
+     */
+
+  }, {
+    key: 'hasNode',
+    value: function hasNode(path) {
+      var node = this.getNode(path);
+      return !!node;
+    }
+
+    /**
+     * Normalize the text node with a `schema`.
+     *
+     * @param {Schema} schema
+     * @return {Function|Void}
+     */
+
+  }, {
+    key: 'normalize',
+    value: function normalize(schema) {
+      var normalizer = schema.normalizeNode(this);
+      return normalizer;
+    }
+
+    /**
+     * Regenerate the node's key.
+     *
+     * @return {Node}
+     */
+
+  }, {
+    key: 'regenerateKey',
+    value: function regenerateKey() {
+      var key = KeyUtils.create();
+      var node = this.set('key', key);
+      return node;
+    }
+
+    /**
+     * Resolve a path from a path list or key string.
+     *
+     * An `index` can be provided, in which case paths created from a key string
+     * will have the index pushed onto them. This is helpful in cases where you
+     * want to accept either a `path` or a `key, index` combination for targeting
+     * a location in the tree that doesn't exist yet, like when inserting.
+     *
+     * @param {List|String} value
+     * @param {Number} index
+     * @return {List}
+     */
+
+  }, {
+    key: 'resolvePath',
+    value: function resolvePath(path, index) {
+      if (typeof path === 'string') {
+        path = this.getPath(path);
+
+        if (index != null) {
+          path = path.concat(index);
+        }
+      } else {
+        path = PathUtils.create(path);
+      }
+
+      return path;
+    }
+
+    /**
+     * Validate the node against a `schema`.
+     *
+     * @param {Schema} schema
+     * @return {Error|Void}
+     */
+
+  }, {
+    key: 'validate',
+    value: function validate(schema) {
+      var error = schema.validateNode(this);
+      return error;
+    }
+  }, {
+    key: 'text',
+
+    /**
+     * Get the concatenated text of the node.
+     *
+     * @return {String}
+     */
+
+    get: function get$$1() {
+      return this.getText();
+    }
+  }]);
+  return NodeInterface;
+}();
+
+/**
+ * Memoize read methods.
+ */
+
+memoize(NodeInterface.prototype, ['getFirstInvalidNode', 'getFirstText', 'getKeysToPathsTable', 'getLastText', 'getText', 'normalize', 'validate']);
 
 /**
  * Mix in the node interface.
  */
 
-mixin(NodeInterface, [Block, Inline, Document]);
+mixin(NodeInterface, [Block, Document, Inline, Text]);
 
 /**
  * The interface that `Decoration`, `Range` and `Selection` all implement, to make
@@ -59956,338 +58157,6 @@ var RangeInterface = function () {
       });
       return range;
     }
-
-    /**
-     * Deprecated.
-     */
-
-  }, {
-    key: 'hasAnchorAtStartOf',
-    value: function hasAnchorAtStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasAnchorAtStartOf` method is deprecated, please use `Range.anchor.isAtStartOfNode` instead.');
-
-      return this.anchor.isAtStartOfNode(node);
-    }
-  }, {
-    key: 'hasAnchorAtEndOf',
-    value: function hasAnchorAtEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasAnchorAtEndOf` method is deprecated, please use `Range.anchor.isAtEndOfNode` instead.');
-
-      return this.anchor.isAtEndOfNode(node);
-    }
-  }, {
-    key: 'hasAnchorBetween',
-    value: function hasAnchorBetween(node, start, end) {
-      logger.deprecate('0.37.0', 'The `Range.hasAnchorBetween` method is deprecated, please use the `Range.anchor` methods and properties directly instead.');
-
-      return this.anchor.offset <= end && start <= this.anchor.offset && this.anchor.isInNode(node);
-    }
-  }, {
-    key: 'hasAnchorIn',
-    value: function hasAnchorIn(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasAnchorAtEndOf` method is deprecated, please use `Range.anchor.isInNode` instead.');
-
-      return this.anchor.isInNode(node);
-    }
-  }, {
-    key: 'hasEdgeAtStartOf',
-    value: function hasEdgeAtStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasEdgeAtStartOf` method is deprecated.');
-
-      return this.anchor.isAtStartOfNode(node) || this.focus.isAtStartOfNode(node);
-    }
-  }, {
-    key: 'hasEdgeAtEndOf',
-    value: function hasEdgeAtEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasEdgeAtEndOf` method is deprecated.');
-
-      return this.anchor.isAtEndOfNode(node) || this.focus.isAtEndOfNode(node);
-    }
-  }, {
-    key: 'hasEdgeBetween',
-    value: function hasEdgeBetween(node, start, end) {
-      logger.deprecate('0.37.0', 'The `Range.hasEdgeBetween` method is deprecated.');
-
-      return this.anchor.offset <= end && start <= this.anchor.offset && this.anchor.isInNode(node) || this.focus.offset <= end && start <= this.focus.offset && this.focus.isInNode(node);
-    }
-  }, {
-    key: 'hasEdgeIn',
-    value: function hasEdgeIn(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasEdgeAtEndOf` method is deprecated.');
-
-      return this.anchor.isInNode(node) || this.focus.isInNode(node);
-    }
-  }, {
-    key: 'hasEndAtStartOf',
-    value: function hasEndAtStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasEndAtStartOf` method is deprecated, please use `Range.end.isAtStartOfNode` instead.');
-
-      return this.end.isAtStartOfNode(node);
-    }
-  }, {
-    key: 'hasEndAtEndOf',
-    value: function hasEndAtEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasEndAtEndOf` method is deprecated, please use `Range.end.isAtEndOfNode` instead.');
-
-      return this.end.isAtEndOfNode(node);
-    }
-  }, {
-    key: 'hasEndBetween',
-    value: function hasEndBetween(node, start, end) {
-      logger.deprecate('0.37.0', 'The `Range.hasEndBetween` method is deprecated, please use the `Range.end` methods and properties directly instead.');
-
-      return this.end.offset <= end && start <= this.end.offset && this.end.isInNode(node);
-    }
-  }, {
-    key: 'hasEndIn',
-    value: function hasEndIn(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasEndAtEndOf` method is deprecated, please use `Range.end.isInNode` instead.');
-
-      return this.end.isInNode(node);
-    }
-  }, {
-    key: 'hasFocusAtEndOf',
-    value: function hasFocusAtEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasFocusAtEndOf` method is deprecated, please use `Range.focus.isAtEndOfNode` instead.');
-
-      return this.focus.isAtEndOfNode(node);
-    }
-  }, {
-    key: 'hasFocusAtStartOf',
-    value: function hasFocusAtStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasFocusAtStartOf` method is deprecated, please use `Range.focus.isAtStartOfNode` instead.');
-
-      return this.focus.isAtStartOfNode(node);
-    }
-  }, {
-    key: 'hasFocusBetween',
-    value: function hasFocusBetween(node, start, end) {
-      logger.deprecate('0.37.0', 'The `Range.hasFocusBetween` method is deprecated, please use the `Range.focus` methods and properties directly instead.');
-
-      return start <= this.focus.offset && this.focus.offset <= end && this.focus.isInNode(node);
-    }
-  }, {
-    key: 'hasFocusIn',
-    value: function hasFocusIn(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasFocusAtEndOf` method is deprecated, please use `Range.focus.isInNode` instead.');
-
-      return this.focus.isInNode(node);
-    }
-  }, {
-    key: 'hasStartAtStartOf',
-    value: function hasStartAtStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasStartAtStartOf` method is deprecated, please use `Range.start.isAtStartOfNode` instead.');
-
-      return this.start.isAtStartOfNode(node);
-    }
-  }, {
-    key: 'hasStartAtEndOf',
-    value: function hasStartAtEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasStartAtEndOf` method is deprecated, please use `Range.start.isAtEndOfNode` instead.');
-
-      return this.start.isAtEndOfNode(node);
-    }
-  }, {
-    key: 'hasStartBetween',
-    value: function hasStartBetween(node, start, end) {
-      logger.deprecate('0.37.0', 'The `Range.hasStartBetween` method is deprecated, please use the `Range.start` methods and properties directly instead.');
-
-      return this.start.offset <= end && start <= this.start.offset && this.start.isInNode(node);
-    }
-  }, {
-    key: 'hasStartIn',
-    value: function hasStartIn(node) {
-      logger.deprecate('0.37.0', 'The `Range.hasStartAtEndOf` method is deprecated, please use `Range.start.isInNode` instead.');
-
-      return this.start.isInNode(node);
-    }
-  }, {
-    key: 'isAtStartOf',
-    value: function isAtStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.isAtStartOf` method is deprecated, please use `Range.isCollapsed` and `Point.isAtStartOfNode` instead.');
-
-      return this.isCollapsed && this.anchor.isAtStartOfNode(node);
-    }
-  }, {
-    key: 'isAtEndOf',
-    value: function isAtEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.isAtEndOf` method is deprecated, please use `Range.isCollapsed` and `Point.isAtEndOfNode` instead.');
-
-      return this.isCollapsed && this.anchor.isAtEndOfNode(node);
-    }
-  }, {
-    key: 'blur',
-    value: function blur() {
-      logger.deprecate('0.37.0', 'The `Range.blur` method is deprecated, please use `Range.merge` directly instead.');
-
-      return this.merge({ isFocused: false });
-    }
-  }, {
-    key: 'deselect',
-    value: function deselect() {
-      logger.deprecate('0.37.0', 'The `Range.deselect` method is deprecated, please use `Range.create` to create a new unset range instead.');
-
-      return Range.create();
-    }
-  }, {
-    key: 'moveAnchorOffsetTo',
-    value: function moveAnchorOffsetTo(o) {
-      logger.deprecate('0.37.0', 'The `Range.moveAnchorOffsetTo` method is deprecated, please use `Range.moveAnchorTo(offset)` instead.');
-
-      return this.moveAnchorTo(o);
-    }
-  }, {
-    key: 'moveFocusOffsetTo',
-    value: function moveFocusOffsetTo(fo) {
-      logger.deprecate('0.37.0', 'The `Range.moveFocusOffsetTo` method is deprecated, please use `Range.moveFocusTo(offset)` instead.');
-
-      return this.moveFocusTo(fo);
-    }
-  }, {
-    key: 'moveStartOffsetTo',
-    value: function moveStartOffsetTo(o) {
-      logger.deprecate('0.37.0', 'The `Range.moveStartOffsetTo` method is deprecated, please use `Range.moveStartTo(offset)` instead.');
-
-      return this.moveStartTo(o);
-    }
-  }, {
-    key: 'moveEndOffsetTo',
-    value: function moveEndOffsetTo(o) {
-      logger.deprecate('0.37.0', 'The `Range.moveEndOffsetTo` method is deprecated, please use `Range.moveEndTo(offset)` instead.');
-
-      return this.moveEndTo(o);
-    }
-  }, {
-    key: 'moveOffsetsTo',
-    value: function moveOffsetsTo(ao) {
-      var fo = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ao;
-
-      logger.deprecate('0.37.0', 'The `Range.moveOffsetsTo` method is deprecated, please use `Range.moveAnchorTo` and `Range.moveFocusTo` in sequence instead.');
-
-      return this.moveAnchorTo(ao).moveFocusTo(fo);
-    }
-  }, {
-    key: 'moveAnchorToStartOf',
-    value: function moveAnchorToStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.moveAnchorToStartOf` method is deprecated, please use `Range.moveAnchorToStartOfNode` instead.');
-
-      return this.moveAnchorToStartOfNode(node);
-    }
-  }, {
-    key: 'moveAnchorToEndOf',
-    value: function moveAnchorToEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.moveAnchorToEndOf` method is deprecated, please use `Range.moveAnchorToEndOfNode` instead.');
-
-      return this.moveAnchorToEndOfNode(node);
-    }
-  }, {
-    key: 'moveFocusToStartOf',
-    value: function moveFocusToStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.moveFocusToStartOf` method is deprecated, please use `Range.moveFocusToStartOfNode` instead.');
-
-      return this.moveFocusToStartOfNode(node);
-    }
-  }, {
-    key: 'moveFocusToEndOf',
-    value: function moveFocusToEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.moveFocusToEndOf` method is deprecated, please use `Range.moveFocusToEndOfNode` instead.');
-
-      return this.moveFocusToEndOfNode(node);
-    }
-  }, {
-    key: 'moveToStartOf',
-    value: function moveToStartOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.moveToStartOf` method is deprecated, please use `Range.moveToStartOfNode` instead.');
-
-      return this.moveToStartOfNode(node);
-    }
-  }, {
-    key: 'moveToEndOf',
-    value: function moveToEndOf(node) {
-      logger.deprecate('0.37.0', 'The `Range.moveToEndOf` method is deprecated, please use `Range.moveToEndOfNode` instead.');
-
-      return this.moveToEndOfNode(node);
-    }
-  }, {
-    key: 'moveToRangeOf',
-    value: function moveToRangeOf() {
-      logger.deprecate('0.37.0', 'The `Range.moveToRangeOf` method is deprecated, please use `Range.moveToRangeOfNode` instead.');
-
-      return this.moveToRangeOfNode.apply(this, arguments);
-    }
-  }, {
-    key: 'collapseToAnchor',
-    value: function collapseToAnchor() {
-      logger.deprecate('0.37.0', 'The `Range.collapseToAnchor` method is deprecated, please use `Range.moveToAnchor` instead.');
-
-      return this.moveToAnchor();
-    }
-  }, {
-    key: 'collapseToEnd',
-    value: function collapseToEnd() {
-      logger.deprecate('0.37.0', 'The `Range.collapseToEnd` method is deprecated, please use `Range.moveToEnd` instead.');
-
-      return this.moveToEnd();
-    }
-  }, {
-    key: 'collapseToFocus',
-    value: function collapseToFocus() {
-      logger.deprecate('0.37.0', 'The `Range.collapseToFocus` method is deprecated, please use `Range.moveToFocus` instead.');
-
-      return this.moveToFocus();
-    }
-  }, {
-    key: 'collapseToStart',
-    value: function collapseToStart() {
-      logger.deprecate('0.37.0', 'The `Range.collapseToStart` method is deprecated, please use `Range.moveToStart` instead.');
-
-      return this.moveToStart();
-    }
-  }, {
-    key: 'move',
-    value: function move() {
-      var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      logger.deprecate('0.37.0', 'The `Range.move` method is deprecated, please use `Range.moveForward` or `Range.moveBackward` instead.');
-
-      return n > 0 ? this.moveForward(n) : this.moveBackward(-n);
-    }
-  }, {
-    key: 'moveAnchor',
-    value: function moveAnchor() {
-      var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      logger.deprecate('0.37.0', 'The `Range.moveAnchor` method is deprecated, please use `Range.moveAnchorForward` or `Range.moveAnchorBackward` instead.');
-
-      return n > 0 ? this.moveAnchorForward(n) : this.moveAnchorBackward(-n);
-    }
-  }, {
-    key: 'moveEnd',
-    value: function moveEnd() {
-      var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      logger.deprecate('0.37.0', 'The `Range.moveEnd` method is deprecated, please use `Range.moveEndForward` or `Range.moveEndBackward` instead.');
-
-      return n > 0 ? this.moveEndForward(n) : this.moveEndBackward(-n);
-    }
-  }, {
-    key: 'moveFocus',
-    value: function moveFocus() {
-      var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      logger.deprecate('0.37.0', 'The `Range.moveFocus` method is deprecated, please use `Range.moveFocusForward` or `Range.moveFocusBackward` instead.');
-
-      return n > 0 ? this.moveFocusForward(n) : this.moveFocusBackward(-n);
-    }
-  }, {
-    key: 'moveStart',
-    value: function moveStart() {
-      var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      logger.deprecate('0.37.0', 'The `Range.moveStart` method is deprecated, please use `Range.moveStartForward` or `Range.moveStartBackward` instead.');
-
-      return n > 0 ? this.moveStartForward(n) : this.moveStartBackward(-n);
-    }
   }, {
     key: 'isCollapsed',
 
@@ -60405,111 +58274,9 @@ var RangeInterface = function () {
     get: function get$$1() {
       return this.isBackward ? this.anchor : this.focus;
     }
-  }, {
-    key: 'anchorKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.anchorKey` property has been deprecated, use `range.anchor.key` instead.');
-
-      return this.anchor.key;
-    }
-  }, {
-    key: 'anchorOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.anchorOffset` property has been deprecated, use `range.anchor.offset` instead.');
-
-      return this.anchor.offset;
-    }
-  }, {
-    key: 'anchorPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.anchorPath` property has been deprecated, use `range.anchor.path` instead.');
-
-      return this.anchor.path;
-    }
-  }, {
-    key: 'focusKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.focusKey` property has been deprecated, use `range.focus.key` instead.');
-
-      return this.focus.key;
-    }
-  }, {
-    key: 'focusOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.focusOffset` property has been deprecated, use `range.focus.offset` instead.');
-
-      return this.focus.offset;
-    }
-  }, {
-    key: 'focusPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.focusPath` property has been deprecated, use `range.focus.path` instead.');
-
-      return this.focus.path;
-    }
-  }, {
-    key: 'startKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.startKey` property has been deprecated, use `range.start.key` instead.');
-
-      return this.start.key;
-    }
-  }, {
-    key: 'startOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.startOffset` property has been deprecated, use `range.start.offset` instead.');
-
-      return this.start.offset;
-    }
-  }, {
-    key: 'startPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.startPath` property has been deprecated, use `range.start.path` instead.');
-
-      return this.start.path;
-    }
-  }, {
-    key: 'endKey',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.endKey` property has been deprecated, use `range.end.key` instead.');
-
-      return this.end.key;
-    }
-  }, {
-    key: 'endOffset',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.endOffset` property has been deprecated, use `range.end.offset` instead.');
-
-      return this.end.offset;
-    }
-  }, {
-    key: 'endPath',
-    get: function get$$1() {
-      logger.deprecate('0.37.0', 'The `range.endPath` property has been deprecated, use `range.end.path` instead.');
-
-      return this.end.path;
-    }
   }]);
   return RangeInterface;
 }();
-
-/**
- * Mix in some aliases for convenience / parallelism with the browser APIs.
- */
-
-var ALIAS_METHODS = [['collapseTo', 'moveTo'], ['collapseToStartOf', 'moveToStartOfNode'], ['collapseToEndOf', 'moveToEndOfNode'], ['extend', 'moveFocus'], ['extendTo', 'moveFocusTo'], ['extendToStartOf', 'moveFocusToStartOfNode'], ['extendToEndOf', 'moveFocusToEndOfNode']];
-
-ALIAS_METHODS.forEach(function (_ref) {
-  var _ref2 = slicedToArray(_ref, 2),
-      alias = _ref2[0],
-      method = _ref2[1];
-
-  RangeInterface.prototype[alias] = function () {
-    logger.deprecate('0.37.0', 'The `Range.' + alias + '` method is deprecated, please use `Range.' + method + '` instead.');
-
-    return this[method].apply(this, arguments);
-  };
-});
 
 /**
  * Mix in the range interface.
@@ -60530,18 +58297,6 @@ var Operations = {
   invert: invertOperation
 };
 
-function setKeyGenerator(fn) {
-  logger.deprecate('0.35.0', 'The `setKeyGenerator()` util is deprecrated. Use the `KeyUtils.setGenerator()` helper instead.');
-
-  return KeyUtils.setGenerator(fn);
-}
-
-function resetKeyGenerator() {
-  logger.deprecate('0.35.0', 'The `resetKeyGenerator()` util is deprecrated. Use the `KeyUtils.resetGenerator()` helper instead.');
-
-  return KeyUtils.resetGenerator();
-}
-
 var index = {
   Block: Block,
   Changes: Changes$7,
@@ -60559,11 +58314,9 @@ var index = {
   PathUtils: PathUtils,
   Point: Point,
   Range: Range,
-  resetKeyGenerator: resetKeyGenerator,
   resetMemoization: resetMemoization,
   Schema: Schema,
   Selection: Selection,
-  setKeyGenerator: setKeyGenerator,
   Stack: Stack,
   Text: Text,
   TextUtils: TextUtils,
@@ -60588,11 +58341,9 @@ exports.Operations = Operations;
 exports.PathUtils = PathUtils;
 exports.Point = Point;
 exports.Range = Range;
-exports.resetKeyGenerator = resetKeyGenerator;
 exports.resetMemoization = resetMemoization;
 exports.Schema = Schema;
 exports.Selection = Selection;
-exports.setKeyGenerator = setKeyGenerator;
 exports.Stack = Stack;
 exports.Text = Text;
 exports.TextUtils = TextUtils;
@@ -60601,10 +58352,10 @@ exports.Value = Value;
 exports.default = index;
 
 
-},{"debug":255,"direction":47,"esrever":48,"immutable":52,"is-empty":53,"is-plain-object":56,"lodash/isEqual":197,"lodash/omit":212,"lodash/pick":213,"slate-dev-logger":244,"slate-schema-violations":253}],255:[function(require,module,exports){
-arguments[4][250][0].apply(exports,arguments)
-},{"./common":256,"_process":221,"dup":250}],256:[function(require,module,exports){
-arguments[4][251][0].apply(exports,arguments)
-},{"dup":251,"ms":257}],257:[function(require,module,exports){
-arguments[4][252][0].apply(exports,arguments)
-},{"dup":252}]},{},[2]);
+},{"debug":240,"direction":47,"esrever":48,"immutable":52,"is-plain-object":55,"lodash/omit":198,"lodash/pick":199,"slate-dev-warning":229}],240:[function(require,module,exports){
+arguments[4][235][0].apply(exports,arguments)
+},{"./common":241,"_process":207,"dup":235}],241:[function(require,module,exports){
+arguments[4][236][0].apply(exports,arguments)
+},{"dup":236,"ms":242}],242:[function(require,module,exports){
+arguments[4][237][0].apply(exports,arguments)
+},{"dup":237}]},{},[2]);
