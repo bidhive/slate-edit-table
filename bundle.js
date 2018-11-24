@@ -7,8 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 
 require('slate');
 
-var _slateSchemaViolations = require('slate-schema-violations');
-
 var _lib = require('../lib/');
 
 var _lib2 = _interopRequireDefault(_lib);
@@ -29,7 +27,6 @@ var tablePlugin = (0, _lib2.default)({
 /*
  * Set align data for the current column
  */
-
 function setColumnAlign(change, align) {
     var pos = tablePlugin.utils.getPosition(change.value);
     var columnCells = tablePlugin.utils.getCellsAtColumn(pos.table, pos.getColumnIndex());
@@ -50,7 +47,7 @@ var alignPlugin = {
                     }
                 },
                 normalize: function normalize(change, error) {
-                    if (error.code === _slateSchemaViolations.NODE_DATA_INVALID) {
+                    if (error.code === "node_data_invalid") {
                         change.setNodeByKey(error.node.key, {
                             data: error.node.data.set('align', 'left')
                         });
@@ -67,7 +64,7 @@ var alignPlugin = {
 
 exports.default = alignPlugin;
 
-},{"../lib/":28,"slate":239,"slate-schema-violations":238}],2:[function(require,module,exports){
+},{"../lib/":28,"slate":238}],2:[function(require,module,exports){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -433,7 +430,7 @@ var Example = function (_React$Component5) {
 
 _reactDom2.default.render(React.createElement(Example, null), document.getElementById('example'));
 
-},{"../lib/":28,"./aligns":1,"./value":3,"prop-types":211,"react":219,"react-dom":215,"slate":239,"slate-react":234}],3:[function(require,module,exports){
+},{"../lib/":28,"./aligns":1,"./value":3,"prop-types":211,"react":219,"react-dom":215,"slate":238,"slate-react":234}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -577,7 +574,7 @@ function clearCell(opts, change, cell) {
 }
 exports.default = clearCell;
 
-},{"slate":239}],5:[function(require,module,exports){
+},{"slate":238}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -698,7 +695,7 @@ getCell) {
 }
 exports.default = insertColumn;
 
-},{"../utils":40,"./moveSelection":10,"slate":239}],7:[function(require,module,exports){
+},{"../utils":40,"./moveSelection":10,"slate":238}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -736,7 +733,7 @@ getRow // Generate the row yourself
 
 exports.default = insertRow;
 
-},{"../utils":40,"slate":239}],8:[function(require,module,exports){
+},{"../utils":40,"slate":238}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -767,7 +764,7 @@ function insertTable(opts, change) {
 
 exports.default = insertTable;
 
-},{"../utils":40,"slate":239}],9:[function(require,module,exports){
+},{"../utils":40,"slate":238}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -834,7 +831,7 @@ fragment) {
 }
 exports.default = insertTableFragmentAtRange;
 
-},{"../changes":5,"../utils":40,"slate":239}],10:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":238}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -868,7 +865,7 @@ function moveSelection(opts, change, x, y) {
 
 exports.default = moveSelection;
 
-},{"../utils":40,"slate":239}],11:[function(require,module,exports){
+},{"../utils":40,"slate":238}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -954,7 +951,7 @@ function normPos(x, y, width, height) {
 
 exports.default = moveSelectionBy;
 
-},{"../utils":40,"slate":239}],12:[function(require,module,exports){
+},{"../utils":40,"slate":238}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -992,7 +989,7 @@ function removeColumn(opts, change, at) {
 }
 exports.default = removeColumn;
 
-},{"../utils":40,"./removeColumnByKey":13,"slate":239}],13:[function(require,module,exports){
+},{"../utils":40,"./removeColumnByKey":13,"slate":238}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1049,7 +1046,7 @@ function removeColumnByKey(opts, change, key) {
 }
 exports.default = removeColumnByKey;
 
-},{"../utils":40,"./clearCell":4,"slate":239}],14:[function(require,module,exports){
+},{"../utils":40,"./clearCell":4,"slate":238}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1087,7 +1084,7 @@ function removeRow(opts, change, at) {
 }
 exports.default = removeRow;
 
-},{"../utils":40,"./removeRowByKey":15,"slate":239}],15:[function(require,module,exports){
+},{"../utils":40,"./removeRowByKey":15,"slate":238}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1133,7 +1130,7 @@ function removeRowByKey(opts, change, key) {
 }
 exports.default = removeRowByKey;
 
-},{"../utils":40,"./clearCell":4,"slate":239}],16:[function(require,module,exports){
+},{"../utils":40,"./clearCell":4,"slate":238}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1161,7 +1158,7 @@ function removeTable(opts, change) {
 
 exports.default = removeTable;
 
-},{"./removeTableByKey":17,"slate":239}],17:[function(require,module,exports){
+},{"./removeTableByKey":17,"slate":238}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1219,7 +1216,7 @@ function removeTableByKey(opts, change, key) {
 
 exports.default = removeTableByKey;
 
-},{"../utils":40,"slate":239}],18:[function(require,module,exports){
+},{"../utils":40,"slate":238}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1450,7 +1447,7 @@ function onBackspace(event, change, editor, opts) {
 
 exports.default = onBackspace;
 
-},{"../changes":5,"slate":239}],21:[function(require,module,exports){
+},{"../changes":5,"slate":238}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1482,7 +1479,7 @@ opts, event, change, editor) {
 }
 exports.default = onCopy;
 
-},{"../utils":40,"slate":239,"slate-react":234}],22:[function(require,module,exports){
+},{"../utils":40,"slate":238,"slate-react":234}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1518,7 +1515,7 @@ function onEnter(event, change, editor, opts) {
 }
 exports.default = onEnter;
 
-},{"../changes":5,"../utils":40,"slate":239}],23:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":238}],23:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1591,7 +1588,7 @@ function onKeyDown(opts, event, change, editor) {
 
 exports.default = onKeyDown;
 
-},{"../utils":40,"./onBackspace":20,"./onEnter":22,"./onModEnter":24,"./onTab":26,"./onUpDown":27,"slate":239}],24:[function(require,module,exports){
+},{"../utils":40,"./onBackspace":20,"./onEnter":22,"./onModEnter":24,"./onTab":26,"./onUpDown":27,"slate":238}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1628,7 +1625,7 @@ function onModEnter(event, change, editor, opts) {
 
 exports.default = onModEnter;
 
-},{"../utils":40,"slate":239}],25:[function(require,module,exports){
+},{"../utils":40,"slate":238}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1675,7 +1672,7 @@ opts, event, change, editor) {
 
 exports.default = onPaste;
 
-},{"../changes":5,"../utils":40,"slate":239,"slate-react":234}],26:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":238,"slate-react":234}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1732,7 +1729,7 @@ function onTab(event, change, editor, opts) {
 
 exports.default = onTab;
 
-},{"../changes":5,"../utils":40,"slate":239}],27:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":238}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1772,7 +1769,7 @@ function onUpDown(event, change, editor, opts) {
 }
 exports.default = onUpDown;
 
-},{"../changes":5,"../utils":40,"slate":239}],28:[function(require,module,exports){
+},{"../changes":5,"../utils":40,"slate":238}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2183,7 +2180,7 @@ var TablePosition = function (_Record) {
 
 exports.default = TablePosition;
 
-},{"immutable":52,"slate":239}],31:[function(require,module,exports){
+},{"immutable":52,"slate":238}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2215,7 +2212,7 @@ function createEmptyContent(opts) {
 
 exports.default = createCell;
 
-},{"slate":239}],32:[function(require,module,exports){
+},{"slate":238}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2247,7 +2244,7 @@ function createRow(opts, columns, getCellContent) {
 }
 exports.default = createRow;
 
-},{"./createCell":31,"immutable":52,"slate":239}],33:[function(require,module,exports){
+},{"./createCell":31,"immutable":52,"slate":238}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2279,7 +2276,7 @@ function createTable(opts, columns, rows, getCellContent) {
 }
 exports.default = createTable;
 
-},{"./createRow":32,"immutable":52,"slate":239}],34:[function(require,module,exports){
+},{"./createRow":32,"immutable":52,"slate":238}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2302,7 +2299,7 @@ table, fn) {
 }
 exports.default = forEachCells;
 
-},{"slate":239}],35:[function(require,module,exports){
+},{"slate":238}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2326,7 +2323,7 @@ table, columnIndex) {
 
 exports.default = getCellsAtColumn;
 
-},{"immutable":52,"slate":239}],36:[function(require,module,exports){
+},{"immutable":52,"slate":238}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2348,7 +2345,7 @@ table, rowIndex) {
 
 exports.default = getCellsAtRow;
 
-},{"immutable":52,"slate":239}],37:[function(require,module,exports){
+},{"immutable":52,"slate":238}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2424,7 +2421,7 @@ function getCopiedFragment(opts, value) {
 }
 exports.default = getCopiedFragment;
 
-},{"../utils":40,"immutable":52,"slate":239}],38:[function(require,module,exports){
+},{"../utils":40,"immutable":52,"slate":238}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2450,7 +2447,7 @@ value) {
 
 exports.default = getPosition;
 
-},{"./TablePosition":30,"slate":239}],39:[function(require,module,exports){
+},{"./TablePosition":30,"slate":238}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2478,7 +2475,7 @@ key) {
 
 exports.default = getPositionByKey;
 
-},{"./TablePosition":30,"slate":239}],40:[function(require,module,exports){
+},{"./TablePosition":30,"slate":238}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2732,8 +2729,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _slate = require('slate');
 
-var _slateSchemaViolations = require('slate-schema-violations');
-
 var _utils = require('../utils');
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2752,9 +2747,9 @@ function schema(opts) {
             parent: { type: opts.typeTable },
             normalize: function normalize(change, error) {
                 switch (error.code) {
-                    case _slateSchemaViolations.CHILD_TYPE_INVALID:
+                    case "child_type_invalid":
                         return onlyCellsInRow(opts, change, error);
-                    case _slateSchemaViolations.PARENT_TYPE_INVALID:
+                    case "parent_type_invalid":
                         return rowOnlyInTable(opts, change, error);
                     default:
                         return undefined;
@@ -2765,9 +2760,9 @@ function schema(opts) {
             parent: { type: opts.typeRow },
             normalize: function normalize(change, error) {
                 switch (error.code) {
-                    case _slateSchemaViolations.CHILD_OBJECT_INVALID:
+                    case "child_object_invalid":
                         return onlyBlocksInCell(opts, change, error);
-                    case _slateSchemaViolations.PARENT_TYPE_INVALID:
+                    case "parent_type_invalid":
                         return cellOnlyInRow(opts, change, error);
                     default:
                         return undefined;
@@ -2826,7 +2821,7 @@ function cellOnlyInRow(opts, change, error) {
 
 exports.default = schema;
 
-},{"../utils":40,"slate":239,"slate-schema-violations":238}],47:[function(require,module,exports){
+},{"../utils":40,"slate":238}],47:[function(require,module,exports){
 'use strict';
 
 var GROUP_LEFT_TO_RIGHT,
@@ -37164,7 +37159,7 @@ var index = {
 exports.default = index;
 
 
-},{"isomorphic-base64":57,"slate":239}],228:[function(require,module,exports){
+},{"isomorphic-base64":57,"slate":238}],228:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38157,7 +38152,7 @@ exports.default = index;
 exports.createHyperscript = createHyperscript;
 
 
-},{"is-plain-object":55,"slate":239}],232:[function(require,module,exports){
+},{"is-plain-object":55,"slate":238}],232:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38282,7 +38277,7 @@ var index = {
 exports.default = index;
 
 
-},{"immutable":52,"slate":239}],233:[function(require,module,exports){
+},{"immutable":52,"slate":238}],233:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -38407,7 +38402,7 @@ var Types = {
 exports.default = Types;
 
 
-},{"slate":239}],234:[function(require,module,exports){
+},{"slate":238}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -42880,7 +42875,7 @@ exports.BeforePlugin = BeforePlugin;
 exports.default = index;
 
 
-},{"debug":235,"get-window":50,"immutable":52,"lodash/throttle":202,"memoize-one":205,"prop-types":211,"react":219,"react-dom":215,"react-immutable-proptypes":216,"selection-is-backward":226,"slate":239,"slate-base64-serializer":227,"slate-dev-environment":228,"slate-dev-warning":229,"slate-hotkeys":230,"slate-plain-serializer":232,"slate-prop-types":233}],235:[function(require,module,exports){
+},{"debug":235,"get-window":50,"immutable":52,"lodash/throttle":202,"memoize-one":205,"prop-types":211,"react":219,"react-dom":215,"react-immutable-proptypes":216,"selection-is-backward":226,"slate":238,"slate-base64-serializer":227,"slate-dev-environment":228,"slate-dev-warning":229,"slate-hotkeys":230,"slate-plain-serializer":232,"slate-prop-types":233}],235:[function(require,module,exports){
 (function (process){
 "use strict";
 
@@ -43480,60 +43475,6 @@ function plural(ms, msAbs, n, name) {
 }
 
 },{}],238:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-/**
- * Schema violations.
- *
- * @type {String}
- */
-
-var CHILD_OBJECT_INVALID = 'child_object_invalid';
-var CHILD_REQUIRED = 'child_required';
-var CHILD_TYPE_INVALID = 'child_type_invalid';
-var CHILD_UNKNOWN = 'child_unknown';
-var FIRST_CHILD_OBJECT_INVALID = 'first_child_object_invalid';
-var FIRST_CHILD_TYPE_INVALID = 'first_child_type_invalid';
-var LAST_CHILD_OBJECT_INVALID = 'last_child_object_invalid';
-var LAST_CHILD_TYPE_INVALID = 'last_child_type_invalid';
-var NEXT_SIBLING_OBJECT_INVALID = 'next_sibling_object_invalid';
-var NEXT_SIBLING_TYPE_INVALID = 'next_sibling_type_invalid';
-var NODE_DATA_INVALID = 'node_data_invalid';
-var NODE_IS_VOID_INVALID = 'node_is_void_invalid';
-var NODE_MARK_INVALID = 'node_mark_invalid';
-var NODE_OBJECT_INVALID = 'node_object_invalid';
-var NODE_TEXT_INVALID = 'node_text_invalid';
-var NODE_TYPE_INVALID = 'node_type_invalid';
-var PARENT_OBJECT_INVALID = 'parent_object_invalid';
-var PARENT_TYPE_INVALID = 'parent_type_invalid';
-var PREVIOUS_SIBLING_OBJECT_INVALID = 'previous_sibling_object_invalid';
-var PREVIOUS_SIBLING_TYPE_INVALID = 'previous_sibling_type_invalid';
-
-exports.CHILD_OBJECT_INVALID = CHILD_OBJECT_INVALID;
-exports.CHILD_REQUIRED = CHILD_REQUIRED;
-exports.CHILD_TYPE_INVALID = CHILD_TYPE_INVALID;
-exports.CHILD_UNKNOWN = CHILD_UNKNOWN;
-exports.FIRST_CHILD_OBJECT_INVALID = FIRST_CHILD_OBJECT_INVALID;
-exports.FIRST_CHILD_TYPE_INVALID = FIRST_CHILD_TYPE_INVALID;
-exports.LAST_CHILD_OBJECT_INVALID = LAST_CHILD_OBJECT_INVALID;
-exports.LAST_CHILD_TYPE_INVALID = LAST_CHILD_TYPE_INVALID;
-exports.NEXT_SIBLING_OBJECT_INVALID = NEXT_SIBLING_OBJECT_INVALID;
-exports.NEXT_SIBLING_TYPE_INVALID = NEXT_SIBLING_TYPE_INVALID;
-exports.NODE_DATA_INVALID = NODE_DATA_INVALID;
-exports.NODE_IS_VOID_INVALID = NODE_IS_VOID_INVALID;
-exports.NODE_MARK_INVALID = NODE_MARK_INVALID;
-exports.NODE_OBJECT_INVALID = NODE_OBJECT_INVALID;
-exports.NODE_TEXT_INVALID = NODE_TEXT_INVALID;
-exports.NODE_TYPE_INVALID = NODE_TYPE_INVALID;
-exports.PARENT_OBJECT_INVALID = PARENT_OBJECT_INVALID;
-exports.PARENT_TYPE_INVALID = PARENT_TYPE_INVALID;
-exports.PREVIOUS_SIBLING_OBJECT_INVALID = PREVIOUS_SIBLING_OBJECT_INVALID;
-exports.PREVIOUS_SIBLING_TYPE_INVALID = PREVIOUS_SIBLING_TYPE_INVALID;
-
-
-},{}],239:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -58352,10 +58293,10 @@ exports.Value = Value;
 exports.default = index;
 
 
-},{"debug":240,"direction":47,"esrever":48,"immutable":52,"is-plain-object":55,"lodash/omit":198,"lodash/pick":199,"slate-dev-warning":229}],240:[function(require,module,exports){
+},{"debug":239,"direction":47,"esrever":48,"immutable":52,"is-plain-object":55,"lodash/omit":198,"lodash/pick":199,"slate-dev-warning":229}],239:[function(require,module,exports){
 arguments[4][235][0].apply(exports,arguments)
-},{"./common":241,"_process":207,"dup":235}],241:[function(require,module,exports){
+},{"./common":240,"_process":207,"dup":235}],240:[function(require,module,exports){
 arguments[4][236][0].apply(exports,arguments)
-},{"dup":236,"ms":242}],242:[function(require,module,exports){
+},{"dup":236,"ms":241}],241:[function(require,module,exports){
 arguments[4][237][0].apply(exports,arguments)
 },{"dup":237}]},{},[2]);

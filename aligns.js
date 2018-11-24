@@ -1,6 +1,5 @@
 // @flow
 import { type Change, type SlateError } from 'slate';
-import { NODE_DATA_INVALID } from 'slate-schema-violations';
 import PluginEditTable from '../lib/';
 
 /*
@@ -38,7 +37,7 @@ const alignPlugin = {
                     align: align => ['left', 'center', 'right'].includes(align)
                 },
                 normalize(change: Change, error: SlateError) {
-                    if (error.code === NODE_DATA_INVALID) {
+                    if (error.code === "node_data_invalid") {
                         change.setNodeByKey(error.node.key, {
                             data: error.node.data.set('align', 'left')
                         });
